@@ -1,0 +1,51 @@
+\begin{thebibliography}{1}
+  \providebibliographyfont{name}{}%
+  \providebibliographyfont{lastname}{}%
+  \providebibliographyfont{title}{\emph}%
+  \providebibliographyfont{jtitle}{\btxtitlefont}%
+  \providebibliographyfont{etal}{\emph}%
+  \providebibliographyfont{journal}{}%
+  \providebibliographyfont{volume}{}%
+  \providebibliographyfont{ISBN}{\MakeUppercase}%
+  \providebibliographyfont{ISSN}{\MakeUppercase}%
+  \providebibliographyfont{url}{\url}%
+  \providebibliographyfont{numeral}{}%
+  \expandafter\btxselectlanguage\expandafter {\btxfallbacklanguage}
+
+\expandafter\btxselectlanguage\expandafter {\btxfallbacklanguage}
+\bibitem {AH09}
+\btxnamefont {\btxlastnamefont {Antoniou}, Grigoris} \btxandlong {}\
+  \btxnamefont {\btxlastnamefont {Harmelen}, Frank\btxfnamespacelong
+  Van}\btxauthorcolon\ \btxjtitlefont {\btxifchangecase {Web ontology language:
+  Owl}{Web Ontology Language: OWL}}.
+\newblock \btxjournalfont {Handbook on ontologies}, 2(September):91--110, 2009.
+\newblock {\latintext
+  \btxurlfont{http://www.springerlink.com/index/10.1007/978-3-540-92673-3}}.
+
+\bibitem {BHL01}
+\btxnamefont {\btxlastnamefont {Berners-Lee}, Tim}, \btxnamefont
+  {\btxlastnamefont {Hendler}, James}\btxandcomma {} \btxandlong {}\
+  \btxnamefont {\btxlastnamefont {Lassila}, Ora}\btxauthorcolon\ \btxjtitlefont
+  {\btxifchangecase {The semantic web}{The Semantic Web}}.
+\newblock \btxjournalfont {Scientific American}, 284(5):34--43, 2001.
+\newblock {\latintext
+  \btxurlfont{http://www.nature.com/doifinder/10.1038/scientificamerican0501-34}}.
+
+\bibitem {MH04}
+\btxnamefont {\btxlastnamefont {McGuinness}, Deborah\btxfnamespacelong L}
+  \btxandlong {}\ \btxnamefont {\btxlastnamefont {Van~Harmelen},
+  Frank}\btxauthorcolon\ \btxjtitlefont {\btxifchangecase {Owl web ontology
+  language overview}{OWL Web Ontology Language Overview}}.
+\newblock \btxjournalfont {W3C recommendation}, 10(February):1--22, 2004.
+\newblock {\latintext \btxurlfont{http://www.w3.org/TR/owl-features/}}.
+
+\bibitem {SWM04}
+\btxnamefont {\btxlastnamefont {Smith}, Michael\btxfnamespacelong K},
+  \btxnamefont {\btxlastnamefont {Welty}, Chris}\btxandcomma {} \btxandlong {}\
+  \btxnamefont {\btxlastnamefont {McGuinness}, Deborah\btxfnamespacelong
+  L}\btxauthorcolon\ \btxjtitlefont {\btxifchangecase {Owl web ontology
+  language guide}{OWL Web Ontology Language Guide}}.
+\newblock \btxjournalfont {W3C Recommendation}, 10(February):1--46, 2004.
+\newblock {\latintext \btxurlfont{http://www.w3.org/TR/owl-guide/}}.
+
+\end{thebibliography}
