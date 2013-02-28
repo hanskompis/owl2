@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.1.22)  22 FEB 2013 13:35
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.1.22)  28 FEB 2013 16:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -637,21 +637,21 @@ Package tocbibind Note: Using section or other style headings.
  (./web_ontology_language.aux)
 \openout1 = `web_ontology_language.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 106.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 115.
  (/usr/share/texmf/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
@@ -683,7 +683,7 @@ File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Redefining \microtypecontext on input line 106.
+LaTeX Info: Redefining \microtypecontext on input line 115.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -726,7 +726,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 \AtBeginShipoutBox=\box30
-Package hyperref Info: Link coloring OFF on input line 106.
+Package hyperref Info: Link coloring OFF on input line 115.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2010/04/30 v2.40 Cross-referencing by name of section
@@ -736,9 +736,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count132
 )
-LaTeX Info: Redefining \ref on input line 106.
-LaTeX Info: Redefining \pageref on input line 106.
-LaTeX Info: Redefining \nameref on input line 106.
+LaTeX Info: Redefining \ref on input line 115.
+LaTeX Info: Redefining \pageref on input line 115.
+LaTeX Info: Redefining \nameref on input line 115.
 
 (./web_ontology_language.out) (./web_ontology_language.out)
 \@outlinefile=\write3
@@ -754,7 +754,7 @@ babelbib extension \btxifchangecaseoff added to \extrasfinnish
 babelbib: Load BibTeX extensions \bibsfinnish for finnish
 babelbib: Set language for keywords in the bibliography fixed to finnish
 babelbib: Set language for keywords in the bibliography fixed to finnish
-Package hyperref Info: Option `pageanchor' set `false' on input line 110.
+Package hyperref Info: Option `pageanchor' set `false' on input line 119.
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
 * paper: <default>
@@ -795,7 +795,7 @@ Package hyperref Info: Option `pageanchor' set `false' on input line 110.
 
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Package hyperref Info: Option `pageanchor' set `true' on input line 110.
+Package hyperref Info: Option `pageanchor' set `true' on input line 119.
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
 * paper: <default>
@@ -880,50 +880,75 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
  [2
 
 ]
-Overfull \hbox (17.70238pt too wide) in paragraph at lines 129--130
+Overfull \hbox (17.70238pt too wide) in paragraph at lines 165--170
 []\T1/lmr/m/n/10.95 (-20) Semanttisen we-bin da-tan ku-vauk-set to-teu-te-taan 
 useim-mi-ten XML-tiedostoina.
  []
 
-[3] [4]
-LaTeX Font Info:    Try loading font information for OMS+lmr on input line 150.
+[3] <JackTorrance.png, id=132, 687.56876pt x 65.24374pt>
+File: JackTorrance.png Graphic file (type png)
+
+<use JackTorrance.png>
+Package pdftex.def Info: JackTorrance.png used on input line 184.
+(pdftex.def)             Requested size: 343.78354pt x 32.62178pt.
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 203.
+
+ (/usr/share/texmf/tex/latex/lm/t1lmtt.fd
+File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+Overfull \hbox (12.51793pt too wide) in paragraph at lines 207--207
+[]    \T1/lmtt/m/n/10.95 <rel:HasProfession rdf:resource="http://example.org/Au
+thor"/>[] 
+ []
+
+<torrance2.png, id=136, 687.56876pt x 180.675pt>
+File: torrance2.png Graphic file (type png)
+ <use torrance2.png>
+Package pdftex.def Info: torrance2.png used on input line 223.
+(pdftex.def)             Requested size: 343.78354pt x 90.33727pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[4 <./JackTorrance.png>]
+Overfull \hbox (10.43317pt too wide) in paragraph at lines 258--272
+\T1/lmr/m/n/10.95 (-20) Yleinen ta-pa il-mais-ta on-to-lo-gioi-ta on OWL(Web On
+-to-lo-gy Language)-ontologiat.
+ []
+
+[5 <./torrance2.png>]
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 289.
 
  (/usr/share/texmf/tex/latex/lm/omslmr.fd
 File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 150.
- [5]
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 174.
-
-
-(/usr/share/texmf/tex/latex/lm/t1lmtt.fd
-File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-Overfull \hbox (25.16515pt too wide) in paragraph at lines 184--184
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 289.
+ [6]
+Overfull \hbox (25.16515pt too wide) in paragraph at lines 355--355
 []    \T1/lmtt/m/n/10.95 xmlns ="http://www.w3.org/TR/2004/REC-owl-guide-200402
 10/wine#"[] 
  []
 
 
-Overfull \hbox (48.16008pt too wide) in paragraph at lines 184--184
+Overfull \hbox (48.16008pt too wide) in paragraph at lines 355--355
 []    \T1/lmtt/m/n/10.95 xmlns:vin ="http://www.w3.org/TR/2004/REC-owl-guide-20
 040210/wine#"[] 
  []
 
 
-Overfull \hbox (48.16008pt too wide) in paragraph at lines 184--184
+Overfull \hbox (48.16008pt too wide) in paragraph at lines 355--355
 []    \T1/lmtt/m/n/10.95 xml:base  ="http://www.w3.org/TR/2004/REC-owl-guide-20
 040210/wine#"[] 
  []
 
 
-Overfull \hbox (48.16008pt too wide) in paragraph at lines 184--184
+Overfull \hbox (48.16008pt too wide) in paragraph at lines 355--355
 []    \T1/lmtt/m/n/10.95 xmlns:food="http://www.w3.org/TR/2004/REC-owl-guide-20
 040210/food#"[] 
  []
 
-(./web_ontology_language.bbl
+[7] (./web_ontology_language.bbl
 babelbib: Using the BibTeX style's default font for `name'.
 babelbib: Using the BibTeX style's default font for `lastname'.
 babelbib: Using the BibTeX style's default font for `title'.
@@ -935,36 +960,36 @@ babelbib: Using the BibTeX style's default font for `ISBN'.
 babelbib: Using the BibTeX style's default font for `ISSN'.
 babelbib: Using the BibTeX style's default font for `url'.
 babelbib: Using the BibTeX style's default font for `numeral'.
-[6])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 204.
- [7]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 204.
+)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 381.
+ [8]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 381.
  (./web_ontology_language.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 204.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 204.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 381.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 381.
 Package rerunfilecheck Info: File `web_ontology_language.out' has not changed.
-(rerunfilecheck)             Checksum: F6B511B953DAEE0C064E3C08F172F3D1;916.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 204.
+(rerunfilecheck)             Checksum: 5A47361556487B3FD705F7C21285238A;1598.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 381.
  ) 
 Here is how much of TeX's memory you used:
- 9608 strings out of 493481
- 142121 string characters out of 3143393
- 267321 words of memory out of 3000000
- 12616 multiletter control sequences out of 15000+200000
- 49797 words of font info for 89 fonts, out of 3000000 for 9000
+ 9652 strings out of 493481
+ 142757 string characters out of 3143393
+ 267553 words of memory out of 3000000
+ 12638 multiletter control sequences out of 15000+200000
+ 50223 words of font info for 93 fonts, out of 3000000 for 9000
  965 hyphenation exceptions out of 8191
- 32i,8n,35p,1335b,586s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dv
-ips/lm/lm-mathsy.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/s
+ 32i,8n,35p,272b,494s stack positions out of 5000i,500n,10000p,200000b,50000s
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/en
+c/dvips/lm/lm-ec.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/s
 hare/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/publi
 c/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/te
 xmf/fonts/type1/public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmri
 10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fon
 ts/type1/public/lm/lmtt10.pfb>
-Output written on web_ontology_language.pdf (8 pages, 211138 bytes).
+Output written on web_ontology_language.pdf (9 pages, 240448 bytes).
 PDF statistics:
- 176 PDF objects out of 1000 (max. 8388607)
- 156 compressed objects within 2 object streams
- 26 named destinations out of 1000 (max. 500000)
- 14441 words of extra memory for PDF output out of 17280 (max. 10000000)
+ 231 PDF objects out of 1000 (max. 8388607)
+ 207 compressed objects within 3 object streams
+ 37 named destinations out of 1000 (max. 500000)
+ 14499 words of extra memory for PDF output out of 17280 (max. 10000000)
 

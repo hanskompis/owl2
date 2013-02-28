@@ -44,3 +44,15 @@ author={McGuinness, Deborah L and Van Harmelen, Frank},
 editor={McGuinness, Deborah L and Harmelen, Frank VanEditors}, 
 year={2004}, 
 pages={1--22}}
+
+@article{RDFP, 
+title={RDF Primer}, 
+volume={10}, 
+url={http://www.w3.org/TR/rdf-primer/}, 
+number={February}, 
+journal={W3C Recommendation}, 
+publisher={W3C}, 
+author={Manola, Frank and Miller, Eric}, 
+editor={Manola, Frank and Miller, EricEditors}, 
+year={2004}, 
+pages={1--107}}

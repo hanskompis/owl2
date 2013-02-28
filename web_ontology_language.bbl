@@ -31,6 +31,21 @@
 \newblock {\latintext
   \btxurlfont{http://www.nature.com/doifinder/10.1038/scientificamerican0501-34}}.
 
+\bibitem {RDFS}
+\btxnamefont {\btxlastnamefont {Brickley}, Dan} \btxandlong {}\ \btxnamefont
+  {\btxlastnamefont {Guha}, R\btxfnamespacelong V}\btxauthorcolon\
+  \btxjtitlefont {\btxifchangecase {Rdf vocabulary description language 1.0:
+  Rdf schema}{RDF Vocabulary Description Language 1.0: RDF Schema}}.
+\newblock \btxjournalfont {W3C Recommendation}, 2009(10 February 2004), 2004.
+\newblock {\latintext \btxurlfont{http://www.w3.org/TR/rdf-schema/}}.
+
+\bibitem {RDFP}
+\btxnamefont {\btxlastnamefont {Manola}, Frank} \btxandlong {}\ \btxnamefont
+  {\btxlastnamefont {Miller}, Eric}\btxauthorcolon\ \btxjtitlefont
+  {\btxifchangecase {Rdf primer}{RDF Primer}}.
+\newblock \btxjournalfont {W3C Recommendation}, 10(February):1--107, 2004.
+\newblock {\latintext \btxurlfont{http://www.w3.org/TR/rdf-primer/}}.
+
 \bibitem {MH04}
 \btxnamefont {\btxlastnamefont {McGuinness}, Deborah\btxfnamespacelong L}
   \btxandlong {}\ \btxnamefont {\btxlastnamefont {Van~Harmelen},

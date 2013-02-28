@@ -11,15 +11,19 @@
 % the language, see below if you need to change any of these manually.
 % 
 % Class options:
-% - grading                 -- Print labels for grading information on the front page.
-% - disablelastpagecounter  -- Disables the automatic generation of page number information
-%                              in the abstract. See also \numberofpagesinformation{} command below.
+% - grading                 -- Print labels for grading information on the front
+%page.
+% - disablelastpagecounter  -- Disables the automatic generation of page number
+%information
+%                              in the abstract. See also
+%\numberofpagesinformation{} command below.
 %
 % The class also respects the following options of article class:
 %   10pt, 11pt, 12pt, final, draft, oneside, twoside,
 %   openright, openany, onecolumn, twocolumn, leqno, fleqn
 %
-% The default font size is 11pt. The paper size used is A4, other sizes are not supported.
+% The default font size is 11pt. The paper size used is A4, other sizes are not
+%supported.
 %
 % rubber: module pdftex
 
@@ -80,25 +84,30 @@
 % The following can be used to specify keywords and classification of the paper:
 
 \keywords{avainsana 1, avainsana 2, avainsana 3}
-\classification{} % classification according to ACM Computing Classification System (http://www.acm.org/about/class/)
+\classification{} % classification according to ACM Computing Classification
+%System (http://www.acm.org/about/class/)
                   % This is probably mostly relevant for computer scientists
 
 % If the automatic page number counting is not working as desired in your case,
-% uncomment the following to manually set the number of pages displayed in the abstract page:
+% uncomment the following to manually set the number of pages displayed in the
+%abstract page:
 %
 % \numberofpagesinformation{16 sivua + 10 sivua liitteissä}
 %
-% If you are not a computer scientist, you will want to uncomment the following by hand and specify
+% If you are not a computer scientist, you will want to uncomment the following
+%by hand and specify
 % your department, faculty and subject by hand:
 %
 % \faculty{Matemaattis-luonnontieteellinen}
 % \department{Tietojenkäsittelytieteen laitos}
 % \subject{Tietojenkäsittelytiede}
 %
-% If you are not from the University of Helsinki, then you will most likely want to set these also:
+% If you are not from the University of Helsinki, then you will most likely want
+%to set these also:
 %
 % \university{Helsingin Yliopisto}
-% \universitylong{HELSINGIN YLIOPISTO --- HELSINGFORS UNIVERSITET --- UNIVERSITY OF HELSINKI} % displayed on the top of the abstract page
+% \universitylong{HELSINGIN YLIOPISTO --- HELSINGFORS UNIVERSITET --- UNIVERSITY
+%OF HELSINKI} % displayed on the top of the abstract page
 % \city{Helsinki}
 %
 
@@ -117,49 +126,207 @@
 % --- Main matter ---
 
 \section{Semanttinen web}
-Suurin osa tämän päivän webin sisällöstä on tarkoitettu ihmisten luettavaksi sekä tulkittavaksi. Kone pystyy tulkitsemaan esim. html-tiedoston ja esittämään dokumentin siinä määritellyllä tavalla. Ongelma on, että kone ei \textit{ymmärrä} dokumentin sisällön merkitystä, semantiikkaa \cite{BHL01}.Se, että kone ei ymmärrä dokumenttien semanttisia merkityksiä rajoittaa esimerkiksi haut internetissä olevista dokumenteista yksinkertaiseksi hakusanojen etsimiseksi. Sen sijaan jos hakukoneet ymmärtäisivät asioiden merkityksen ja niiden välillä vallitsevat yhteydet, olisi hakukoneiden hakutulokset tarkempia ja sisältäisivät mahdollisesti laajennettuja hakuja alkuperäisen asian ympäriltä \cite{BHL01}. On siis tarve olla menetelmä  käsitteiden luomiseen, käsitteiden ominaisuuksien kuvaamiseen sekä käsitteiden välisten suhteiden kuvaamiseen \cite{BHL01}. Tim Berners-Lee, James Hendler ja Ora Lassila toteavat artikkelissaan "Semantic web", että "semanttinen web ei ole erillinen web vaan laajennos tämänhetkiseen webiin, jossa informaatiolle on annettu hyvin muotoiltu merkitys mahdollistaen koneiden ja ihmisten paremman yhteistyön."  web of documents -> web of data dataa voi parsia manuaalisesti tai koneellisesti
+Suurin osa tämän päivän webin sisällöstä on tarkoitettu ihmisten luettavaksi
+sekä tulkittavaksi. Kone pystyy tulkitsemaan esim. html-tiedoston ja esittämään
+dokumentin siinä määritellyllä tavalla. Ongelma on, että kone ei
+\textit{ymmärrä} dokumentin sisällön merkitystä, semantiikkaa \cite{BHL01}.Se,
+että kone ei ymmärrä dokumenttien semanttisia merkityksiä rajoittaa esimerkiksi
+haut internetissä olevista dokumenteista yksinkertaiseksi hakusanojen
+etsimiseksi. Sen sijaan jos hakukoneet ymmärtäisivät asioiden merkityksen ja
+niiden välillä vallitsevat yhteydet, olisi hakukoneiden hakutulokset tarkempia
+ja sisältäisivät mahdollisesti laajennettuja hakuja alkuperäisen asian ympäriltä
+\cite{BHL01}. On siis tarve olla menetelmä  käsitteiden luomiseen, käsitteiden
+ominaisuuksien kuvaamiseen sekä käsitteiden välisten suhteiden kuvaamiseen
+\cite{BHL01}. Tim Berners-Lee, James Hendler ja Ora Lassila toteavat
+artikkelissaan "Semantic web", että "semanttinen web ei ole erillinen web vaan
+laajennos tämänhetkiseen webiin, jossa informaatiolle on annettu hyvin muotoiltu
+merkitys mahdollistaen koneiden ja ihmisten paremman yhteistyön."  web of
+documents -> web of data dataa voi parsia manuaalisesti tai koneellisesti
 
 \section{Teknologiat ja kielet merkitysten ilmaisuun semanttisessa webissä}
-W3c tarjoaa semanttisen webin toteuttamiseen standardit teknologioista ja kielistä. Kuvassa n on semanttisen webin teknologiapino sekä ajatuskonsepteja semanttisen webin toteuttamiseen. Osa teknologioista on todellisuutta ja käytössä, osa vasta ideatasolla. Jokainen kerros käyttää alemman kerroksen palveluita. Seuraavissa kappaleissa käyn läpi kaavion teknologioita ja kieliä alhaalta ylöspäin kohti OWL:ää.
-
+W3c tarjoaa semanttisen webin toteuttamiseen standardit teknologioista ja
+kielistä. Kuvassa n on semanttisen webin teknologiapino sekä ajatuskonsepteja
+semanttisen webin toteuttamiseen. Osa teknologioista on todellisuutta ja
+käytössä, osa vasta ideatasolla. Jokainen kerros käyttää alemman kerroksen
+palveluita. Seuraavissa kappaleissa käyn läpi kaavion teknologioita ja kieliä
+alhaalta ylöspäin kohti OWL:ää. Jokaisesta seuraavissa kappaleissa esitetystä
+teknologiasta käsitellään tarkemmin ne konstruktiot, jotka ovat olennaisia ja käytössä 
+myös OWL:ssä. 
 \subsection{URI ja XML}
 
-Semanttisessa webissä luokkia, imentymiä, ominaisuuksia ja ominaisuuksien arvoja kutsutaan resursseiksi. Jotta sekaannusta jo määritettyjen resurssien sekä uusien määritysten kanssa ei syntyisi, identifioidaan kaikki resurssit (pl. ominaisuuksien literaaliarvot) yksilöllisesti URI(Unified Resource Locator):lla. URI:n avulla voidaan viitata mihin tahansa määritettyyn resurssiin. Useinmiten URIna toimii perinteinen URL(Unified Resourse Locator)-osoite \cite{BHL01}. IRI (Internationalized Resource Identifier) on ainoastaan merkistölaajennos URI:in.  
+Semanttisessa webissä luokkia, ilmentymiä, ominaisuuksia ja ominaisuuksien
+arvoja kutsutaan resursseiksi. Jotta sekaannusta jo määritettyjen resurssien
+sekä uusien määritysten kanssa ei syntyisi, identifioidaan kaikki resurssit (pl.
+ominaisuuksien literaaliarvot) yksilöllisesti URI(Unified Resource Locator):lla.
+URI:n avulla voidaan viitata mihin tahansa määritettyyn resurssiin. Useinmiten
+URIna toimii perinteinen URL(Unified Resourse Locator)-osoite \cite{BHL01}. IRI
+(Internationalized Resource Identifier) on ainoastaan merkistölaajennos URI:in.
+ 
+Semanttisen webin datan kuvaukset toteutetaan useimmiten XML-tiedostoina.
+XML-kieltä voidaan käyttää monimutkaisen rakenteisen tiedon esittämiseen ja
+tarjoaa näin standardoidun mallin tiedon vaihtamiseen prosessoijien välillä.
+Tärkeä XML:n ominaisuus on nimiavaruudet, jotka mahdollistavat resurssien
+identifioinnin URI:en avulla. Tästä kuitenkin enemmän seuraavissa kappaleissa. 
 
-Semanttisen webin datan kuvaukset toteutetaan useimmiten XML-tiedostoina. XML-kieltä voidaan käyttää monimutkaisen rakenteisen tiedon esittämiseen ja tarjoaa näin standardoidun mallin tiedon vaihtamiseen prosessoijien välillä.  
 \subsection{Tiedon esittäminen RDF-triploilla}
-Tapa, jolla ilmaistaan asioiden ominaisuuksia webissä on tripla. Triplassä on subjekti, predikaatti ja objekti, joilla voidaan ilmaista asiayhteyksiä kuten 'hauki(subjekti) on(predikaatti) kala(objekti)'. Triploja voidaan ilmaista XML (Extensive Markup Language)-kieleen perustuvalla RDF(Resource Description Framework)-kielellä. ***identifiointi URI:lla*****Triploilla ilmaistuista datasta muodostuu varkkotietokanta, josta hakuja tekemällä voidaan hakea tietoa monipuolisilla tavoilla. Tämä verkkotietokanta ei sinällään ole vielä riittävä, koska siinä on ainoastaan talletettuna tietoa asioiden välisistä yhteyksistä, ei merkityksiä. RDF-triploilla ei ole mahdollista tallettaa semantiikoita \cite{BHL01}. 
+
+Resource Description Framework RDF on kieli webissä olevien resurssien
+kuvaamiseen. 
+RDF perustuu asioiden identifiointiin URI:lla ja näiden asioiden kuvaamiseen 
+ominaisuuksilla ja ominaisuuksien arvoilla. Tämä mahdollistaa yksinkertaisten
+lausumien 
+esittämisen verkkoina, joissa resurssit ja ominaisuudet ovat soluja ja
+ominaisuudet verkon 
+kaaria \cite{RDFP}. Kuvassa \ref{jack} on havainnollistettu asiaa. 
+
+\begin{figure}[h]
+ \centering
+ \includegraphics[scale=0.50]{JackTorrance.png}
+ \caption{RDF-tripla joka kuvaa yksinkertaisen lausuman. Jokainen triplan solmu
+ja kaari on identifioitu URI:lla. }
+ \label{jack}
+\end{figure}
+
+Kuvassa \ref{jack} on havainnollistettu yksinkertainen \textit{RDF-tripla}.
+Triplan 
+subjekti, predikaatti ja objekti kertovat, että "Jack Torrance on ammatiltaan
+kirjailija".
+Jokainen solu ja kaari on esimerkissä identifioitu URI:lla. Objekti voi olla
+myös literaali, jolloin 
+sitä ei identifioida erikseen, mutta formaatti määritellään ****NIIN VITTU
+MILLÄ?*****
+
+Yleisin tapa esittää tripla on XML-notaatio. Myös muut tavat ovat mahdollisia,
+kuten 
+esimerkiksi \textit{JSON} ja \textit{turtle}. Alla on esitetty kuvassa
+\ref{jack} triplan XML-notaatio:
+\begin{verbatim}
+<rdf:Description rdf:about="http://example.org/JackTorrance">
+    <rel:HasProfession rdf:resource="http://example.org/Author"/>
+</rdf:Description>
+\end{verbatim}
+
+Esimerkistä näkee selvästi, kuinka subjekti, predikaatti ja objekti ovat
+identifioitu
+URI:lla. Jack Torrance on toiselta ammatiltaan talonmies ja myös Laila Hietamies
+on 
+ammatiltaan kirjailija. Kun myös nämä triplat kuvataan samaan kaavioon, alkaa
+pieni 
+mutta informatiivinen verkkkuva ja selitys triploista ja URI:sta? Kyllä, tähän se sopisi kokoavana
+elementtinä.
+o syntyä, kuva \ref{jack2}. Tästä verkosta voisimme
+tehdä hakuja, kuten 
+"ketkä ovat kirjailijoita?".
+
+\begin{figure}[h]
+ \centering
+ \includegraphics[scale=0.50]{torrance2.png}
+ \caption{RDF-triplat muodostavat verkon.}
+ \label{jack2}
+\end{figure}
+
+RDF tarjoaa siis vain melko alkeellisen tavan esittää lausumia, jotka
+muodostavat
+haut mahdollistavan verkon. RDF toteuttaa myös joukon muita ominaisuuksia, kuten
+\textit{säiliöitä} (container) tiedon säilömiseen sekä
+\textit{kokoomatietorakenteita}
+(collections) asioiden listaamiseen \cite{RDFP}. Näitä käsitellään myöhemmin
+niiltä osin 
+kuin ne ovat relevantteja OWL-ontologioiden muodostamisessa.  
+ 
 \subsection{Alkeelliset ontologiat RDF Schemalla}
-Semantiikkaa voidaan webissä ilmaista ontologioilla. Tietojenkäsittelytieteessä ontologialla tarkoitetaan dokumenttia, jossa kerrrotaan asioiden välisistä yhteyksistä \cite{BHL01}. 
-Yleinen tapa ilmaista ontologioita on OWL(Web Ontology Language)-ontologiat. OWL-ontologioissa määritellään sovellusalueen luokkia, ominaisuuksia, luokkien ilmentymiä eli instansseja  sekä instanssien välisiä suhteita \cite{SWM04}. Ontologoiden pohjalta on mahdollista päätellä implisiittisiä asioiden ilmentymien välisiä suhteita. Eräs tapa hahmottaa RDF-triplojen ja OWL-ontologioiden välinen ero on verrata niitä perinteiseen relaatiotietokantaan. RDF-triplat on tapa tallettaa tietoa samalla tavalla kuin relaatiotietokannan riveillä tallennetaan rakenteista tietoa. Jokaista riviä yksilöi yksilöivä avain kun taas RDF-triploissa yksilöinnin takee URI(Uniform Resource Identifier). Vastaavasti asioiden välisiä suhteita kuvataan OWL-ontologioilla samalla tavalla kuin relaatiotietokannan tauluissa suhteita ilmaistaan taulurakenteilla ja viitteillä tauluista toiseen. 
+Semantiikkaa voidaan webissä ilmaista ontologioilla. Tietojenkäsittelytieteessä
+ontologialla tarkoitetaan dokumenttia, jossa kerrrotaan asioiden välisistä
+yhteyksistä \cite{BHL01}. ***vajaa läppä!!*******
+
+RDF:llä ilmaistut ominaisuudet voidaan ajatella resurssien attribuuteiksi
+samassa mielessä kuin perinteiset attribuutti-arvo -parit \cite{RDFS}. Vaikka 
+RDF:llä voidaan kuvata resursseja, se ei tarjoa keinoja kuvata ominaisuuksia tai
+ominaisuuksien välisiä suhteita. Tämä on mahdollista RDF:n \textit{sanastonkuvauslaajennoksella}
+RDF Schemalla. RDF Schemalla on mahdollista määritellä luokkia ja ominaisuuksia
+joita voidaan käyttää luokkien, ominaisuuksien ja resurssien kuvaamiseen \cite{RDFS}. 
+RDF Schema on RDF:n semanttinen laajennos. Seuraavassa esitellään RDF Scheman peruskonstruktiot, 
+koska myös OWL käyttää niitä lähes sellaisenaan.
+
+\subsection{Luokan jäsenet ovat sen ilmentymiä, rdf:type}
+\subsection{Luokalla on aliluokkia, rdf:subClassOf}
+\subsection{Ominaisuuksilla on aliominaisuuksia, rdf:subPropertyOf}
+\subsection{Ominaisuuden sovellusaluetta ja sallittuja arvoja voi rajoittaa, rdfs:range ja rdfs:domain}
+
+
 \subsection{Kehittyneitä ontologioita OWL:llä}
-RDF on kuin kieli jolla ilmaistaan asioita kun taas OWL on sanasto, jonka avulla merkitykset ymmärretään. 
 
-teknologiastäkki?
+Yleinen tapa ilmaista ontologioita on OWL(Web Ontology Language)-ontologiat.
+OWL-ontologioissa määritellään sovellusalueen luokkia, ominaisuuksia, luokkien
+ilmentymiä eli instansseja  sekä instanssien välisiä suhteita \cite{SWM04}.
+Ontologoiden pohjalta on mahdollista päätellä implisiittisiä asioiden
+ilmentymien välisiä suhteita. Eräs tapa hahmottaa RDF-triplojen ja
+OWL-ontologioiden välinen ero on verrata niitä perinteiseen
+relaatiotietokantaan. RDF-triplat on tapa tallettaa tietoa samalla tavalla kuin
+relaatiotietokannan riveillä tallennetaan rakenteista tietoa. Jokaista riviä
+yksilöi yksilöivä avain kun taas RDF-triploissa yksilöinnin takee URI(Uniform
+Resource Identifier). Vastaavasti asioiden välisiä suhteita kuvataan
+OWL-ontologioilla samalla tavalla kuin relaatiotietokannan tauluissa suhteita
+ilmaistaan taulurakenteilla ja viitteillä tauluista toiseen. 
+RDF on kuin kieli jolla ilmaistaan asioita kun taas OWL on sanasto, jonka avulla
+merkitykset ymmärretään. 
 
-kuva ja selitys triploista ja URI:sta? Kyllä, tähän se sopisi kokoavana elementtinä.
+kuva ja selitys triploista ja URI:sta? Kyllä, tähän se sopisi kokoavana
+elementtinä.
 
 
 \section{OWL Web Ontology Language}
 
-mitä owl tarjoaa? syntaksi, semantiikka, tuki päättelylle, ilmaisuvoimaa, käytettävyyttä
+mitä owl tarjoaa? syntaksi, semantiikka, tuki päättelylle, ilmaisuvoimaa,
+käytettävyyttä
 Description Logics
 \subsection{RDF:n ja RDF Scheman rajoitukset}
-RDF/RDFS:ssä on toteutettu luokka (class) ja sen aliluokka (subclass), suhde (property) ja siitä periytynyt alisuhde (subproperty), suhteen sovellusalue ja arvorajoitukset sekä luokkien ilmentymien väliset suhteet \cite{AH09}. Mutta useita tarpeellisia ominaisuuksia puuttuu, jotka on toteutettu OWL:ssä, esimerkiksi \cite{AH09}:
+RDF/RDFS:ssä on toteutettu luokka (class) ja sen aliluokka (subclass), suhde
+(property) ja siitä periytynyt alisuhde (subproperty), suhteen sovellusalue ja
+arvorajoitukset sekä luokkien ilmentymien väliset suhteet \cite{AH09}. Mutta
+useita tarpeellisia ominaisuuksia puuttuu, jotka on toteutettu OWL:ssä,
+esimerkiksi \cite{AH09}:
 \begin{itemize}
- \item \textit{Rajoitukset suhteen kohteessa}: (WTF?) RDFS:ssä voidaan määritellä rajoituksia, mitä arvoja tai muita luokkia suhteen objektiksi voidaan asettaa. Kuitenkaan ei ole mahdollista määrätä rajoitteita sen suhteen, onko jotkut rajoitteet voimassa vain rajatulle joukolle luokkia. 
- \item \textit{Luokkien poissulkevuus}: joissain tapauksissa on hyvä pystyä sanomaan, että joku luokka on poissulkeva toisen luokan suhteen. Voidaan sanoa esimerkiksi että luokka 'mies' on poissulkeva suhteessa luokkaan 'nainen'
- \item \textit{Luokkien joukko-operaatiot}: toisinaan on tarve muodostaa uusia luokkia olemassaolevien joukkojen perusteella. Esimerkiksi luokka 'henkilö' voitaisiin määritellä luokkien 'mies' ja 'nainen' yhdisteeksi kuitenkin niin, että henkilö voi olla vain joko mies tai nainen (poissulkevuus).
- \item \textit{Suhteiden kardinaliteetit}: joihinkin suhteisiin on hyvä määrittää rajoituksia sen suhteen kuinka monta arvoa arvoksi voi antaa. Esimerkiksi ihmisellä voi olla ainoastaan kaksi vanhempaa.
- \item \textit{Suhteiden erikoisominaisuudet}: suhteet voidaan määritellä \textit{transitiivisiksi, uniikeiksi} jonkun toisen suhteen \textit{inversioksi}. 
+ \item \textit{Rajoitukset suhteen kohteessa}: (WTF?) RDFS:ssä voidaan
+määritellä rajoituksia, mitä arvoja tai muita luokkia suhteen objektiksi voidaan
+asettaa. Kuitenkaan ei ole mahdollista määrätä rajoitteita sen suhteen, onko
+jotkut rajoitteet voimassa vain rajatulle joukolle luokkia. 
+ \item \textit{Luokkien poissulkevuus}: joissain tapauksissa on hyvä pystyä
+sanomaan, että joku luokka on poissulkeva toisen luokan suhteen. Voidaan sanoa
+esimerkiksi että luokka 'mies' on poissulkeva suhteessa luokkaan 'nainen'
+ \item \textit{Luokkien joukko-operaatiot}: toisinaan on tarve muodostaa uusia
+luokkia olemassaolevien joukkojen perusteella. Esimerkiksi luokka 'henkilö'
+voitaisiin määritellä luokkien 'mies' ja 'nainen' yhdisteeksi kuitenkin niin,
+että henkilö voi olla vain joko mies tai nainen (poissulkevuus).
+ \item \textit{Suhteiden kardinaliteetit}: joihinkin suhteisiin on hyvä
+määrittää rajoituksia sen suhteen kuinka monta arvoa arvoksi voi antaa.
+Esimerkiksi ihmisellä voi olla ainoastaan kaksi vanhempaa.
+ \item \textit{Suhteiden erikoisominaisuudet}: suhteet voidaan määritellä
+\textit{transitiivisiksi, uniikeiksi} jonkun toisen suhteen
+\textit{inversioksi}. 
 \end{itemize}
-Tarvitaan siis kieli, joka on rikkaampi kuin RDF Schema \cite{AH09}. OWL:n suunnittelussa on jouduttu tasapainoilemaan kielen ilmaisuvoiman ja sen soveltuvuudesta koneelliseen päättelyyn. Mitä rikkaampi ja ilmaisuvoimaisempi kieli on, sitä hankalampi ja tehottomampi sen pohjalta on päätellä asioita. Pahimmassa tapauksessa päättely muodostuu mahdottomaksi tehtäväksi \cite{AH09}.   
+Tarvitaan siis kieli, joka on rikkaampi kuin RDF Schema \cite{AH09}. OWL:n
+suunnittelussa on jouduttu tasapainoilemaan kielen ilmaisuvoiman ja sen
+soveltuvuudesta koneelliseen päättelyyn. Mitä rikkaampi ja ilmaisuvoimaisempi
+kieli on, sitä hankalampi ja tehottomampi sen pohjalta on päätellä asioita.
+Pahimmassa tapauksessa päättely muodostuu mahdottomaksi tehtäväksi \cite{AH09}. 
+ 
 
-Ideaalisesti OWL on RDF:n ja RDF Scheman laajennos \cite{AH09}. OWL käyttää RDF:n luokkia ja suhteita lisäten niihin omia laajennoksiaan kuten yllä on selitetty. RDF Schemassa on joitain hyvin vahvoja primitiivejä, kuten rfd:Class (kaikkien luokkien yliluokka) sekä rdf:Property (kaikkien suhteiden yliluokka). Näiden primitiivien ilmaisuvoima yhdistettynä yllä luetelluilla laajennoksilla on ristiriidassa sen tavoitteen kanssa, että ontologiat olisivat koneellisesti pääteltävissä. Tämä tasapainotila mielessäpitäen on määritelty kolme OWL:n alikieltä sen perusteella, painotetaanko ilmaisuvoimaa vai koneellista päättelyä \cite{AH09}.  
+Ideaalisesti OWL on RDF:n ja RDF Scheman laajennos \cite{AH09}. OWL käyttää
+RDF:n luokkia ja suhteita lisäten niihin omia laajennoksiaan kuten yllä on
+selitetty. RDF Schemassa on joitain hyvin vahvoja primitiivejä, kuten rfd:Class
+(kaikkien luokkien yliluokka) sekä rdf:Property (kaikkien suhteiden yliluokka).
+Näiden primitiivien ilmaisuvoima yhdistettynä yllä luetelluilla laajennoksilla
+on ristiriidassa sen tavoitteen kanssa, että ontologiat olisivat koneellisesti
+pääteltävissä. Tämä tasapainotila mielessäpitäen on määritelty kolme OWL:n
+alikieltä sen perusteella, painotetaanko ilmaisuvoimaa vai koneellista päättelyä
+\cite{AH09}.  
 
 \subsection{OWL:n kolme alikieltä}
 
-W3C:n Web Ontology Working Group on määritellyt OWL:lle kolme alikieltä, joiden on takoitus toteuttaa eri aspektit (ilmaisuvoima, koneellinen päättely), joita ontologioiden kuvaamiskieleltä vaaditaan \cite{MH04}:
+W3C:n Web Ontology Working Group on määritellyt OWL:lle kolme alikieltä, joiden
+on takoitus toteuttaa eri aspektit (ilmaisuvoima, koneellinen päättely), joita
+ontologioiden kuvaamiskieleltä vaaditaan \cite{MH04}:
 
 \begin{itemize}
  \item \textit{OWL Full}
@@ -170,7 +337,12 @@ W3C:n Web Ontology Working Group on määritellyt OWL:lle kolme alikieltä, joid
 \subsection{OWL-ontologian rakenne}
 
 \subsubsection{Nimiavaruudet}
-XML-dokumentissa tulee määritellä nimiavaruudet (namespace). Nimiavaruuksien avulla voidaan ratkaista mm. samannimisten elementtien aiheuttamia tulkintaongelmia sekä kertoa lukijalle (koneelle tai ihmiselle) konteksti, jonka mukaan elementtien kahvoja tulee tulkita. OWL-ontologiassa nimiavaruudet määritellään rdf:RDF -kahvojen sisään. Alla olevassa esimerkissä on eräs mahdollinen nimiavaruusmäärittely \cite{BHL01}. 
+XML-dokumentissa tulee määritellä nimiavaruudet (namespace). Nimiavaruuksien
+avulla voidaan ratkaista mm. samannimisten elementtien aiheuttamia
+tulkintaongelmia sekä kertoa lukijalle (koneelle tai ihmiselle) konteksti, jonka
+mukaan elementtien kahvoja tulee tulkita. OWL-ontologiassa nimiavaruudet
+määritellään rdf:RDF -kahvojen sisään. Alla olevassa esimerkissä on eräs
+mahdollinen nimiavaruusmäärittely \cite{BHL01}. 
 \begin{verbatim}
 <rdf:RDF 
     xmlns ="http://www.w3.org/TR/2004/REC-owl-guide-20040210/wine#" 
@@ -182,7 +354,13 @@ XML-dokumentissa tulee määritellä nimiavaruudet (namespace). Nimiavaruuksien 
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
     xmlns:xsd ="http://www.w3.org/2001/XMLSchema#">
 \end{verbatim}
-Esimerkin nimiavaruusmäärittelyissä on määritelty oletusnimiavaruus niille kahvoille, joissa ei käyteä mitään etuliitettä sekä nimiavaruudet niille kahvoille, joissa käytetään etuliitteitä vin: tai food:. Nimiavaruudet on määritelty myös owl:-, rdf:- ja rdfs:-etuliiteille kertomaan, että näillä etuliitteillä varustetut kahvat edustavat OWL:n, RDF:n ja RDFS:n termistöä. OWL-ontologia on riippuvainen myös XMLSchema-datatyypeistä, joten myös niiden nimiavaruus tulee määrittää. 
+Esimerkin nimiavaruusmäärittelyissä on määritelty oletusnimiavaruus niille
+kahvoille, joissa ei käyteä mitään etuliitettä sekä nimiavaruudet niille
+kahvoille, joissa käytetään etuliitteitä vin: tai food:. Nimiavaruudet on
+määritelty myös owl:-, rdf:- ja rdfs:-etuliiteille kertomaan, että näillä
+etuliitteillä varustetut kahvat edustavat OWL:n, RDF:n ja RDFS:n termistöä.
+OWL-ontologia on riippuvainen myös XMLSchema-datatyypeistä, joten myös niiden
+nimiavaruus tulee määrittää. 
 \section{OWL2}
 
 

@@ -12,18 +12,18 @@
 % 
 % Class options:
 % - grading                 -- Print labels for grading information on the front
-page.
+%page.
 % - disablelastpagecounter  -- Disables the automatic generation of page number
-information
+%information
 %                              in the abstract. See also
-\numberofpagesinformation{} command below.
+%\numberofpagesinformation{} command below.
 %
 % The class also respects the following options of article class:
 %   10pt, 11pt, 12pt, final, draft, oneside, twoside,
 %   openright, openany, onecolumn, twocolumn, leqno, fleqn
 %
 % The default font size is 11pt. The paper size used is A4, other sizes are not
-supported.
+%supported.
 %
 % rubber: module pdftex
 
@@ -85,17 +85,17 @@ supported.
 
 \keywords{avainsana 1, avainsana 2, avainsana 3}
 \classification{} % classification according to ACM Computing Classification
-System (http://www.acm.org/about/class/)
+%System (http://www.acm.org/about/class/)
                   % This is probably mostly relevant for computer scientists
 
 % If the automatic page number counting is not working as desired in your case,
 % uncomment the following to manually set the number of pages displayed in the
-abstract page:
+%abstract page:
 %
 % \numberofpagesinformation{16 sivua + 10 sivua liitteissä}
 %
 % If you are not a computer scientist, you will want to uncomment the following
-by hand and specify
+%by hand and specify
 % your department, faculty and subject by hand:
 %
 % \faculty{Matemaattis-luonnontieteellinen}
@@ -103,11 +103,11 @@ by hand and specify
 % \subject{Tietojenkäsittelytiede}
 %
 % If you are not from the University of Helsinki, then you will most likely want
-to set these also:
+%to set these also:
 %
 % \university{Helsingin Yliopisto}
 % \universitylong{HELSINGIN YLIOPISTO --- HELSINGFORS UNIVERSITET --- UNIVERSITY
-OF HELSINKI} % displayed on the top of the abstract page
+%OF HELSINKI} % displayed on the top of the abstract page
 % \city{Helsinki}
 %
 
@@ -149,13 +149,14 @@ kielistä. Kuvassa n on semanttisen webin teknologiapino sekä ajatuskonsepteja
 semanttisen webin toteuttamiseen. Osa teknologioista on todellisuutta ja
 käytössä, osa vasta ideatasolla. Jokainen kerros käyttää alemman kerroksen
 palveluita. Seuraavissa kappaleissa käyn läpi kaavion teknologioita ja kieliä
-alhaalta ylöspäin kohti OWL:ää.
-
+alhaalta ylöspäin kohti OWL:ää. Jokaisesta seuraavissa kappaleissa esitetystä
+teknologiasta käsitellään tarkemmin ne konstruktiot, jotka ovat olennaisia ja käytössä 
+myös OWL:ssä. 
 \subsection{URI ja XML}
 
-Semanttisessa webissä luokkia, imentymiä, ominaisuuksia ja ominaisuuksien arvoja
-kutsutaan resursseiksi. Jotta sekaannusta jo määritettyjen resurssien sekä
-uusien määritysten kanssa ei syntyisi, identifioidaan kaikki resurssit (pl.
+Semanttisessa webissä luokkia, ilmentymiä, ominaisuuksia ja ominaisuuksien
+arvoja kutsutaan resursseiksi. Jotta sekaannusta jo määritettyjen resurssien
+sekä uusien määritysten kanssa ei syntyisi, identifioidaan kaikki resurssit (pl.
 ominaisuuksien literaaliarvot) yksilöllisesti URI(Unified Resource Locator):lla.
 URI:n avulla voidaan viitata mihin tahansa määritettyyn resurssiin. Useinmiten
 URIna toimii perinteinen URL(Unified Resourse Locator)-osoite \cite{BHL01}. IRI
@@ -164,27 +165,98 @@ URIna toimii perinteinen URL(Unified Resourse Locator)-osoite \cite{BHL01}. IRI
 Semanttisen webin datan kuvaukset toteutetaan useimmiten XML-tiedostoina.
 XML-kieltä voidaan käyttää monimutkaisen rakenteisen tiedon esittämiseen ja
 tarjoaa näin standardoidun mallin tiedon vaihtamiseen prosessoijien välillä.
-Tärkeä XML:n ominaisuus on nimiavaruudet, jotka mahdollistavat resurssien identifioinnin URI:en avulla. Tästä kuitenkin enemmän seuraavissa kappaleissa. 
+Tärkeä XML:n ominaisuus on nimiavaruudet, jotka mahdollistavat resurssien
+identifioinnin URI:en avulla. Tästä kuitenkin enemmän seuraavissa kappaleissa. 
 
 \subsection{Tiedon esittäminen RDF-triploilla}
 
-Resource Description Framework RDF on kieli webissä olevien resurssien kuvaamiseen. RDF käyttää apunaan XML:n syntaksia. 
-RDF:n avulla voidaan kuvata URI:lla identifioituja resursseja yksinkertaisilla ominaisuuksilla, jotka ovat myös URI-identifioituja sekä antaa ominaisuuksille arvoja, jotka voivat myös olla URI-identifioituja. ****jatka tästä kalvojen rahtiin, w3c:n standardia lainaillen****
-RDF is based on the idea of identifying things using Web identifiers (called Uniform Resource Identifiers, or URIs), and describing resources in terms of simple properties and property values. This enables RDF to represent simple statements about resources as a graph of nodes and arcs representing the resources, and their properties and values.
-Tapa, jolla ilmaistaan asioiden ominaisuuksia webissä on tripla. Triplassä on
-subjekti, predikaatti ja objekti, joilla voidaan ilmaista asiayhteyksiä kuten
-'hauki(subjekti) on(predikaatti) kala(objekti)'. Triploja voidaan ilmaista XML
-(Extensive Markup Language)-kieleen perustuvalla RDF(Resource Description
-Framework)-kielellä. Triploilla ilmaistuista
-datasta muodostuu varkkotietokanta, josta hakuja tekemällä voidaan hakea tietoa
-monipuolisilla tavoilla. Tämä verkkotietokanta ei sinällään ole vielä riittävä,
-koska siinä on ainoastaan talletettuna tietoa asioiden välisistä yhteyksistä, ei
-merkityksiä. RDF-triploilla ei ole mahdollista tallettaa semantiikoita
-\cite{BHL01}. 
+Resource Description Framework RDF on kieli webissä olevien resurssien
+kuvaamiseen. 
+RDF perustuu asioiden identifiointiin URI:lla ja näiden asioiden kuvaamiseen 
+ominaisuuksilla ja ominaisuuksien arvoilla. Tämä mahdollistaa yksinkertaisten
+lausumien 
+esittämisen verkkoina, joissa resurssit ja ominaisuudet ovat soluja ja
+ominaisuudet verkon 
+kaaria \cite{RDFP}. Kuvassa \ref{jack} on havainnollistettu asiaa. 
+
+\begin{figure}[h]
+ \centering
+ \includegraphics[scale=0.50]{JackTorrance.png}
+ \caption{RDF-tripla joka kuvaa yksinkertaisen lausuman. Jokainen triplan solmu
+ja kaari on identifioitu URI:lla. }
+ \label{jack}
+\end{figure}
+
+Kuvassa \ref{jack} on havainnollistettu yksinkertainen \textit{RDF-tripla}.
+Triplan 
+subjekti, predikaatti ja objekti kertovat, että "Jack Torrance on ammatiltaan
+kirjailija".
+Jokainen solu ja kaari on esimerkissä identifioitu URI:lla. Objekti voi olla
+myös literaali, jolloin 
+sitä ei identifioida erikseen, mutta formaatti määritellään ****NIIN VITTU
+MILLÄ?*****
+
+Yleisin tapa esittää tripla on XML-notaatio. Myös muut tavat ovat mahdollisia,
+kuten 
+esimerkiksi \textit{JSON} ja \textit{turtle}. Alla on esitetty kuvassa
+\ref{jack} triplan XML-notaatio:
+\begin{verbatim}
+<rdf:Description rdf:about="http://example.org/JackTorrance">
+    <rel:HasProfession rdf:resource="http://example.org/Author"/>
+</rdf:Description>
+\end{verbatim}
+
+Esimerkistä näkee selvästi, kuinka subjekti, predikaatti ja objekti ovat
+identifioitu
+URI:lla. Jack Torrance on toiselta ammatiltaan talonmies ja myös Laila Hietamies
+on 
+ammatiltaan kirjailija. Kun myös nämä triplat kuvataan samaan kaavioon, alkaa
+pieni 
+mutta informatiivinen verkkkuva ja selitys triploista ja URI:sta? Kyllä, tähän se sopisi kokoavana
+elementtinä.
+o syntyä, kuva \ref{jack2}. Tästä verkosta voisimme
+tehdä hakuja, kuten 
+"ketkä ovat kirjailijoita?".
+
+\begin{figure}[h]
+ \centering
+ \includegraphics[scale=0.50]{torrance2.png}
+ \caption{RDF-triplat muodostavat verkon.}
+ \label{jack2}
+\end{figure}
+
+RDF:n peruskonstruktioita ovat: 
+
+RDF tarjoaa siis vain melko alkeellisen tavan esittää lausumia, jotka
+muodostavat haut mahdollistavan verkon. RDF toteuttaa myös joukon muita ominaisuuksia, kuten
+\textit{säiliöitä} (container) tiedon säilömiseen sekä
+\textit{kokoomatietorakenteita}
+(collections) asioiden listaamiseen \cite{RDFP}. Näitä käsitellään myöhemmin
+niiltä osin 
+kuin ne ovat relevantteja OWL-ontologioiden muodostamisessa.  
+ 
 \subsection{Alkeelliset ontologiat RDF Schemalla}
 Semantiikkaa voidaan webissä ilmaista ontologioilla. Tietojenkäsittelytieteessä
 ontologialla tarkoitetaan dokumenttia, jossa kerrrotaan asioiden välisistä
-yhteyksistä \cite{BHL01}. 
+yhteyksistä \cite{BHL01}. ***vajaa läppä!!*******
+
+RDF:llä ilmaistut ominaisuudet voidaan ajatella resurssien attribuuteiksi
+samassa mielessä kuin perinteiset attribuutti-arvo -parit \cite{RDFS}. Vaikka 
+RDF:llä voidaan kuvata resursseja, se ei tarjoa keinoja kuvata ominaisuuksia tai
+ominaisuuksien välisiä suhteita. Tämä on mahdollista RDF:n \textit{sanastonkuvauslaajennoksella}
+RDF Schemalla. RDF Schemalla on mahdollista määritellä luokkia ja ominaisuuksia
+joita voidaan käyttää luokkien, ominaisuuksien ja resurssien kuvaamiseen \cite{RDFS}. 
+RDF Schema on RDF:n semanttinen laajennos. Seuraavassa esitellään RDF Scheman peruskonstruktiot, 
+koska myös OWL käyttää niitä lähes sellaisenaan.
+
+\subsubsection{Resurssit voidaan ryhmitellä luokiksi, rdfs:Class}
+\subsubsection{Ominaisuuksien yliluokka, rdf:Property}
+\subsubsection{Luokan jäsenet ovat sen ilmentymiä, rdf:type}
+\subsubsection{Luokalla on aliluokkia, rdf:subClassOf}
+\subsubsection{Ominaisuuksilla on aliominaisuuksia, rdf:subPropertyOf}
+\subsubsection{Ominaisuuden sovellusaluetta ja sallittuja arvoja voi rajoittaa, rdfs:range ja rdfs:domain}
+\subsection{Kehittyneitä ontologioita OWL:llä}
+
 Yleinen tapa ilmaista ontologioita on OWL(Web Ontology Language)-ontologiat.
 OWL-ontologioissa määritellään sovellusalueen luokkia, ominaisuuksia, luokkien
 ilmentymiä eli instansseja  sekä instanssien välisiä suhteita \cite{SWM04}.
@@ -197,11 +269,8 @@ yksilöi yksilöivä avain kun taas RDF-triploissa yksilöinnin takee URI(Unifor
 Resource Identifier). Vastaavasti asioiden välisiä suhteita kuvataan
 OWL-ontologioilla samalla tavalla kuin relaatiotietokannan tauluissa suhteita
 ilmaistaan taulurakenteilla ja viitteillä tauluista toiseen. 
-\subsection{Kehittyneitä ontologioita OWL:llä}
 RDF on kuin kieli jolla ilmaistaan asioita kun taas OWL on sanasto, jonka avulla
 merkitykset ymmärretään. 
-
-teknologiastäkki?
 
 kuva ja selitys triploista ja URI:sta? Kyllä, tähän se sopisi kokoavana
 elementtinä.
