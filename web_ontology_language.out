@@ -1,19 +1,18 @@
 \BOOKMARK [1][-]{section.1}{Semanttinen web}{}% 1
-\BOOKMARK [1][-]{section.2}{Teknologiat ja kielet merkitysten ilmaisuun semanttisessa webiss\344}{}% 2
+\BOOKMARK [1][-]{section.2}{Teknologiat ja kielet jotka mahdollistavat OWL:n}{}% 2
 \BOOKMARK [2][-]{subsection.2.1}{URI ja XML}{section.2}% 3
 \BOOKMARK [2][-]{subsection.2.2}{Tiedon esitt\344minen RDF-triploilla}{section.2}% 4
 \BOOKMARK [2][-]{subsection.2.3}{Alkeelliset ontologiat RDF Schemalla}{section.2}% 5
-\BOOKMARK [3][-]{subsubsection.2.3.1}{Resurssit voidaan ryhmitell\344 luokiksi, rdfs:Class}{subsection.2.3}% 6
-\BOOKMARK [3][-]{subsubsection.2.3.2}{Ominaisuuksien yliluokka, rdf:Property}{subsection.2.3}% 7
-\BOOKMARK [3][-]{subsubsection.2.3.3}{Luokan j\344senet ovat sen ilmentymi\344, rdf:type}{subsection.2.3}% 8
-\BOOKMARK [3][-]{subsubsection.2.3.4}{Luokalla on aliluokkia, rdf:subClassOf}{subsection.2.3}% 9
-\BOOKMARK [3][-]{subsubsection.2.3.5}{Ominaisuuksilla on aliominaisuuksia, rdf:subPropertyOf}{subsection.2.3}% 10
-\BOOKMARK [3][-]{subsubsection.2.3.6}{Ominaisuuden sovellusaluetta ja sallittuja arvoja voi rajoittaa, rdfs:range ja rdfs:domain}{subsection.2.3}% 11
-\BOOKMARK [2][-]{subsection.2.4}{Kehittyneit\344 ontologioita OWL:ll\344}{section.2}% 12
-\BOOKMARK [1][-]{section.3}{OWL Web Ontology Language}{}% 13
-\BOOKMARK [2][-]{subsection.3.1}{RDF:n ja RDF Scheman rajoitukset}{section.3}% 14
-\BOOKMARK [2][-]{subsection.3.2}{OWL:n kolme alikielt\344}{section.3}% 15
-\BOOKMARK [2][-]{subsection.3.3}{OWL-ontologian rakenne}{section.3}% 16
-\BOOKMARK [3][-]{subsubsection.3.3.1}{Nimiavaruudet}{subsection.3.3}% 17
-\BOOKMARK [1][-]{section.4}{OWL2}{}% 18
-\BOOKMARK [1][-]{section*.2}{L\344hteet}{}% 19
+\BOOKMARK [3][-]{subsubsection.2.3.1}{Luokat ja ilmentym\344t}{subsection.2.3}% 6
+\BOOKMARK [3][-]{subsubsection.2.3.2}{Luokan aliluokka}{subsection.2.3}% 7
+\BOOKMARK [3][-]{subsubsection.2.3.3}{Ominaisuudet ja periytetyt ominaisuudet}{subsection.2.3}% 8
+\BOOKMARK [3][-]{subsubsection.2.3.4}{Rajoitukset ominaisuuksien sovellusalueissa ja arvoissa}{subsection.2.3}% 9
+\BOOKMARK [3][-]{subsubsection.2.3.5}{RDF Schema esimerkki}{subsection.2.3}% 10
+\BOOKMARK [1][-]{section.3}{Kehittyneit\344 ontologioita OWL:ll\344}{}% 11
+\BOOKMARK [1][-]{section.4}{OWL Web Ontology Language}{}% 12
+\BOOKMARK [2][-]{subsection.4.1}{RDF:n ja RDF Scheman rajoitukset}{section.4}% 13
+\BOOKMARK [2][-]{subsection.4.2}{OWL:n kolme alikielt\344}{section.4}% 14
+\BOOKMARK [2][-]{subsection.4.3}{OWL-ontologian rakenne}{section.4}% 15
+\BOOKMARK [3][-]{subsubsection.4.3.1}{Nimiavaruudet}{subsection.4.3}% 16
+\BOOKMARK [1][-]{section.5}{OWL2}{}% 17
+\BOOKMARK [1][-]{section*.2}{L\344hteet}{}% 18

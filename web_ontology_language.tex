@@ -143,15 +143,23 @@ laajennos tämänhetkiseen webiin, jossa informaatiolle on annettu hyvin muotoil
 merkitys mahdollistaen koneiden ja ihmisten paremman yhteistyön."  web of
 documents -> web of data dataa voi parsia manuaalisesti tai koneellisesti
 
-\section{Teknologiat ja kielet merkitysten ilmaisuun semanttisessa webissä}
+\section{Teknologiat ja kielet jotka mahdollistavat OWL:n}
 W3c tarjoaa semanttisen webin toteuttamiseen standardit teknologioista ja
-kielistä. Kuvassa n on semanttisen webin teknologiapino sekä ajatuskonsepteja
+kielistä. Kuvassa \ref{stack} on semanttisen webin teknologiapino sekä ajatuskonsepteja
 semanttisen webin toteuttamiseen. Osa teknologioista on todellisuutta ja
 käytössä, osa vasta ideatasolla. Jokainen kerros käyttää alemman kerroksen
 palveluita. Seuraavissa kappaleissa käyn läpi kaavion teknologioita ja kieliä
 alhaalta ylöspäin kohti OWL:ää. Jokaisesta seuraavissa kappaleissa esitetystä
 teknologiasta käsitellään tarkemmin ne konstruktiot, jotka ovat olennaisia ja käytössä 
-myös OWL:ssä. 
+myös OWL:ssä.
+
+\begin{figure}[h]
+ \centering
+ \includegraphics[scale=0.50]{stack.png}
+ \caption{Semanttisen webin toteutukseen tarvittavat teknologia, kielet ja konseptit. }
+ \label{stack}
+\end{figure}
+ 
 \subsection{URI ja XML}
 
 Semanttisessa webissä luokkia, ilmentymiä, ominaisuuksia ja ominaisuuksien
@@ -225,7 +233,7 @@ tehdä hakuja, kuten
  \label{jack2}
 \end{figure}
 
-RDF:n peruskonstruktioita ovat: 
+RDF:n peruskonstruktioita ovat: description, resource, about ***selitä nää*****
 
 RDF tarjoaa siis vain melko alkeellisen tavan esittää lausumia, jotka
 muodostavat haut mahdollistavan verkon. RDF toteuttaa myös joukon muita ominaisuuksia, kuten
@@ -238,7 +246,7 @@ kuin ne ovat relevantteja OWL-ontologioiden muodostamisessa.
 \subsection{Alkeelliset ontologiat RDF Schemalla}
 Semantiikkaa voidaan webissä ilmaista ontologioilla. Tietojenkäsittelytieteessä
 ontologialla tarkoitetaan dokumenttia, jossa kerrrotaan asioiden välisistä
-yhteyksistä \cite{BHL01}. ***vajaa läppä!!*******
+yhteyksistä \cite{BHL01}. ***vajaa läppä!! kuuluuko edes tähän???!!*******
 
 RDF:llä ilmaistut ominaisuudet voidaan ajatella resurssien attribuuteiksi
 samassa mielessä kuin perinteiset attribuutti-arvo -parit \cite{RDFS}. Vaikka 
@@ -246,16 +254,58 @@ RDF:llä voidaan kuvata resursseja, se ei tarjoa keinoja kuvata ominaisuuksia ta
 ominaisuuksien välisiä suhteita. Tämä on mahdollista RDF:n \textit{sanastonkuvauslaajennoksella}
 RDF Schemalla. RDF Schemalla on mahdollista määritellä luokkia ja ominaisuuksia
 joita voidaan käyttää luokkien, ominaisuuksien ja resurssien kuvaamiseen \cite{RDFS}. 
-RDF Schema on RDF:n semanttinen laajennos. Seuraavassa esitellään RDF Scheman peruskonstruktiot, 
-koska myös OWL käyttää niitä lähes sellaisenaan.
+RDF Schema on RDF:n semanttinen laajennos. 
 
-\subsubsection{Resurssit voidaan ryhmitellä luokiksi, rdfs:Class}
-\subsubsection{Ominaisuuksien yliluokka, rdf:Property}
-\subsubsection{Luokan jäsenet ovat sen ilmentymiä, rdf:type}
-\subsubsection{Luokalla on aliluokkia, rdf:subClassOf}
-\subsubsection{Ominaisuuksilla on aliominaisuuksia, rdf:subPropertyOf}
-\subsubsection{Ominaisuuden sovellusaluetta ja sallittuja arvoja voi rajoittaa, rdfs:range ja rdfs:domain}
-\subsection{Kehittyneitä ontologioita OWL:llä}
+Seuraavassa esitellään RDF Scheman niitä peruskonstruktioita, 
+joita myös OWL käyttää määrittelyssään lähes sellaisenaan. \emph{RDFS Schema määrittelee myös suurehkon joukon muita konstruktioita, mutta niiden esittely OWL:n selostamisen kannalta on tässä tarpeetonta.} 
+
+\subsubsection{Luokat ja ilmentymät}
+Resurssit voidaan jaotella luokkiin. Luokkien jäseniä nimitetään luokan ilmentymiksi \cite{RDFS}. Luokat ovat itsessään resursseja. Useimmiten luokat identifioidaan RDF:n URI:lla ja niitä voidaan kuvata RDF:n ominaisuuksilla (property). Luokka ilmaistaan rdfs:Class tagilla, rdf:type ominaisuudella voidaan ilmaista, että resurssi kuuluu luokkaan \cite{RDFS}. Esimerkiksi kustannusosakeyhtiö "WSOY" on itse luokka ja  luokan "Kustantamo" ilmentymä:
+\begin{verbatim}
+Esim:WSOY rdf:type rdfs:Class
+Esim:WSOY rdf:type esim:Kustantamo
+\end{verbatim}  
+
+\subsubsection{Luokan aliluokka}
+rdfs:subClassOf ominaisuudella voidaan ilmaista, että jonkin luokan ilmentymät ovat myös jonkin toisen luokan ilmentymiä \cite{RDFS}. Esimerkiksi 
+luokka "Kustantamo" on luokan "Liikeyritys" aliluokka:
+\begin{verbatim}
+esim:Kustantamo rdfs:subClassOf esim:Liikeyritys 
+\end{verbatim}
+
+\subsubsection{Ominaisuudet ja periytetyt ominaisuudet}
+Resursien välisiä suhteita kuvataan ominaisuuksilla. Esimerkiksi "Matilla on veli Teppo". Voidaan ajatella, että resurssien "Matti" ja "Teppo" välinen suhde on ominaisuus "Veljeys". Ominaisuus "Veljeys" voi olla ominaisuuden "Perhesuhde"  aliluokka tai paremminkin aliominaisuus. Tällaisia konstruktioita kuvataan RDF Schemassa termillä subPropertyOf: 
+\begin{verbatim}
+esim:Veljeys rdfs:subPropertyOf esim:Perhesuhde
+\end{verbatim}
+ subPropertyOf ilmaisee määritelmällisesti, että resurssit joiden välistä suhdetta kuvataan jollain suhteella, voidaan kuvata myös tämän suhteen ylisuhteella, josta ko. suhde on periytynyt \cite{RDFS}. 
+\subsubsection{Rajoitukset ominaisuuksien sovellusalueissa ja arvoissa}
+RDF Schemassa on mahdollista antaa ominaisuuksille rajoituksia sen suhteen, että minkä luokkien välistä suhdetta ominaisuus kuvaa. Ensinnäkin
+voidaan rajoittaa suhteen sovellusaluetta (domain). Suhteen  "Työskentelee" sovellusalue voidaan rajata koskemaan ainoastaan luokkaa "Yyöntekijä". Samaten suhteen saamat arvot voidaan rajata olemaan ainoastaan luokan "Yritys" tai sen aliluokkien ilmentymiä. 
+\begin{verbatim}
+esim:Työskentelee rdfs:domain esim:Työntekijä
+esim:Työskentelee rdfs:range esim:Yritys
+\end{verbatim}
+
+\subsubsection{RDF Schema esimerkki}
+Myös RDF Scheman varsinainen notaatio on toteutettu XML:llä. Alla on lyhyt esimerkki RDF Schemalla toteutetusta ontologiasta.: 
+\begin{verbatim}
+<?xml version="1.0"?>
+<rdf:RDF
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+
+<rdfs:Class rdf:ID="liikeyritys" />
+
+<rdfs:Class rdf:ID="kustantamo">
+  <rdfs:subClassOf rdf:resource="#liikeyritys"/>
+</rdfs:Class>
+
+</rdf:RDF>
+\end{verbatim}
+
+Esimerkissä on yksinkertainen ontologia, joka kertoo, että "kustantamo" on luokka ja että ko. luokka on myös luokan "liikeyritys" aliluokka. RDF Schema  -ontologiat ovat RDF-tiedostoja samoin kuin OWL-ontologiatkin. Tiedoston alussa olevat nimiavaruusmäärittelyt varmistavat, että rdf- ja rdfs-alkuisilla tageilla ympäröidyt elementit todellakin ovat rdf- ja rdfs- elementtejä.  
+\section{Kehittyneitä ontologioita OWL:llä}
 
 Yleinen tapa ilmaista ontologioita on OWL(Web Ontology Language)-ontologiat.
 OWL-ontologioissa määritellään sovellusalueen luokkia, ominaisuuksia, luokkien
@@ -271,6 +321,7 @@ OWL-ontologioilla samalla tavalla kuin relaatiotietokannan tauluissa suhteita
 ilmaistaan taulurakenteilla ja viitteillä tauluista toiseen. 
 RDF on kuin kieli jolla ilmaistaan asioita kun taas OWL on sanasto, jonka avulla
 merkitykset ymmärretään. 
+valmiit sanastot
 
 kuva ja selitys triploista ja URI:sta? Kyllä, tähän se sopisi kokoavana
 elementtinä.

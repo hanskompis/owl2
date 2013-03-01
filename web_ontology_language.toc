@@ -1,23 +1,22 @@
 \select@language {finnish}
 \contentsline {section}{\numberline {1}Semanttinen web}{3}{section.1}
-\contentsline {section}{\numberline {2}Teknologiat ja kielet merkitysten ilmaisuun semanttisessa webiss\IeC {\"a}}{3}{section.2}
+\contentsline {section}{\numberline {2}Teknologiat ja kielet jotka mahdollistavat OWL:n}{3}{section.2}
 \contentsline {subsection}{\numberline {2.1}URI ja XML}{3}{subsection.2.1}
 \contentsline {subsection}{\numberline {2.2}Tiedon esitt\IeC {\"a}minen RDF-triploilla}{4}{subsection.2.2}
 \contentsline {subsection}{\numberline {2.3}Alkeelliset ontologiat RDF Schemalla}{5}{subsection.2.3}
-\contentsline {subsubsection}{\numberline {2.3.1}Resurssit voidaan ryhmitell\IeC {\"a} luokiksi, rdfs:Class}{5}{subsubsection.2.3.1}
-\contentsline {subsubsection}{\numberline {2.3.2}Ominaisuuksien yliluokka, rdf:Property}{5}{subsubsection.2.3.2}
-\contentsline {subsubsection}{\numberline {2.3.3}Luokan j\IeC {\"a}senet ovat sen ilmentymi\IeC {\"a}, rdf:type}{5}{subsubsection.2.3.3}
-\contentsline {subsubsection}{\numberline {2.3.4}Luokalla on aliluokkia, rdf:subClassOf}{5}{subsubsection.2.3.4}
-\contentsline {subsubsection}{\numberline {2.3.5}Ominaisuuksilla on aliominaisuuksia, rdf:subPropertyOf}{5}{subsubsection.2.3.5}
-\contentsline {subsubsection}{\numberline {2.3.6}Ominaisuuden sovellusaluetta ja sallittuja arvoja voi rajoittaa, rdfs:range ja rdfs:domain}{5}{subsubsection.2.3.6}
-\contentsline {subsection}{\numberline {2.4}Kehittyneit\IeC {\"a} ontologioita OWL:ll\IeC {\"a}}{5}{subsection.2.4}
-\contentsline {section}{\numberline {3}OWL Web Ontology Language}{6}{section.3}
-\contentsline {subsection}{\numberline {3.1}RDF:n ja RDF Scheman rajoitukset}{6}{subsection.3.1}
-\contentsline {subsection}{\numberline {3.2}OWL:n kolme alikielt\IeC {\"a}}{7}{subsection.3.2}
-\contentsline {subsection}{\numberline {3.3}OWL-ontologian rakenne}{7}{subsection.3.3}
-\contentsline {subsubsection}{\numberline {3.3.1}Nimiavaruudet}{7}{subsubsection.3.3.1}
-\contentsline {section}{\numberline {4}OWL2}{8}{section.4}
-\contentsline {section}{L\IeC {\"a}hteet}{8}{section*.2}
+\contentsline {subsubsection}{\numberline {2.3.1}Luokat ja ilmentym\IeC {\"a}t}{6}{subsubsection.2.3.1}
+\contentsline {subsubsection}{\numberline {2.3.2}Luokan aliluokka}{6}{subsubsection.2.3.2}
+\contentsline {subsubsection}{\numberline {2.3.3}Ominaisuudet ja periytetyt ominaisuudet}{6}{subsubsection.2.3.3}
+\contentsline {subsubsection}{\numberline {2.3.4}Rajoitukset ominaisuuksien sovellusalueissa ja arvoissa}{7}{subsubsection.2.3.4}
+\contentsline {subsubsection}{\numberline {2.3.5}RDF Schema esimerkki}{7}{subsubsection.2.3.5}
+\contentsline {section}{\numberline {3}Kehittyneit\IeC {\"a} ontologioita OWL:ll\IeC {\"a}}{7}{section.3}
+\contentsline {section}{\numberline {4}OWL Web Ontology Language}{8}{section.4}
+\contentsline {subsection}{\numberline {4.1}RDF:n ja RDF Scheman rajoitukset}{8}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}OWL:n kolme alikielt\IeC {\"a}}{9}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}OWL-ontologian rakenne}{9}{subsection.4.3}
+\contentsline {subsubsection}{\numberline {4.3.1}Nimiavaruudet}{9}{subsubsection.4.3.1}
+\contentsline {section}{\numberline {5}OWL2}{10}{section.5}
+\contentsline {section}{L\IeC {\"a}hteet}{10}{section*.2}
 \select@language {finnish}
 \select@language {finnish}
 \select@language {finnish}
