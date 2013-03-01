@@ -281,7 +281,7 @@ esim:Veljeys rdfs:subPropertyOf esim:Perhesuhde
  subPropertyOf ilmaisee määritelmällisesti, että resurssit joiden välistä suhdetta kuvataan jollain suhteella, voidaan kuvata myös tämän suhteen ylisuhteella, josta ko. suhde on periytynyt \cite{RDFS}. 
 \subsubsection{Rajoitukset ominaisuuksien sovellusalueissa ja arvoissa}
 RDF Schemassa on mahdollista antaa ominaisuuksille rajoituksia sen suhteen, että minkä luokkien välistä suhdetta ominaisuus kuvaa. Ensinnäkin
-voidaan rajoittaa suhteen sovellusaluetta (domain). Suhteen  "Työskentelee" sovellusalue voidaan rajata koskemaan ainoastaan luokkaa "Yyöntekijä". Samaten suhteen saamat arvot voidaan rajata olemaan ainoastaan luokan "Yritys" tai sen aliluokkien ilmentymiä. 
+voidaan rajoittaa suhteen sovellusaluetta (domain). Suhteen  "Työskentelee" sovellusalue voidaan rajata koskemaan ainoastaan luokkaa "Työntekijä". Samaten suhteen saamat arvot (range) voidaan rajata olemaan ainoastaan luokan "Yritys" tai sen aliluokkien ilmentymiä. 
 \begin{verbatim}
 esim:Työskentelee rdfs:domain esim:Työntekijä
 esim:Työskentelee rdfs:range esim:Yritys
@@ -304,71 +304,36 @@ xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 </rdf:RDF>
 \end{verbatim}
 
-Esimerkissä on yksinkertainen ontologia, joka kertoo, että "kustantamo" on luokka ja että ko. luokka on myös luokan "liikeyritys" aliluokka. RDF Schema  -ontologiat ovat RDF-tiedostoja samoin kuin OWL-ontologiatkin. Tiedoston alussa olevat nimiavaruusmäärittelyt varmistavat, että rdf- ja rdfs-alkuisilla tageilla ympäröidyt elementit todellakin ovat rdf- ja rdfs- elementtejä.  
+Esimerkissä on yksinkertainen ontologia, joka kertoo, että "kustantamo" ja "liikeyritys" ovat luokkia ja että "kustantamo" on myös luokan "liikeyritys" aliluokka. RDF Schema  -ontologiat ovat RDF-tiedostoja samoin kuin OWL-ontologiatkin. Tiedoston alussa olevat nimiavaruusmäärittelyt varmistavat, että rdf- ja rdfs-alkuisilla tageilla ympäröidyt elementit todellakin ovat rdf- ja rdfs- elementtejä. Nimiavaruudet käsitellään takemmin OWL:n esittelyn yhteydessä. 
+
 \section{Kehittyneitä ontologioita OWL:llä}
 
-Yleinen tapa ilmaista ontologioita on OWL(Web Ontology Language)-ontologiat.
-OWL-ontologioissa määritellään sovellusalueen luokkia, ominaisuuksia, luokkien
-ilmentymiä eli instansseja  sekä instanssien välisiä suhteita \cite{SWM04}.
-Ontologoiden pohjalta on mahdollista päätellä implisiittisiä asioiden
-ilmentymien välisiä suhteita. Eräs tapa hahmottaa RDF-triplojen ja
+
+
+Tälä hetkellä kehittynein tapa ilmaista ontologioita on OWL-ontologiat. Lyhenne OWL tulee 
+sanoista Web Ontology Language. Vaikka määritelmässä on sana language, kieli, on 
+OWL-ontologiat ymmärettävä ennemminkin sanastoina, joita on kuvattu RDF-kielellä.
+ Eräs tapa hahmottaa RDF-triplojen ja
 OWL-ontologioiden välinen ero on verrata niitä perinteiseen
-relaatiotietokantaan. RDF-triplat on tapa tallettaa tietoa samalla tavalla kuin
-relaatiotietokannan riveillä tallennetaan rakenteista tietoa. Jokaista riviä
-yksilöi yksilöivä avain kun taas RDF-triploissa yksilöinnin takee URI(Uniform
-Resource Identifier). Vastaavasti asioiden välisiä suhteita kuvataan
-OWL-ontologioilla samalla tavalla kuin relaatiotietokannan tauluissa suhteita
-ilmaistaan taulurakenteilla ja viitteillä tauluista toiseen. 
-RDF on kuin kieli jolla ilmaistaan asioita kun taas OWL on sanasto, jonka avulla
-merkitykset ymmärretään. 
-valmiit sanastot
+relaatiotietokantaan. RDF-triplat on tapa tallettaa tietoa olioiden ominaisuuksista samalla tavalla kuin
+relaatiotietokannan taulun riveillä tallennetaan rakenteista tietoa tietokantaolioista. Jokaista riviä relaatiotietokannassa
+yksilöi yksilöivä avain kun taas RDF-triploissa avaimen virkaa hoitaa URI. Relaatiotietokannoissa tietokantaolion attribuuttien suhteita ilmaistaan taulurakenteilla ja tietokantaolioiden suhteita toisiin tietokantaolioihin ilmaistaan viitteillä taulujen välillä. Vastaavasti voidaan ajatella, että OWL-ontologiat kuvaavat ja jäsentävät  samalla tavalla RDF-triploilla ilmaistua tietoa: ontologialla voidaan määritellä monipuolisesti luokkien, ilmentymien ja suhteiden ominaisuuksia.  RDF on kuin kieli jolla ilmaistaan lausumia asioista kun taas OWL on sanasto, jonka avulla lausumien merkitykset ymmärretään. 
 
-kuva ja selitys triploista ja URI:sta? Kyllä, tähän se sopisi kokoavana
-elementtinä.
-
-
-\section{OWL Web Ontology Language}
-
-mitä owl tarjoaa? syntaksi, semantiikka, tuki päättelylle, ilmaisuvoimaa,
-käytettävyyttä
-Description Logics
-\subsection{RDF:n ja RDF Scheman rajoitukset}
-RDF/RDFS:ssä on toteutettu luokka (class) ja sen aliluokka (subclass), suhde
-(property) ja siitä periytynyt alisuhde (subproperty), suhteen sovellusalue ja
-arvorajoitukset sekä luokkien ilmentymien väliset suhteet \cite{AH09}. Mutta
-useita tarpeellisia ominaisuuksia puuttuu, jotka on toteutettu OWL:ssä,
-esimerkiksi \cite{AH09}:
+OWL tarjoaa ontologioiden määrittelyyn \cite{AH09} 
 \begin{itemize}
- \item \textit{Rajoitukset suhteen kohteessa}: (WTF?) RDFS:ssä voidaan
-määritellä rajoituksia, mitä arvoja tai muita luokkia suhteen objektiksi voidaan
-asettaa. Kuitenkaan ei ole mahdollista määrätä rajoitteita sen suhteen, onko
-jotkut rajoitteet voimassa vain rajatulle joukolle luokkia. 
- \item \textit{Luokkien poissulkevuus}: joissain tapauksissa on hyvä pystyä
-sanomaan, että joku luokka on poissulkeva toisen luokan suhteen. Voidaan sanoa
-esimerkiksi että luokka 'mies' on poissulkeva suhteessa luokkaan 'nainen'
- \item \textit{Luokkien joukko-operaatiot}: toisinaan on tarve muodostaa uusia
-luokkia olemassaolevien joukkojen perusteella. Esimerkiksi luokka 'henkilö'
-voitaisiin määritellä luokkien 'mies' ja 'nainen' yhdisteeksi kuitenkin niin,
-että henkilö voi olla vain joko mies tai nainen (poissulkevuus).
- \item \textit{Suhteiden kardinaliteetit}: joihinkin suhteisiin on hyvä
-määrittää rajoituksia sen suhteen kuinka monta arvoa arvoksi voi antaa.
-Esimerkiksi ihmisellä voi olla ainoastaan kaksi vanhempaa.
- \item \textit{Suhteiden erikoisominaisuudet}: suhteet voidaan määritellä
-\textit{transitiivisiksi, uniikeiksi} jonkun toisen suhteen
-\textit{inversioksi}. 
+\item \textit{hyvin määritellyn syntaksin} , jotta ontologiat olisivat koneluettavissa
+\item \textit{hyvin määritellyn semantiikan}, jolla voi ilmaista merkityksiä tarkasti ja konsistentisti
+\item \textit{tuen koneelliselle päättelylle}, jotta esim.  ontologioiden eheys voidaan tarkastaa automaattisesti
+\item \textit{riittävästi ilmaisuvoimaa} ilmaisemaan kaikki tarvittavat merkitykset
+\item \textit{miellyttävän ilmaisutavan}, jotta työskentely olisi sujuvaa
 \end{itemize}
-Tarvitaan siis kieli, joka on rikkaampi kuin RDF Schema \cite{AH09}. OWL:n
-suunnittelussa on jouduttu tasapainoilemaan kielen ilmaisuvoiman ja sen
-soveltuvuudesta koneelliseen päättelyyn. Mitä rikkaampi ja ilmaisuvoimaisempi
-kieli on, sitä hankalampi ja tehottomampi sen pohjalta on päätellä asioita.
-Pahimmassa tapauksessa päättely muodostuu mahdottomaksi tehtäväksi \cite{AH09}. 
- 
+
 
 Ideaalisesti OWL on RDF:n ja RDF Scheman laajennos \cite{AH09}. OWL käyttää
-RDF:n luokkia ja suhteita lisäten niihin omia laajennoksiaan kuten yllä on
-selitetty. RDF Schemassa on joitain hyvin vahvoja primitiivejä, kuten rfd:Class
+RDF:n luokkia ja suhteita lisäten niihin omia laajennoksiaan. RDF Schemassa on joitain 
+hyvin vahvoja konstruktioita, kuten rfd:Class
 (kaikkien luokkien yliluokka) sekä rdf:Property (kaikkien suhteiden yliluokka).
-Näiden primitiivien ilmaisuvoima yhdistettynä yllä luetelluilla laajennoksilla
+Näiden primitiivien ilmaisuvoima yhdistettynä OWL:n tarjoamaan laajennoksiin
 on ristiriidassa sen tavoitteen kanssa, että ontologiat olisivat koneellisesti
 pääteltävissä. Tämä tasapainotila mielessäpitäen on määritelty kolme OWL:n
 alikieltä sen perusteella, painotetaanko ilmaisuvoimaa vai koneellista päättelyä
@@ -378,13 +343,44 @@ alikieltä sen perusteella, painotetaanko ilmaisuvoimaa vai koneellista päätte
 
 W3C:n Web Ontology Working Group on määritellyt OWL:lle kolme alikieltä, joiden
 on takoitus toteuttaa eri aspektit (ilmaisuvoima, koneellinen päättely), joita
-ontologioiden kuvaamiskieleltä vaaditaan \cite{MH04}:
+ontologioiden kuvaamiskieleltä vaaditaan \cite{MH04}. Alikielet ovat ilmaisuvoiman mukaisesti
+kasvavassa järjestyksessä:
 
 \begin{itemize}
- \item \textit{OWL Full}
- \item \textit{OWL DL}
- \item \textit{OWL Lite}
+ \item \textit{OWL Lite} tarjoaa ainoastaan yksinkertaisen luokitteluhierarkian ja yksinkertaiset rajoitteet\cite{MH04}. Kardinaalisuusrajoitteet ovat ainoastaan muotoa 0 ta 1. Työkalutuen tarjoaminen on OWL Litelle helpompaa kuin ilmaisuvoimaisemmille versioille \cite{MH04}.  
+ \item \textit{OWL DL} on tarkoitettu niille käyttäjille, jotka haluavat mahdollisimman hyvän ilmaisukyvyn siten, että ontologia on koneellisesti pääteltävissä (kaikki päätelmät tehtävissä järjellisessä ajassa) \cite{MH04}. OWL DL tarjoaa kaikki kielen konstruktiot, mutta niitä voi käyttää tietyin rajoituksin, esimerkiksi luokka voi olla monen luokan aliluokka mutta ei voi olla samalla luokan ilmentymä. DL tulee sanoista Description Logics, deskriptiivinen logiikka, joka on tieteenala, joka tutkii logiikkaa ja on OWL:n perusta \cite{MH04}.  
+ \item \textit{OWL Full} on tarkoitettu niille käyttäjille, jotka haluavat maksimaalisen ilmaisukyvyn välittämättä siitä, onko ontologiat enää koneellisesti pääteltävissä \cite{MH04}. Toisin kuin OWL DL:ssä, luokka voi olla kokoelma yksilöitä (instansseja) samalla kuin luokka itsessään on jonkin luokan yksilö. OWL Full mahdollistaa jo olemassa olevien ontologioiden laajentamisen. On epätodennäköistä, että mikään ohjelmisto pystyy täydellisesti päättelemään OWL Full ontologioita \cite{MH04}. 
 \end{itemize}
+
+%Edellisissä kappaleissa on valotettu RDF:n ja RDF Scheman keinoja ilmaista merkityksiä.
+%RDF/RDF Schemassa on toteutettu luokkien ja ominaisuuksien hierarkinen järjestelmä, ominaisuuksien sovellusalue ja
+%arvorajoitukset sekä luokkien ilmentymien väliset suhteet \cite{AH09}. Mutta
+%useita tarpeellisia ominaisuuksia puuttuu, jotka on toteutettu OWL:ssä,
+%esimerkiksi \cite{AH09}:
+%\begin{itemize}
+% \item \textit{Rajoitukset suhteen kohteessa}: (WTF?) RDFS:ssä voidaan
+%määritellä rajoituksia, mitä arvoja tai muita luokkia suhteen objektiksi voidaan
+%asettaa. Kuitenkaan ei ole mahdollista määrätä rajoitteita sen suhteen, onko
+%jotkut rajoitteet voimassa vain rajatulle joukolle luokkia. 
+% \item \textit{Luokkien poissulkevuus}: joissain tapauksissa on hyvä pystyä
+%sanomaan, että joku luokka on poissulkeva toisen luokan suhteen. Voidaan sanoa
+%esimerkiksi että luokka 'mies' on poissulkeva suhteessa luokkaan 'nainen'
+% \item \textit{Luokkien joukko-operaatiot}: toisinaan on tarve muodostaa uusia
+%luokkia olemassaolevien joukkojen perusteella. Esimerkiksi luokka 'henkilö'
+%voitaisiin määritellä luokkien 'mies' ja 'nainen' yhdisteeksi kuitenkin niin,
+%että henkilö voi olla vain joko mies tai nainen (poissulkevuus).
+% \item \textit{Suhteiden kardinaliteetit}: joihinkin suhteisiin on hyvä
+%määrittää rajoituksia sen suhteen kuinka monta arvoa arvoksi voi antaa.
+%Esimerkiksi ihmisellä voi olla ainoastaan kaksi vanhempaa.
+% \item \textit{Suhteiden erikoisominaisuudet}: suhteet voidaan määritellä
+%\textit{transitiivisiksi, uniikeiksi} jonkun toisen suhteen
+%\textit{inversioksi}. 
+%\end{itemize}
+%Tarvitaan siis kieli, joka on rikkaampi kuin RDF Schema \cite{AH09}. OWL:n
+%suunnittelussa on jouduttu tasapainoilemaan kielen ilmaisuvoiman ja sen
+%soveltuvuudesta koneelliseen päättelyyn. Mitä rikkaampi ja ilmaisuvoimaisempi
+%kieli on, sitä hankalampi ja tehottomampi sen pohjalta on päätellä asioita.
+%Pahimmassa tapauksessa päättely muodostuu mahdottomaksi tehtäväksi \cite{AH09}. 
 
 \subsection{OWL-ontologian rakenne}
 

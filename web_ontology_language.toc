@@ -10,12 +10,10 @@
 \contentsline {subsubsection}{\numberline {2.3.4}Rajoitukset ominaisuuksien sovellusalueissa ja arvoissa}{7}{subsubsection.2.3.4}
 \contentsline {subsubsection}{\numberline {2.3.5}RDF Schema esimerkki}{7}{subsubsection.2.3.5}
 \contentsline {section}{\numberline {3}Kehittyneit\IeC {\"a} ontologioita OWL:ll\IeC {\"a}}{7}{section.3}
-\contentsline {section}{\numberline {4}OWL Web Ontology Language}{8}{section.4}
-\contentsline {subsection}{\numberline {4.1}RDF:n ja RDF Scheman rajoitukset}{8}{subsection.4.1}
-\contentsline {subsection}{\numberline {4.2}OWL:n kolme alikielt\IeC {\"a}}{9}{subsection.4.2}
-\contentsline {subsection}{\numberline {4.3}OWL-ontologian rakenne}{9}{subsection.4.3}
-\contentsline {subsubsection}{\numberline {4.3.1}Nimiavaruudet}{9}{subsubsection.4.3.1}
-\contentsline {section}{\numberline {5}OWL2}{10}{section.5}
+\contentsline {subsection}{\numberline {3.1}OWL:n kolme alikielt\IeC {\"a}}{8}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}OWL-ontologian rakenne}{9}{subsection.3.2}
+\contentsline {subsubsection}{\numberline {3.2.1}Nimiavaruudet}{9}{subsubsection.3.2.1}
+\contentsline {section}{\numberline {4}OWL2}{10}{section.4}
 \contentsline {section}{L\IeC {\"a}hteet}{10}{section*.2}
 \select@language {finnish}
 \select@language {finnish}
