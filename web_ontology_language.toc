@@ -13,8 +13,17 @@
 \contentsline {subsection}{\numberline {3.1}OWL:n kolme alikielt\IeC {\"a}}{8}{subsection.3.1}
 \contentsline {subsection}{\numberline {3.2}OWL-ontologian rakenne}{9}{subsection.3.2}
 \contentsline {subsubsection}{\numberline {3.2.1}Nimiavaruudet}{9}{subsubsection.3.2.1}
-\contentsline {section}{\numberline {4}OWL2}{10}{section.4}
-\contentsline {section}{L\IeC {\"a}hteet}{10}{section*.2}
+\contentsline {subsection}{\numberline {3.3}Otsikkotiedot}{9}{subsection.3.3}
+\contentsline {subsection}{\numberline {3.4}Yksinkertaiset luokat ja aliluokat}{10}{subsection.3.4}
+\contentsline {subsection}{\numberline {3.5}Luokan yksil\IeC {\"o}t}{11}{subsection.3.5}
+\contentsline {subsection}{\numberline {3.6}Luokkaominaisuus ja datatyyppiominaisuus}{11}{subsection.3.6}
+\contentsline {subsubsection}{\numberline {3.6.1}Luokkaominaisuus}{11}{subsubsection.3.6.1}
+\contentsline {subsubsection}{\numberline {3.6.2}Datatyyppiominaisuus}{11}{subsubsection.3.6.2}
+\contentsline {subsubsection}{\numberline {3.6.3}Aliominaisuudet}{12}{subsubsection.3.6.3}
+\contentsline {subsubsection}{\numberline {3.6.4}Kardinaalisuusrajoitteet}{12}{subsubsection.3.6.4}
+\contentsline {subsubsection}{\numberline {3.6.5}Ominaisuuden transitiivisuus, symmetrisyys, funktionaalisuus ja inversio}{13}{subsubsection.3.6.5}
+\contentsline {section}{\numberline {4}OWL2}{14}{section.4}
+\contentsline {section}{L\IeC {\"a}hteet}{14}{section*.2}
 \select@language {finnish}
 \select@language {finnish}
 \select@language {finnish}

@@ -12,5 +12,14 @@
 \BOOKMARK [2][-]{subsection.3.1}{OWL:n kolme alikielt\344}{section.3}% 12
 \BOOKMARK [2][-]{subsection.3.2}{OWL-ontologian rakenne}{section.3}% 13
 \BOOKMARK [3][-]{subsubsection.3.2.1}{Nimiavaruudet}{subsection.3.2}% 14
-\BOOKMARK [1][-]{section.4}{OWL2}{}% 15
-\BOOKMARK [1][-]{section*.2}{L\344hteet}{}% 16
+\BOOKMARK [2][-]{subsection.3.3}{Otsikkotiedot}{section.3}% 15
+\BOOKMARK [2][-]{subsection.3.4}{Yksinkertaiset luokat ja aliluokat}{section.3}% 16
+\BOOKMARK [2][-]{subsection.3.5}{Luokan yksil\366t}{section.3}% 17
+\BOOKMARK [2][-]{subsection.3.6}{Luokkaominaisuus ja datatyyppiominaisuus}{section.3}% 18
+\BOOKMARK [3][-]{subsubsection.3.6.1}{Luokkaominaisuus}{subsection.3.6}% 19
+\BOOKMARK [3][-]{subsubsection.3.6.2}{Datatyyppiominaisuus}{subsection.3.6}% 20
+\BOOKMARK [3][-]{subsubsection.3.6.3}{Aliominaisuudet}{subsection.3.6}% 21
+\BOOKMARK [3][-]{subsubsection.3.6.4}{Kardinaalisuusrajoitteet}{subsection.3.6}% 22
+\BOOKMARK [3][-]{subsubsection.3.6.5}{Ominaisuuden transitiivisuus, symmetrisyys, funktionaalisuus ja inversio}{subsection.3.6}% 23
+\BOOKMARK [1][-]{section.4}{OWL2}{}% 24
+\BOOKMARK [1][-]{section*.2}{L\344hteet}{}% 25
