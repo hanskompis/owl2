@@ -404,7 +404,7 @@ etuliitteillä varustetut tagit edustavat OWL:n, RDF:n ja RDF Scemann termistö�
 OWL-ontologia on riippuvainen myös XMLSchema-datatyypeistä (xsd:), joten myös niiden
 nimiavaruus tulee määrittää. 
 
-\subsection{Otsikkotiedot}
+\subsubsection{Otsikkotiedot}
 Owl-ontologian otsikkotiedoissa voidaan kertoa yleisiä asioita kuten versiotietoa, kommentteja, ontologian nimi sekä
 tärkeänä ominaisuutena importata muita ontologioita. Otsikkotiedot määritellään owl:Ontology-elementiksi: 
 \begin{verbatim}
@@ -419,7 +419,7 @@ tärkeänä ominaisuutena importata muita ontologioita. Otsikkotiedot määritel
 \end{verbatim}
 Esimerkkiotsikossa perustietojen lisäksi importataan Dublin Core - sanasto  \footnote{Dublin Core on nnnnn}  ontologiamme käyttöön.
 
-\subsection{Yksinkertaiset luokat ja aliluokat}
+\subsubsection{Yksinkertaiset luokat ja aliluokat}
 OWL:ssä kaikki yksilöt ovat luokan owl:Thing jäseniä ja kaikki käyttäjän määrittämät luokat owl:Thingin aliluokkia \cite{SWM04}. Myös owl:Nothing on määritelty(MIX VITUSCH?). Luokkamäärittelyt tapahtuvat hyvin samaan tapaan kuin RDF Schemassa, ainoastaan tagin nimi on owl:Class. Aliluokkanotaatio vastaa suoraan RDF Scheman konstruktiota:
 \begin{verbatim}
 <owl:Class  rdf:ID="Auto">
@@ -440,7 +440,7 @@ implisiittisesti määritettyyn toiseen luokkaan:
 \end{verbatim}
 Luokan "Ajoneuvo" ja sen mahdollisten aliluokkien jäsenet eivät voi siis kuulua samaan aikaan luokkaan "Kissa" tai sen mahdollisiin aliluokkiin. Voidaan siis päätellä, että ilmentymä "Lada" ei voi olla luokan "Kissa" jäsen jos "Kissa" on määritetty luokan "Eläin" aliluokaksi. 
 
-\subsection{Luokan yksilöt}
+\subsubsection{Luokan yksilöt}
 Luokan jäseniä kutsutaan yksilöiksi, eli luokan ilmentymiksi \cite{SWM04}. Jonkun ilmentymän kuuluminen luokkaan ilmaistaan samalla tavalla kuin RDF Schemassa rdf:type konstruktiolla. Ensiksi määritellään kuitenkin instanssi owl:Thing-tagilla:
 \begin{verbatim}
 <owl:Thing rdf:ID="Lada"/>
@@ -451,7 +451,7 @@ Luokan jäseniä kutsutaan yksilöiksi, eli luokan ilmentymiksi \cite{SWM04}. Jo
 \end{verbatim}
 Esimerkissä määritettiin "Autonvalmistaja"-luokan ilmentymä "Lada". Esimerkissä viitataan oletetusti jo aiemmin määritettyyn "Autonvalmistaja"-luokkaan \cite{SWM04}. 
 
-\subsection{Luokkaominaisuus ja datatyyppiominaisuus}
+\subsubsection{Luokkaominaisuus ja datatyyppiominaisuus}
 Ominaisuudet jaetaan OWL:ssä luokkaominaisuuksiksi (Object Property) ja datatyyppiominaisuuksiksi (Data Type Property) sen perusteella liittääkö ominaisuus yhteen kaksi luokan ilmentymää vai luokan ilmentymän ja RDF-literaalin tai XML Schema -datatyypin  \cite{SWM04}. 
 \subsubsection{Luokkaominaisuus}
 OWL:ssä luokkaominaisuudet määritellään kuten mitkä tahansa luokat, mutta käyttäen ObjectProperty -konstruktiota. Määrittelyssä kerrotaan myös minkä luokan ilmentymiin ominaisuus on sovellettavissa sekä mitä arvoja (luokkia) ominaisuus voi saada. Nämä rajoitteet ilmaistaan RDF Schemasta tutuilla rdfs:domain- ja rdfs:range-elementeillä:
@@ -489,7 +489,7 @@ Myös ominaisuuksille voidaan määritellä aliominaisuuksia samaan tapaan kuin 
 \end{verbatim}
 
 \subsubsection{Kardinaalisuusrajoitteet}
-OWL antaa mahdollisuuden määrätä kardinaalisuusrajoitteita ominaisuuksien arvoille kun ominaisuutta sovelletaan tietyssä kontekstissa \cite{SWM04}. Voidaan esimerkiksi määrätä, että luokka "Ajoneuvo" on joukko asioita, joilla on aina vähintään kaksi "Renkaat"-ominaisuutta. ***KIRJOITA SELKEÄMMIN TOI*** Tämä määritetään siten, että luokalle "Ajoneuvo" määritetään anonyymi aliluokka, jolle kardinaalisuusrajoite annetaan. Alla oleva esimerkki selventää asiaa:
+OWL antaa mahdollisuuden määrätä kardinaalisuusrajoitteita ominaisuuksien arvoille kun ominaisuutta sovelletaan tietyssä kontekstissa \cite{SWM04}. Voidaan esimerkiksi määrätä, että luokka "Ajoneuvo" on joukko asioita, joilla on aina vähintään kaksi arvoa "Renkaat"-ominaisuudessa. Toisin sanoen, määritellään anonyymi aliluokka luokalle "Ajoneuvo" \cite{SWM04}. Alla oleva esimerkki selventää asiaa:
 \begin{verbatim}
 <owl:Class  rdf:ID="Ajoneuvo">
     <rdfs:subClassOf>
@@ -504,7 +504,7 @@ OWL antaa mahdollisuuden määrätä kardinaalisuusrajoitteita ominaisuuksien ar
 Anonyymi aliluokka määrätään normaalilla subClassOf-konstruktiolla. Aliluokalle määritetään rajoite owl:Restriction-tagilla ja kardinaalisuusrajoite tässä tapauksessa  minCardinality-elementillä. Kardinaalisuus määritetään koskemaan ominaisuutta "Renkaat" onProperty-elementillä. Kardinaalisuusrajoitteita voi määrätä myös maxCardinality-elementillä, joka määrää suhteen yläkardinaliteetin, sekä Cardinality-elementillä, joka määrää tarkan arvon mikä on luokan esiintymän ja ominaisuuden suhde. Voitaisiin esimerkiksi määrittää luokka "Moottoripyörä" siten, että seillä voisi olla tasan kaksi "Renkaat" ominaisuutta.   
 
 \subsubsection{Ominaisuuden transitiivisuus, symmetrisyys, funktionaalisuus ja inversio}
-Ominaisuuden voi tarvittaessa määrittää transitiiviseksi, symmetriseksi tai funktionaaliseksi \cite{SWM04}. Transitiivinen ominaisuus voidaan määrittää seuraavasti ominaisuudelle P ja ilmentymille x,y ja z \cite{SWM04}:
+Ominaisuuden voi tarvittaessa määrittää transitiiviseksi, symmetriseksi tai funktionaaliseksi \cite{SWM04}. Näin tekemällä voidaan monipuolistaa ontologioista tehtäviä implisiittisiä päättelyitä.  Transitiivinen ominaisuus voidaan määrittää seuraavasti ominaisuudelle P ja ilmentymille x,y ja z \cite{SWM04}:
 
 P(x,y) ja P(y,z) -> P(x,z)
 
@@ -542,26 +542,115 @@ Funktionaalinen ominaisuus voisi olla esimerkiksi opiskelijanumero. Jokainen opi
 
 INVERSIO JA FUNKTIONAALINEN INVERSIO???
 
-   
+\subsubsection{Arvorajoitteet luokkaominaisuuksissa}
+OWL mahdollistaa rajoittaa ilmentymiä, joita voidaan antaa ominaisuuden arvoiksi luokkaominaisuuksia määritettäessä \cite{SWM04}. Tällä tavoin voidaan rajata aliluokkia näiden rajoitusten avulla.  Esimerkiksi on mahdollista määrätä, että luokan "Auto" aliluokka siten, että ominaisuuden "Omistaja" arvona voi olla vain luokan "Henkilo" jäsen:
+\begin{verbatim}
+<owl:Class rdf:ID="Auto">
+    <rdfs:subClassOf>
+       <owl:Restriction>
+           <owl:onProperty rdf:resource="Omistaja"/>
+           <owl:allValuesFrom rdf:resource="Henkilo"/>
+       </owl:Restriction>        
+    </rdfs:subClassOf>
+</owl:Class>    
+\end{verbatim}
+
+Edellisessä esimerkissä määritettiin, että auton omistaja on aina "Henkilo"-luokan jäsen. OWL mahdollistaa myös hieman kevyemmän rajoitteen, jossa määrätään, että ominaisuuden jonkun arvon tulee olla määrätyn luokan jäsen \cite{SWM04}. Voidaan määrittää, että autojen omistajista ainakin yksi on luokan "Henkilo" jasen:
+\begin{verbatim}
+. . .
+           <owl:onProperty rdf:resource="Omistaja"/>
+           <owl:someValuesFrom rdf:resource="Henkilo"/>
+. . .
+\end{verbatim}
+Rajoite toteutetaan owl:someValuesFrom-tagilla.
+
+On myös mahdollista määrätä ominaisuuden arvoksi täsmällisesti joku olemassa oleva resurssi \cite{SWM04}. Tällöin aliluokkamäärittelyyn lisätään owl:hasValue -elementti:
+\begin{verbatim}
+. . .
+           <owl:onProperty rdf:resource="Omistaja"/>
+           <owl:hasValue rdf:"Hansi"/>
+. . .
+\end{verbatim}
+
+\subsubsection{Kompleksiset luokat}
+Kompleksiset luokat on erittäin vahva ja ilmaisuvoimainen OWL:n konstruktio \cite{SWM04}. Konstruktio tarjoaa mahdollisuuden määrittää luokkalausekkeita, joissa käytetään joukko-opista tuttuja operaattoreita \textit{yhdistetä}, \textit{leikkausta} ja \textit{komplementtia}. Esimerkiksi voimme määrittää luokan "Lada-auto", joka on luokan "Auto" ja sellaisten asioiden, jotka ovat jollain tapaa "Lada", leikkaus:
+\begin{verbatim}
+<owl:Class rdf:ID="Lada-auto">
+    <owl:intersectionOf rdf:parseType="Collection">
+        <owl:Class rdf:about="Auto"/>
+        <owl:Class rdf:about="Lada"/>
+    </owl:intersectionOf>
+</owl:Class>
+\end{verbatim}
+
+Esimerkissä leikkaus-operaattori on ilmaistu owl:intersectionOf -elementillä. rdf:parseType="Collection" ilmoittaa parserille, että tämän elementin sisältämät elementit tulee tulkita lueteltuna kokoelmana.
+
+Vastaavasti voidaan määrittää yhdisteluokka käyttämällä elementtiä owl:unionOf \cite{SWM04}. Esimerkkinä voidaan määrittää luokka "Maansiirtokoneet", jonka jäsenet ovat ainakin yhden luetellun luokan jäsen:
+\begin{verbatim}
+<owl:Class rdf:ID="Maansiirtokone"/>
+    <owl:intersectionOf rdf:parseType="Collection">
+        <owl:Class rdf:about="Kauhakuormaaja"/>
+        <owl:Class rdf:about="Dumpperi"/>
+    </owl:intersectionOf>
+</owl:Class>
+\end{verbatim}
  
-
-
-
-
-
-
-
-
-
-
+ Esimerkissä luokkaan "Maansiirtokone" kuuluu ilmentymät, jotka ovat joko kauhakuormaajia, dumppereita tai peräti molempia.
  
+Komplementtiluokka määritellään elementillä owl:complementOf  \cite{SWM04}. Komplementtiluokan jäseniä määrittää se, että ne eivät missään tapauksessa ole komplementiksi ilmoitetun luokan jäseniä. Komplementtiluokalla on helppo esimerkiksi määrittää luokka, "Manuaalivaihteisto", joka määritelmällisesti on luokan "Automaattivaihteisto" komplementti:
+\begin{verbatim}
+<owl:Class ref:about="Automaattivaihteisto"/>
 
+<owl:Class ref:about="Manuaalivaihteisto">
+    <owl::complementOf rdf:resource="Automaattivaihteisto">
+</owl:Class>
+\end{verbatim}
+Esimerkkimäärityksessä luokkaan "Manuaalivaihteisto" kuuluvat vain ne ilmentymät, jotka eivät kuulu luokkaan "Automaattivaihteisto". 
 
+\subsubsection{Ontologioiden yhdistäminen}
+Jotta ontologioiden luominen olisi mielekästä, tulee olla kyky yhdistää ontologioita toisiinsa jotta saadaan aikaan uusia laajempia ontologioita \cite{SWM04}.  Ontologian otsikkotiedoissa voidaan import-lasuseella tuoda jonkun toisen jo olemassa olevan ontologian määritykset oman ontologian käyttöön. OWL tarjoaa myös elementtejä, joilla voidaan käyttää hyväksi jo olemassa olevia määrityksiä omien määrityksien tekemisessä \cite{SWM04}. 
 
+owl:equivalentClass -elementillä voidaan oma luokkamääritys määrätä vastaamaan jotain olemassaolevaa määritystä: 
+\begin{verbatim}
+<owl:Class rdf:ID="Auto">
+    <owl:equivalentClass rdf:resource="&kulkuneuvot;Auto"/>
+</owl:Class>
+\end{verbatim}
+Esimerkissä siis oletetaan, että otsikkotiedoissa on import-määritys ontologialle "kulkuneuvot". Oma määritys luokalle "Auto" siis asetetaan vastaamaan tuodun ontologian määritystä luokalle "Auto". 
 
+OWL mahdollistaa myös määrittää yksittäisen ilmentymän vastaamaan toista ilmentymää \cite{SWM04}. Tämä tehdään sameAs-konstruktiolla: 
+\begin{verbatim}
+<owl:Class rdf:ID="HansinSuosikkiAuto">
+    <owl:sameAs rdf:resource="Lada1200A"/>
+</owl:Class>
+\end{verbatim}
+Tällä konstruktiolla ei ole suurtakaan käyttöä. Ainoa, mitä tässä ilmaistaan on, että Hansin suosikkiauto on Ladan klassikkomalli. Käänteinen ominaisuus sameAs-konstruktiolle on differentFrom \cite{SWM04}. Sen käyttö on samaan tapaan suoraviivaista eikä se trivialiteettien lisäksi määritä mitään oleellista. 
 
+Käyttökelpoisempi konsruktio on \textit{AllDifferent}, jolla voidaan määrittää kokoelma ilmentymiä olemaan erillisiä toistensa suhteen \cite{SWM04}:
+\begin{verbatim}
+<owl:AllDifferent>
+    <owl:distinctMembers rdf:parseType="Collection">
+        <Henkilo rdf:about="Matti"/>
+        <Henkilo rdf:about="Teppo"/>
+        <Henkilo rdf:about="Seppo"/>
+    </owl:distinctMembers>
+</owl:AllDifferent>
+\end{verbatim}
+Esimerkki kertoo, että jokainen Henkilon ilmentymä viittaa eri ilmentymään. 
 
-\section{OWL2}
+\subsection{OWL 2}
+OWL 2 on laajennos OWL-kieleen, jolle on annettu W3C-suositus vuonna 2009 \cite{OWL2}. OWL 2:n ominaisuudet ovat suurilta osin samat kuin OWL 1:ssä, osa ainoastaan eri nimellä esitettynä . Myös OWL 2:n ytimen muodostaa XML/RDF ja mikä tärkeintä, OWL 2 on taaksepäin yhteensopiva OWL 1:n kanssa. Jokainen OWL 1 -ontologia on siis kelvollinen OWL 2 -ontologia.  
+
+OWL 2 lisää pääasiassa syntaktista sokeria OWL 1:n päälle. Se tarjoaa kuitenkin myös muutamia uusia toiminnallisuuksia \cite{OWL2}: 
+\begin{itemize}
+\item \textit{avaimet}, joka mahdollistaa sen, että ominaisuuksia (tai ominaisuuksien joukkoa) voidaan käyttää avaimena tunnistamaan luokan ilmentymää.
+\item \textit{ominaisuusketjut}, joka mahdollistaa esimerkiksi määrittää ominaisuuden "Isovanhempi" kahden "Vanhempi"-ominaisuuden ketjuksi
+\item \textit{uusia datatyyppejä}, jotka mahdollistavat esimerkiki ominaisuuksille annettavien numeeristen arvojen rajoittamisen jollekin välille. 
+\item \textit{kvalifioituja kardinaalisuusrajoitteita}
+\item \textit{asymetriset, refleksiiviset ja poissulkevat ominaisuudet}. Asymmetrisyys on vastakohta OWL 1:n symmetrisyydelle, reflektiivinen ominaisuus viittaa aina itseensä ja poissulkevat ominaisuudet eivät voi olla voimassa samaan aikaan. 
+\item \textit{parannellut kommentointimahdollisuudet}  
+\end{itemize}
+
 
 
 
@@ -574,6 +663,7 @@ INVERSIO JA FUNKTIONAALINEN INVERSIO???
 % \bibliographystyle{babalpha-lf}
 %
 % instead.
+\newpage
 
 \bibliographystyle{babplain-lf}
 \bibliography{lahteet}
