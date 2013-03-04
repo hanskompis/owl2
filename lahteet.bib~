@@ -67,3 +67,14 @@ publisher={W3C},
 author={Brickley, Dan and Guha, R V}, 
 editor={McBride, BrianEditor}, 
 year={2004}}
+
+@article{OWL2, 
+title={OWL 2 Web Ontology Language Document Overview}, 
+volume={2}, 
+url={http://www.w3.org/TR/owl2-overview/}, 
+number={October}, 
+journal={October}, 
+publisher={W3C}, 
+author={Ontology, Web and Document, Language and Recommendation, Latest and Group, O W L Working and Reserved, All Rights}, 
+year={2009}, 
+pages={1--12}}

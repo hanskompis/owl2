@@ -1,10 +1,10 @@
-\BOOKMARK [1][-]{section.1}{Semanttinen web}{}% 1
+\BOOKMARK [1][-]{section.1}{Johdanto}{}% 1
 \BOOKMARK [1][-]{section.2}{Teknologiat ja kielet jotka mahdollistavat OWL:n}{}% 2
 \BOOKMARK [2][-]{subsection.2.1}{URI ja XML}{section.2}% 3
 \BOOKMARK [2][-]{subsection.2.2}{Tiedon esitt\344minen RDF-triploilla}{section.2}% 4
 \BOOKMARK [2][-]{subsection.2.3}{Alkeelliset ontologiat RDF Schemalla}{section.2}% 5
-\BOOKMARK [3][-]{subsubsection.2.3.1}{Luokat ja ilmentym\344t}{subsection.2.3}% 6
-\BOOKMARK [3][-]{subsubsection.2.3.2}{Luokan aliluokka}{subsection.2.3}% 7
+\BOOKMARK [3][-]{subsubsection.2.3.1}{Luokka ja yksil\366}{subsection.2.3}% 6
+\BOOKMARK [3][-]{subsubsection.2.3.2}{Aliluokka}{subsection.2.3}% 7
 \BOOKMARK [3][-]{subsubsection.2.3.3}{Ominaisuudet ja periytetyt ominaisuudet}{subsection.2.3}% 8
 \BOOKMARK [3][-]{subsubsection.2.3.4}{Rajoitukset ominaisuuksien sovellusalueissa ja arvoissa}{subsection.2.3}% 9
 \BOOKMARK [3][-]{subsubsection.2.3.5}{RDF Schema esimerkki}{subsection.2.3}% 10
