@@ -283,57 +283,49 @@ ilmentymiä toisiinsa, luo suhteen niiden välille. Ominaisuudella voi olla myö
 
 Seuraavissa kappaleissa esitellään niitä RDF Scheman peruskonstruktioita, 
 joita myös OWL käyttää toteutuksessaan lähes sellaisenaan. \emph{RDFS Schema määrittelee myös suurehkon joukon muita konstruktioita, mutta niiden käsittely on OWL:n esittelyn kannalta tässä tarpeetonta.} 
+Huomionarvoista on, että RDF Schema -dokumentit ovat RDF-dokumentteja, jotka sisältävät kummankin kielen primitiivejä.
 
 \subsubsection{Luokka ja yksilö}
-Resurssit voidaan jaotella luokkiin. Luokkien jäseniä nimitetään luokan ilmentymiksi \cite{RDFS}. Luokat ovat myös itse resursseja. Useimmiten luokat identifioidaan RDF:n URI:lla ja niitä voidaan kuvata RDF:n ominaisuuksilla (property). Luokka määritellään rdfs:Class elementissä. rdf:type -elementillä ilmaistaan, että resurssi kuuluu määrättyyn luokkaan \cite{RDFS}. Esimerkiksi kustannusosakeyhtiö "WSOY" on luokka mutta myös luokan "Kustantamo" yksilö:
+Resurssit voidaan jaotella luokkiin. Luokkien jäseniä nimitetään luokan ilmentymiksi tai yksilöiksi\cite{RDFS}. Luokat ovat myös itse resursseja. Useimmiten luokat identifioidaan RDF:n URI:lla ja niitä voidaan kuvata RDF:n ominaisuuksilla (property). Luokka määritellään rdfs:Class elementissä. rdf:type -elementillä ilmaistaan, että resurssi kuuluu määrättyyn luokkaan \cite{RDFS}. Esimerkiksi kustannusosakeyhtiö "WSOY" on luokan "Kustantamo" jäsen:
 \begin{verbatim}
-<rdf:RDF>
-<!--nimiavaruusmäärittelyt poistettu yksinkertaisuuden vuoksi -->
     <rdfs:Class rdf:ID="WSOY" />
         <rdf:type rdf:resource="Kustantamo"/>
     </rdfs:Class>
-</rdf:RDF>
-\end{verbatim}
-Huomionarvoista on, että RDF Schema -dokumentit ovat RDF-dokumentteja, jotka sisältävät kummankin kielen primitiivejä. 
+\end{verbatim} 
 
 \subsubsection{Aliluokka}
-rdfs:subClassOf ominaisuudella voidaan ilmaista, että jonkin luokan ilmentymät ovat myös jonkin toisen luokan ilmentymiä \cite{RDFS}. Esimerkiksi 
+rdfs:subClassOf -elementillä voidaan ilmaista, että kaikki jonkin luokan jäsenet ovat myös jonkin toisen luokan jäseniä \cite{RDFS}. Esimerkiksi 
 luokka "Kustantamo" on luokan "Liikeyritys" aliluokka:
 \begin{verbatim}
-esim:Kustantamo rdfs:subClassOf esim:Liikeyritys 
+    <rdfs:Class rdf:ID="Kustantamo" />
+        <rdf:subClassOf rdf:resource="Liikeyritys"/>
+    </rdfs:Class>
 \end{verbatim}
-
-\subsubsection{Ominaisuudet ja periytetyt ominaisuudet}
-Resursien välisiä suhteita kuvataan ominaisuuksilla. Esimerkiksi "Matilla on veli Teppo". Voidaan ajatella, että resurssien "Matti" ja "Teppo" välinen suhde on ominaisuus "Veljeys". Ominaisuus "Veljeys" voi olla ominaisuuden "Perhesuhde"  aliluokka tai paremminkin aliominaisuus. Tällaisia konstruktioita kuvataan RDF Schemassa termillä subPropertyOf: 
+Kaikki yksilöt, jotka kuuluvat luokkaan Kustantamo kuuluvat myös luokkaan Liikeyritys.
+\subsubsection{Ominaisuus ja periytetty aliominaisuus}
+Resursien välisiä suhteita kuvataan \textit{ominaisuuksilla}. Esimerkiksi "Matilla on veli Teppo". Voidaan ajatella, että resurssien "Matti" ja "Teppo" välinen suhde on ominaisuus "Veljeys". Ominaisuus "Veljeys" voi olla ominaisuuden "Perhesuhde"  aliluokka tai paremminkin aliominaisuus. Tällaisia konstruktioita kuvataan RDF Schemassa termillä subPropertyOf: 
 \begin{verbatim}
-esim:Veljeys rdfs:subPropertyOf esim:Perhesuhde
+    <rdf:Property rdf:about="http://esim.fi/veljeys">
+        <rdfs:subPropertyOf rdf:resource="http://esim.fi/perhesuhde" />
+    </rdf:Property>
+
+    <rdf:Description rdf:about="http://esim.fi/Matti">
+        <esim:veljeys rdf:resource="http://esim.fi/Teppo" />
+    </rdf:Description>
 \end{verbatim}
- subPropertyOf ilmaisee määritelmällisesti, että resurssit joiden välistä suhdetta kuvataan jollain suhteella, voidaan kuvata myös tämän suhteen ylisuhteella, josta ko. suhde on periytynyt \cite{RDFS}. 
-\subsubsection{Rajoitukset ominaisuuksien sovellusalueissa ja arvoissa}
-RDF Schemassa on mahdollista antaa ominaisuuksille rajoituksia sen suhteen, että minkä luokkien välistä suhdetta ominaisuus kuvaa. Ensinnäkin
-voidaan rajoittaa suhteen sovellusaluetta (domain). Suhteen  "Työskentelee" sovellusalue voidaan rajata koskemaan ainoastaan luokkaa "Työntekijä". Samaten suhteen saamat arvot (range) voidaan rajata olemaan ainoastaan luokan "Yritys" tai sen aliluokkien ilmentymiä. 
+Esimerkissä on määritetty ensiksi ominaisuus "Veljeys", joka on ominaisuden "Perhesuhde" aliominaisuus. Seuraavaksi kuvataan yksilöä "Matti" ominaisuudella "Veljeys", joka saa arvokseen resurssin "Teppo". subPropertyOf ilmaisee määritelmällisesti, että resurssit joiden välistä suhdetta kuvataan jollain suhteella, voidaan kuvata myös tämän suhteen ylisuhteella, josta ko. suhde on periytynyt \cite{RDFS}. Matin ja Tepon suhdetta voidaan kuvailla ominaisuudella "Veljeys", mutta myös ominaisuudella "Perhesuhde". 
+
+\subsubsection{Rajoitukset ominaisuuden sovellusalueessa ja arvojoukossa}
+RDF Schemassa on mahdollista määrittää ominaisuuksille rajoituksia sen suhteen, että minkä luokkien jäsenten välistä suhdetta ominaisuus voi kuvata. Ensinnäkin
+voidaan rajoittaa ominaisuuden sovellusaluetta (domain). Esimerkiksi ominaisuuden "Työskentelee" sovellusalue voidaan rajata koskemaan ainoastaan luokkaa "Työntekijä". Samoin 
+ominaisuuden saamat arvot (range) voidaan rajata olemaan ainoastaan luokan "Yritys" tai sen aliluokkien ilmentymiä: 
 \begin{verbatim}
-esim:Työskentelee rdfs:domain esim:Työntekijä
-esim:Työskentelee rdfs:range esim:Yritys
+    <rdf:Property rdf:about="http://esim.fi/tyoskentelee">
+        <rdfs:domain rdf:resource="http://esim.fi/tyontekija" />
+        <rdfs:range rdf:resource="http://esim.fi/yritys" />
+    </rdf:Property>
 \end{verbatim}
-
-\subsubsection{RDF Schema esimerkki}
-Myös RDF Scheman varsinainen notaatio on toteutettu XML:llä. Alla on lyhyt esimerkki RDF Schemalla toteutetusta ontologiasta.: 
-\begin{verbatim}
-<rdf:RDF>
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-
-<rdfs:Class rdf:ID="liikeyritys" />
-
-<rdfs:Class rdf:ID="kustantamo">
-  <rdfs:subClassOf rdf:resource="#liikeyritys"/>
-</rdfs:Class>
-
-</rdf:RDF>
-\end{verbatim}
-
-Esimerkissä on yksinkertainen ontologia, joka kertoo, että "kustantamo" ja "liikeyritys" ovat luokkia ja että "kustantamo" on myös luokan "liikeyritys" aliluokka. RDF Schema  -ontologiat ovat RDF-tiedostoja samoin kuin OWL-ontologiatkin. Tiedoston alussa olevat nimiavaruusmäärittelyt varmistavat, että rdf- ja rdfs-alkuisilla tageilla ympäröidyt elementit todellakin ovat rdf- ja rdfs- elementtejä. Nimiavaruudet käsitellään takemmin OWL:n esittelyn yhteydessä. 
+Sovellusalueen rajaus määritetään rdfs:domain -elementillä ja arvojoukon rajaus rdfs:range -elementillä.  
 
 \section{Kehittyneitä ontologioita OWL:llä}
 
