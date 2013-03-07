@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.1.22)  5 MAR 2013 19:04
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.1.22)  7 MAR 2013 17:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -932,57 +932,46 @@ File: torrance2.png Graphic file (type png)
 <use torrance2.png>
 Package pdftex.def Info: torrance2.png used on input line 259.
 (pdftex.def)             Requested size: 343.78354pt x 90.33727pt.
- [6 <./torrance2.png>]
-Overfull \hbox (47.01033pt too wide) in paragraph at lines 315--315
-[]        \T1/lmtt/m/n/10.95 <rdfs:subPropertyOf rdf:resource="http://esim.fi/p
-erhesuhde" />[] 
- []
-
-
+ [6 <./torrance2.png>] [7]
 Overfull \hbox (10.56674pt too wide) in paragraph at lines 316--317
 \T1/lmr/m/n/10.95 (-20) "Per-he-suh-de"aliominaisuus. Seu-raa-vak-si ku-va-taan
  yk-si-lˆ‰ "Mat-ti"ominaisuudella
  []
 
-[7]
-Overfull \hbox (6.7692pt too wide) in paragraph at lines 327--327
-[]        \T1/lmtt/m/n/10.95 <rdfs:domain rdf:resource="http://esim.fi/tyonteki
-ja" />[] 
- []
+[8]
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 341.
 
-LaTeX Font Info:    Try loading font information for OMS+lmr on input line 345.
-
-(/usr/share/texmf/tex/latex/lm/omslmr.fd
+ (/usr/share/texmf/tex/latex/lm/omslmr.fd
 File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 345.
- [8] [9]
-Overfull \hbox (75.754pt too wide) in paragraph at lines 441--441
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 341.
+ [9]
+Overfull \hbox (75.754pt too wide) in paragraph at lines 404--404
 []   \T1/lmtt/m/n/10.95 <owl:imports>rdf:resource="http://purl.org/dc/elements/
 1.1"</owl:imports>[] 
  []
 
 [10] [11] [12]
-Overfull \hbox (33.29507pt too wide) in paragraph at lines 503--504
+Overfull \hbox (33.29507pt too wide) in paragraph at lines 466--467
 \T1/lmr/m/n/10.95 (-20) kuin luo-kil-le voi-daan m‰‰-rit-t‰‰ ali-luok-kia. Alio
 -mi-nai-suus to-teu-te-taan subPropertyOf-
  []
 
 
-Overfull \hbox (48.16008pt too wide) in paragraph at lines 525--525
+Overfull \hbox (48.16008pt too wide) in paragraph at lines 488--488
 []           \T1/lmtt/m/n/10.95 <owl:minCardinality rdf:datatype="&xsd;nonNegat
 iveInteger">2[] 
  []
 
 [13] [14] [15]
-Overfull \hbox (5.6825pt too wide) in paragraph at lines 608--609
+Overfull \hbox (5.6825pt too wide) in paragraph at lines 571--572
 []\T1/lmr/m/n/10.95 (-20) Esimerkiss‰ leikkaus-operaattori on il-mais-tu owl:in
 tersectionOf -elementill‰.
  []
 
 
-Overfull \hbox (14.71329pt too wide) in paragraph at lines 622--623
+Overfull \hbox (14.71329pt too wide) in paragraph at lines 585--586
 []\T1/lmr/m/n/10.95 (-20) Komplementtiluokka m‰‰-ri-tel-l‰‰n ele-men-til-l‰ owl
 :complementOf [[]]. Komple-
  []
@@ -1000,15 +989,15 @@ babelbib: Using the BibTeX style's default font for `ISSN'.
 babelbib: Using the BibTeX style's default font for `url'.
 babelbib: Using the BibTeX style's default font for `numeral'.
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 694.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 657.
  [19]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 694.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 657.
  (./web_ontology_language.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 694.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 694.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 657.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 657.
 Package rerunfilecheck Info: File `web_ontology_language.out' has not changed.
 (rerunfilecheck)             Checksum: CD9D53507F490929CF6B4EA404421232;2172.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 694.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 657.
  ) 
 Here is how much of TeX's memory you used:
  9786 strings out of 493481
@@ -1026,10 +1015,10 @@ xmf/fonts/type1/public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8
 .pfb></usr/share/texmf/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf/fonts/t
 ype1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></
 usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb>
-Output written on web_ontology_language.pdf (20 pages, 371282 bytes).
+Output written on web_ontology_language.pdf (20 pages, 371528 bytes).
 PDF statistics:
- 386 PDF objects out of 1000 (max. 8388607)
- 346 compressed objects within 4 object streams
+ 387 PDF objects out of 1000 (max. 8388607)
+ 347 compressed objects within 4 object streams
  62 named destinations out of 1000 (max. 500000)
  19688 words of extra memory for PDF output out of 20736 (max. 10000000)
 

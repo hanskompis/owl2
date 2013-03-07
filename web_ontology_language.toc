@@ -22,8 +22,8 @@
 \contentsline {subsubsection}{\numberline {3.2.9}Kardinaalisuusrajoitteet}{13}{subsubsection.3.2.9}
 \contentsline {subsubsection}{\numberline {3.2.10}Ominaisuuden transitiivisuus, symmetrisyys, funktionaalisuus ja inversio}{14}{subsubsection.3.2.10}
 \contentsline {subsubsection}{\numberline {3.2.11}Arvorajoitteet luokkaominaisuuksissa}{15}{subsubsection.3.2.11}
-\contentsline {subsubsection}{\numberline {3.2.12}Kompleksiset luokat}{15}{subsubsection.3.2.12}
-\contentsline {subsubsection}{\numberline {3.2.13}Ontologioiden yhdist\IeC {\"a}minen}{16}{subsubsection.3.2.13}
+\contentsline {subsubsection}{\numberline {3.2.12}Kompleksiset luokat}{16}{subsubsection.3.2.12}
+\contentsline {subsubsection}{\numberline {3.2.13}Ontologioiden yhdist\IeC {\"a}minen}{17}{subsubsection.3.2.13}
 \contentsline {subsection}{\numberline {3.3}OWL 2}{17}{subsection.3.3}
 \contentsline {section}{L\IeC {\"a}hteet}{19}{section*.2}
 \select@language {finnish}
