@@ -83,4 +83,11 @@
 \newblock \btxjournalfont {W3C Recommendation}, 10(February):1--46, 2004.
 \newblock {\latintext \btxurlfont{http://www.w3.org/TR/owl-guide/}}.
 
+\bibitem {XMLS}
+\btxnamefont {\btxlastnamefont {Wikipedia}}\btxauthorcolon\ \btxtitlefont
+  {\btxifchangecase {Xml schema (w3c)}{XML Schema (W3C)}}, 2012.
+\newblock {\latintext
+  \btxurlfont{http://http://en.wikipedia.org/wiki/XML_Schema_(W3C)}}, [Online;
+  noudettu 8.3.2013].
+
 \end{thebibliography}
