@@ -1,12 +1,12 @@
 \select@language {finnish}
 \contentsline {section}{\numberline {1}Johdanto}{3}{section.1}
-\contentsline {section}{\numberline {2}Teknologiat ja kielet jotka mahdollistavat OWL:n}{4}{section.2}
+\contentsline {section}{\numberline {2}Teknologiat ja kielet, joihin OWL perustuu}{4}{section.2}
 \contentsline {subsection}{\numberline {2.1}URI ja XML}{4}{subsection.2.1}
 \contentsline {subsection}{\numberline {2.2}Tiedon esitt\IeC {\"a}minen RDF-triploilla}{5}{subsection.2.2}
 \contentsline {subsection}{\numberline {2.3}Yksinkertaiset ontologiat RDF Schemalla}{6}{subsection.2.3}
 \contentsline {subsubsection}{\numberline {2.3.1}Luokka ja yksil\IeC {\"o}}{7}{subsubsection.2.3.1}
 \contentsline {subsubsection}{\numberline {2.3.2}Aliluokka}{7}{subsubsection.2.3.2}
-\contentsline {subsubsection}{\numberline {2.3.3}Ominaisuus ja periytetty aliominaisuus}{7}{subsubsection.2.3.3}
+\contentsline {subsubsection}{\numberline {2.3.3}Ominaisuus ja aliominaisuus}{7}{subsubsection.2.3.3}
 \contentsline {subsubsection}{\numberline {2.3.4}Rajoitukset ominaisuuden sovellusalueessa ja arvojoukossa}{8}{subsubsection.2.3.4}
 \contentsline {section}{\numberline {3}Kehittyneit\IeC {\"a} ontologioita OWL:ll\IeC {\"a}}{8}{section.3}
 \contentsline {subsection}{\numberline {3.1}OWL:n kolme alikielt\IeC {\"a}}{9}{subsection.3.1}
@@ -16,13 +16,14 @@
 \contentsline {subsubsection}{\numberline {3.2.3}Yksinkertaiset luokat ja aliluokat}{11}{subsubsection.3.2.3}
 \contentsline {subsubsection}{\numberline {3.2.4}Luokan ja ilmentym\IeC {\"a}t}{11}{subsubsection.3.2.4}
 \contentsline {subsubsection}{\numberline {3.2.5}Ominaisuudet}{12}{subsubsection.3.2.5}
-\contentsline {subsubsection}{\numberline {3.2.6}Datatyyppiominaisuus}{12}{subsubsection.3.2.6}
-\contentsline {subsubsection}{\numberline {3.2.7}Aliominaisuudet}{13}{subsubsection.3.2.7}
-\contentsline {subsubsection}{\numberline {3.2.8}Kardinaalisuusrajoitteet}{13}{subsubsection.3.2.8}
-\contentsline {subsubsection}{\numberline {3.2.9}Ominaisuuden transitiivisuus, symmetrisyys, funktionaalisuus ja k\IeC {\"a}\IeC {\"a}nteisfunktionaalisuus}{14}{subsubsection.3.2.9}
-\contentsline {subsubsection}{\numberline {3.2.10}Arvorajoitteet luokkaominaisuuksissa}{14}{subsubsection.3.2.10}
-\contentsline {subsubsection}{\numberline {3.2.11}Kompleksiset luokat}{15}{subsubsection.3.2.11}
-\contentsline {subsubsection}{\numberline {3.2.12}Ontologioiden yhdist\IeC {\"a}minen}{16}{subsubsection.3.2.12}
+\contentsline {subsubsection}{\numberline {3.2.6}Luokkaominaisuus}{12}{subsubsection.3.2.6}
+\contentsline {subsubsection}{\numberline {3.2.7}Datatyyppiominaisuus}{12}{subsubsection.3.2.7}
+\contentsline {subsubsection}{\numberline {3.2.8}Aliominaisuudet}{13}{subsubsection.3.2.8}
+\contentsline {subsubsection}{\numberline {3.2.9}Kardinaalisuusrajoitteet}{13}{subsubsection.3.2.9}
+\contentsline {subsubsection}{\numberline {3.2.10}Ominaisuuden transitiivisuus, symmetrisyys, funktionaalisuus ja k\IeC {\"a}\IeC {\"a}nteisfunktionaalisuus}{14}{subsubsection.3.2.10}
+\contentsline {subsubsection}{\numberline {3.2.11}Arvorajoitteet luokkaominaisuuksissa}{14}{subsubsection.3.2.11}
+\contentsline {subsubsection}{\numberline {3.2.12}Kompleksiset luokat}{15}{subsubsection.3.2.12}
+\contentsline {subsubsection}{\numberline {3.2.13}Ontologioiden yhdist\IeC {\"a}minen}{16}{subsubsection.3.2.13}
 \contentsline {subsection}{\numberline {3.3}OWL 2}{17}{subsection.3.3}
 \contentsline {subsection}{\numberline {3.4}P\IeC {\"a}\IeC {\"a}telmi\IeC {\"a}}{18}{subsection.3.4}
 \contentsline {section}{L\IeC {\"a}hteet}{19}{section*.2}
