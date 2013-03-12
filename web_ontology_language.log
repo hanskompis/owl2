@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.1.22)  12 MAR 2013 16:17
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.1.22)  12 MAR 2013 18:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -902,81 +902,81 @@ Overfull \hbox (0.5083pt too wide) in paragraph at lines 198--204
 i-ten XML-kielell‰. XML-
  []
 
-[4 <./stack.png>] <JackTorrance.png, id=185, 687.56876pt x 65.24374pt>
+[4 <./stack.png>] <JackTorrance.png, id=185, 624.3325pt x 39.14626pt>
 File: JackTorrance.png Graphic file (type png)
 
 <use JackTorrance.png>
 Package pdftex.def Info: JackTorrance.png used on input line 217.
-(pdftex.def)             Requested size: 343.78354pt x 32.62178pt.
+(pdftex.def)             Requested size: 312.16548pt x 19.57307pt.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 234.
+(Font)              <9> on input line 233.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 234.
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 236.
+(Font)              <5> on input line 233.
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 235.
 
  (/usr/share/texmf/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-Overfull \hbox (29.76413pt too wide) in paragraph at lines 247--247
-[]        \T1/lmtt/m/n/10.95 <ex:onAmmatiltaan rdf:resource="http://esim.fi/Kir
-jailija"/>[] 
- []
-
-[5 <./JackTorrance.png>] <torrance2.png, id=206, 687.56876pt x 180.675pt>
+) [5 <./JackTorrance.png>] <torrance2.png, id=206, 717.68124pt x 180.675pt>
 File: torrance2.png Graphic file (type png)
 
 <use torrance2.png>
-Package pdftex.def Info: torrance2.png used on input line 261.
-(pdftex.def)             Requested size: 343.78354pt x 90.33727pt.
- [6 <./torrance2.png>] [7]
-Overfull \hbox (10.56674pt too wide) in paragraph at lines 319--320
-\T1/lmr/m/n/10.95 (-20) "Per-he-suh-de"aliominaisuus. Seu-raa-vak-si ku-va-taan
- yk-si-lˆ‰ "Mat-ti"ominaisuudella
+Package pdftex.def Info: torrance2.png used on input line 260.
+(pdftex.def)             Requested size: 358.83974pt x 90.33727pt.
+ [6 <./torrance2.png>]
+Overfull \hbox (10.43663pt too wide) in paragraph at lines 308--309
+\T1/lmtt/m/n/10.95 Ven‰j‰ \T1/lmr/m/n/10.95 (-20) v‰-li-nen suh-de on omi-nai-s
+uus \T1/lmtt/m/n/10.95 Valmistusmaa\T1/lmr/m/n/10.95 (-20) . Omi-nai-suus \T1/l
+mtt/m/n/10.95 Valmistusmaa
  []
 
-[8]
-LaTeX Font Info:    Try loading font information for OMS+lmr on input line 345.
+
+Overfull \hbox (7.19992pt too wide) in paragraph at lines 318--319
+\T1/lmtt/m/n/10.95 Lada1200A \T1/lmr/m/n/10.95 (-20) omi-nai-suu-del-la \T1/lmt
+t/m/n/10.95 Valmistusmaa\T1/lmr/m/n/10.95 (-20) , jo-ka saa ar-vok-seen re-surs
+-sin \T1/lmtt/m/n/10.95 Ven‰j‰\T1/lmr/m/n/10.95 (-20) .
+ []
+
+[7] [8]
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 344.
 
  (/usr/share/texmf/tex/latex/lm/omslmr.fd
 File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 345.
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 344.
  [9] [10]
-Overfull \hbox (75.754pt too wide) in paragraph at lines 408--408
+Overfull \hbox (75.754pt too wide) in paragraph at lines 407--407
 []   \T1/lmtt/m/n/10.95 <owl:imports>rdf:resource="http://purl.org/dc/elements/
 1.1"</owl:imports>[] 
  []
 
-[11] [12]
-Overfull \hbox (33.29507pt too wide) in paragraph at lines 464--465
+[11]
+Overfull \hbox (2.88199pt too wide) in paragraph at lines 439--440
+\T1/lmr/m/n/10.95 (-20) Esimerkiss‰ m‰‰-ri-te-t‰‰n \T1/lmtt/m/n/10.95 Autonvalm
+istaja\T1/lmr/m/n/10.95 (-20) -luokan il-men-ty-m‰ \T1/lmtt/m/n/10.95 AvtoVAZ\T
+1/lmr/m/n/10.95 (-20) . Luok-
+ []
+
+[12]
+Overfull \hbox (38.68376pt too wide) in paragraph at lines 463--464
 \T1/lmr/m/n/10.95 (-20) kuin luo-kil-le voi-daan m‰‰-rit-t‰‰ ali-luok-kia. Alio
--mi-nai-suus to-teu-te-taan subPropertyOf-
+-mi-nai-suus to-teu-te-taan \T1/lmtt/m/n/10.95 subPropertyOf\T1/lmr/m/n/10.95 (
+-20) -
  []
 
 
-Overfull \hbox (48.16008pt too wide) in paragraph at lines 486--486
+Overfull \hbox (48.16008pt too wide) in paragraph at lines 485--485
 []           \T1/lmtt/m/n/10.95 <owl:minCardinality rdf:datatype="&xsd;nonNegat
 iveInteger">2[] 
  []
 
 [13] [14]
-Overfull \hbox (5.6825pt too wide) in paragraph at lines 550--551
-[]\T1/lmr/m/n/10.95 (-20) Esimerkiss‰ leikkaus-operaattori on il-mais-tu owl:in
-tersectionOf -elementill‰.
+Overfull \hbox (24.80386pt too wide) in paragraph at lines 548--549
+[]\T1/lmr/m/n/10.95 (-20) Esimerkiss‰ leikkaus-operaattori on il-mais-tu \T1/lm
+tt/m/n/10.95 owl:intersectionOf \T1/lmr/m/n/10.95 (-20) -elementill‰.
  []
 
-[15]
-Overfull \hbox (14.71329pt too wide) in paragraph at lines 564--565
-[]\T1/lmr/m/n/10.95 (-20) Komplementtiluokka m‰‰-ri-tel-l‰‰n ele-men-til-l‰ owl
-:complementOf [[]]. Komple-
- []
-
-[16] [17]
-
-LaTeX Warning: Citation `WEB3' on page 18 undefined on input line 617.
-
-[18] (./web_ontology_language.bbl
+[15] [16] [17] [18] (./web_ontology_language.bbl
 babelbib: Using the BibTeX style's default font for `name'.
 babelbib: Using the BibTeX style's default font for `lastname'.
 babelbib: Using the BibTeX style's default font for `title'.
@@ -989,28 +989,24 @@ babelbib: Using the BibTeX style's default font for `ISSN'.
 babelbib: Using the BibTeX style's default font for `url'.
 babelbib: Using the BibTeX style's default font for `numeral'.
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 641.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 639.
  [19]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 641.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 639.
  (./web_ontology_language.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 641.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 641.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 639.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 639.
 Package rerunfilecheck Info: File `web_ontology_language.out' has not changed.
-(rerunfilecheck)             Checksum: 38BA7859E6174D05CE5269DB1883960F;2066.
-
-
-LaTeX Warning: There were undefined references.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 641.
+(rerunfilecheck)             Checksum: 08CF48767715BD5EA459E1E5C9055335;2063.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 639.
  ) 
 Here is how much of TeX's memory you used:
- 9807 strings out of 493481
- 144771 string characters out of 3143393
- 269535 words of memory out of 3000000
- 12708 multiletter control sequences out of 15000+200000
- 66658 words of font info for 129 fonts, out of 3000000 for 9000
+ 9802 strings out of 493481
+ 144685 string characters out of 3143393
+ 269563 words of memory out of 3000000
+ 12696 multiletter control sequences out of 15000+200000
+ 67095 words of font info for 132 fonts, out of 3000000 for 9000
  965 hyphenation exceptions out of 8191
- 35i,8n,35p,773b,494s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 35i,8n,35p,774b,494s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/en
 c/dvips/lm/lm-ec.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/s
 hare/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/publi
@@ -1019,10 +1015,10 @@ xmf/fonts/type1/public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8
 .pfb></usr/share/texmf/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf/fonts/t
 ype1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></
 usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb>
-Output written on web_ontology_language.pdf (20 pages, 379775 bytes).
+Output written on web_ontology_language.pdf (20 pages, 379013 bytes).
 PDF statistics:
- 397 PDF objects out of 1000 (max. 8388607)
- 357 compressed objects within 4 object streams
- 63 named destinations out of 1000 (max. 500000)
+ 401 PDF objects out of 1000 (max. 8388607)
+ 361 compressed objects within 4 object streams
+ 64 named destinations out of 1000 (max. 500000)
  19680 words of extra memory for PDF output out of 20736 (max. 10000000)
 

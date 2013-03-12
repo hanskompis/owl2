@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
   \providebibliographyfont{name}{}%
   \providebibliographyfont{lastname}{}%
   \providebibliographyfont{title}{\emph}%
@@ -38,6 +38,12 @@
   Rdf schema}{RDF Vocabulary Description Language 1.0: RDF Schema}}.
 \newblock \btxjournalfont {W3C Recommendation}, 2009(10 February 2004), 2004.
 \newblock {\latintext \btxurlfont{http://www.w3.org/TR/rdf-schema/}}.
+
+\bibitem {WEB30}
+\btxnamefont {\btxlastnamefont {Hendler}, J}\btxauthorcolon\ \btxtitlefont
+  {\btxifchangecase {Web 3.0 emerging}{Web 3.0 Emerging}}, 2009.
+\newblock {\latintext
+  \btxurlfont{http://ieeexplore.ieee.org/lpdocs/epic03/wrapper.htm?arnumber=4755170}}.
 
 \bibitem {SHIQ}
 \btxnamefont {\btxlastnamefont {Horrocks}, I}\btxauthorcolon\ \btxjtitlefont

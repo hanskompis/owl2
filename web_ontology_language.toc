@@ -14,7 +14,7 @@
 \contentsline {subsubsection}{\numberline {3.2.1}Nimiavaruudet}{10}{subsubsection.3.2.1}
 \contentsline {subsubsection}{\numberline {3.2.2}Otsikkotiedot}{10}{subsubsection.3.2.2}
 \contentsline {subsubsection}{\numberline {3.2.3}Yksinkertaiset luokat ja aliluokat}{11}{subsubsection.3.2.3}
-\contentsline {subsubsection}{\numberline {3.2.4}Luokan ja ilmentym\IeC {\"a}t}{12}{subsubsection.3.2.4}
+\contentsline {subsubsection}{\numberline {3.2.4}Luokan ilmentym\IeC {\"a}t}{12}{subsubsection.3.2.4}
 \contentsline {subsubsection}{\numberline {3.2.5}Ominaisuudet}{12}{subsubsection.3.2.5}
 \contentsline {subsubsection}{\numberline {3.2.6}Aliominaisuudet}{13}{subsubsection.3.2.6}
 \contentsline {subsubsection}{\numberline {3.2.7}Kardinaalisuusrajoitteet}{13}{subsubsection.3.2.7}
