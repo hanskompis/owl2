@@ -1,7 +1,7 @@
 \BOOKMARK [1][-]{section.1}{Johdanto}{}% 1
 \BOOKMARK [1][-]{section.2}{Teknologiat ja kielet, joihin OWL perustuu}{}% 2
 \BOOKMARK [2][-]{subsection.2.1}{URI ja XML}{section.2}% 3
-\BOOKMARK [2][-]{subsection.2.2}{Tiedon esitt\344minen RDF-triploilla}{section.2}% 4
+\BOOKMARK [2][-]{subsection.2.2}{Tiedon esitt\344minen RDF-kolmikoilla}{section.2}% 4
 \BOOKMARK [2][-]{subsection.2.3}{Yksinkertaiset ontologiat RDF Schemalla}{section.2}% 5
 \BOOKMARK [3][-]{subsubsection.2.3.1}{Luokka ja yksil\366}{subsection.2.3}% 6
 \BOOKMARK [3][-]{subsubsection.2.3.2}{Aliluokka}{subsection.2.3}% 7
@@ -15,14 +15,12 @@
 \BOOKMARK [3][-]{subsubsection.3.2.3}{Yksinkertaiset luokat ja aliluokat}{subsection.3.2}% 15
 \BOOKMARK [3][-]{subsubsection.3.2.4}{Luokan ja ilmentym\344t}{subsection.3.2}% 16
 \BOOKMARK [3][-]{subsubsection.3.2.5}{Ominaisuudet}{subsection.3.2}% 17
-\BOOKMARK [3][-]{subsubsection.3.2.6}{Luokkaominaisuus}{subsection.3.2}% 18
-\BOOKMARK [3][-]{subsubsection.3.2.7}{Datatyyppiominaisuus}{subsection.3.2}% 19
-\BOOKMARK [3][-]{subsubsection.3.2.8}{Aliominaisuudet}{subsection.3.2}% 20
-\BOOKMARK [3][-]{subsubsection.3.2.9}{Kardinaalisuusrajoitteet}{subsection.3.2}% 21
-\BOOKMARK [3][-]{subsubsection.3.2.10}{Ominaisuuden transitiivisuus, symmetrisyys, funktionaalisuus ja k\344\344nteisfunktionaalisuus}{subsection.3.2}% 22
-\BOOKMARK [3][-]{subsubsection.3.2.11}{Arvorajoitteet luokkaominaisuuksissa}{subsection.3.2}% 23
-\BOOKMARK [3][-]{subsubsection.3.2.12}{Kompleksiset luokat}{subsection.3.2}% 24
-\BOOKMARK [3][-]{subsubsection.3.2.13}{Ontologioiden yhdist\344minen}{subsection.3.2}% 25
-\BOOKMARK [2][-]{subsection.3.3}{OWL 2}{section.3}% 26
-\BOOKMARK [2][-]{subsection.3.4}{P\344\344telmi\344}{section.3}% 27
-\BOOKMARK [1][-]{section*.2}{L\344hteet}{}% 28
+\BOOKMARK [3][-]{subsubsection.3.2.6}{Aliominaisuudet}{subsection.3.2}% 18
+\BOOKMARK [3][-]{subsubsection.3.2.7}{Kardinaalisuusrajoitteet}{subsection.3.2}% 19
+\BOOKMARK [3][-]{subsubsection.3.2.8}{Ominaisuuden transitiivisuus, symmetrisyys, funktionaalisuus ja k\344\344nteisfunktionaalisuus}{subsection.3.2}% 20
+\BOOKMARK [3][-]{subsubsection.3.2.9}{Arvorajoitteet luokkaominaisuuksissa}{subsection.3.2}% 21
+\BOOKMARK [3][-]{subsubsection.3.2.10}{Kompleksiset luokat}{subsection.3.2}% 22
+\BOOKMARK [3][-]{subsubsection.3.2.11}{Ontologioiden yhdist\344minen}{subsection.3.2}% 23
+\BOOKMARK [2][-]{subsection.3.3}{OWL 2}{section.3}% 24
+\BOOKMARK [2][-]{subsection.3.4}{P\344\344telmi\344}{section.3}% 25
+\BOOKMARK [1][-]{section*.2}{L\344hteet}{}% 26

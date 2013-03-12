@@ -3,11 +3,12 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: web_ontology_language.aux
 The style file: babplain-lf.bst
 Database file #1: lahteet.bib
+Warning--I didn't find a database entry for "WEB3"
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Warning--empty language in AH09
 You've used 9 entries,
             2783 wiz_defined-function locations,
-            707 strings with 7738 characters,
+            709 strings with 7746 characters,
 and the built_in function-call counts, 3559 in all, are:
 = -- 323
 > -- 130
@@ -46,4 +47,4 @@ warning$ -- 1
 while$ -- 32
 width$ -- 10
 write$ -- 121
-(There was 1 warning)
+(There were 2 warnings)

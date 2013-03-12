@@ -75,11 +75,11 @@
 % The following commands define the information used to generate title and
 % abstract pages. The following entries should be always specified:
 
-\title{OWL - Web Ontology Language}
+\title{Ontologianmäärityskieli OWL}
 \author{Hansi Keijonen}
 \date{\today}
 \level{Seminaariraportti}
-\abstract{Tiivistelmä.}
+\abstract{Semanttisessa webissä ei ole ainoastaan dokumentteja ihmisten luettavaksi, vaan myös tietoa dokumenteissa olevien asioiden merkityksistä. Näitä merkityksiä voidaan tulkita ja tuottaa myös koneellisesti. Merkityksiä, semantiikkaa, voidaan ilmaista ontologioilla. Tietojenkäsittelytieteessä ontologialla tarkoitetaan dokumenttia, jossa kerrotaan asioiden välisistä yhteyksistä. Ontologiat ovat kehittyneen semanttisen webin perusta. OWL (Web Ontology Language) on ilmaisuvoimainen mutta kuitenkin koneellisesti pääteltävissä oleva ontologianmäärityskieli. Tässä seminaariraportissa esitellään OWL-kieli sekä muita teknologioita ja kieliä, kuten RDF ja RDF Schema, joiden konstruktioita OWL käyttää.}
 
 % The following can be used to specify keywords and classification of the paper:
 
@@ -124,51 +124,54 @@
 
 
 % --- Main matter ---
-use case
 
 \section{Johdanto}
 Semanttinen web on visio tulevaisuuden webistä, jossa informaatiolle annetaan eksplisiittinen
-merkitys mahdollistaen näin koneiden kyky prosessoida ja yhdistellä webissä olevaa tietoa \cite{MH04}.  
-Tim Berners-Lee, James Hendler ja Ora Lassila toteavat
-artikkelissa "Semantic web", että  
+merkitys mahdollistaen näin koneiden kyky prosessoida ja yhdistellä webissä olevaa tietoa \cite{MH04}. 
+Vuonna 2001 Tim Berners-Lee, James Hendler ja Ora Lassila julkaisivat artikkelin "the Semantic Web", jossa he
+luonnehtivat semanttista webiä seuraavasti:
 \begin{quote}
 "Semanttinen web ei ole erillinen web vaan
 laajennos tämänhetkiseen webiin, jossa informaatiolle on annettu hyvin muotoiltu
-merkitys mahdollistaen koneiden ja ihmisten paremman yhteistyön. TULEEX VIITE MIHIN?"
+merkitys mahdollistaen koneiden ja ihmisten paremman yhteistyön.[suomennos kirjoittajan]
 \end{quote}
 Suurin osa tämän päivän webin sisällöstä on tarkoitettu ihmisten luettavaksi sekä tulkittavaksi.
-Kone pystyy tulkitsemaan esim. html-tiedoston ja esittämään
+Kone pystyy tulkitsemaan esimerkiksi html-tiedoston ja esittämään
 dokumentin siinä määritellyllä tavalla mutta se ei
-\textit{ymmärrä} dokumentin sisällön merkitystä, semantiikkaa \cite{BHL01}.Tämä 
+\textit{ymmärrä} dokumentin sisällön \textit{merkitystä}, semantiikkaa \cite{BHL01}.Tämä 
 rajoittaa esimerkiksi haut internetissä olevista dokumenteista yksinkertaiseksi hakusanojen
 etsimiseksi. Sen sijaan jos hakukoneet ymmärtäisivät asioiden merkityksen ja
 niiden välillä vallitsevat yhteydet, olisivat hakutulokset tarkempia
 ja sisältäisivät mahdollisesti laajennettuja hakuja alkuperäisen asian ympäriltä
-\cite{SHIQ}. Semanttisella webillä on mahdollisuuksia myös verkkokaupankäynnissä, jossa 
+\cite{SHIQ}. 
+
+Semanttisella webillä on mahdollisuuksia myös verkkokaupankäynnissä, jossa 
 myyjäagentit ja ostaja-agentit voivat kommunikoida keskenään tuotetietojen pohjalta luotujen 
 ontologioiden avulla \cite{SHIQ}. Myös eri toimijoiden tuottamien web-palveluiden koostamisessa semanttisen 
 webin teknologioilla on keskeinen rooli: palveluiden tuottajat voivat kuvata tarjoamansa
 palvelun jolloin palveluita kokoavat sovellukset voivat niitä hyödyntää tehokkaasti \cite{SHIQ}. 
-Maailmanlaajuinen tietoverkko tulisi siis muuttaa dokumenttien verkosta 
+Maailmanlaajuinen tietoverkko voisi muuttua dokumenttien verkosta 
 tiedon verkoksi \cite{BHL01}. 
 
 Semantiikkaa voidaan webissä ilmaista ontologioilla. Tietojenkäsittelytieteessä
 ontologialla tarkoitetaan dokumenttia, jossa kerrrotaan asioiden välisistä
 yhteyksistä \cite{BHL01}.
-Ontologioiden luomiseksi pitää olla menetelmiä käsitteiden määritykseen, käsitteiden
-ominaisuuksien määritykseen sekä käsitteiden välisten suhteiden määritykseen
-\cite{BHL01}. World Wide Web Consortium W3C on määritellyt 
-joukon standardeja (suosituksia) kielille ja sanastoille, joilla merkitysten määrittäminen voidaan toteuttaa.
-Tässä artikkelissa selvitetään pääasiassa OWL:n periaatteita. Lyhenne OWL tulee sanoista Web Ontology Language ja sille on
-W3C:n suositus standardiksi vuodelta 2004. Uudempi suositus on OWL2:lle vuodelta 2012. 
+Ontologioiden luomiseksi pitää olla menetelmiä käsitteiden, käsitteiden
+ominaisuuksien sekä käsitteiden välisten suhteiden määritykseen
+\cite{BHL01}. 
 
-Jotta olisi mahdollista ymmärtää OWL:n toimintaperiaate on käytävä soveltuvin osin läpi myös teknologiat, joihin
-se perustuu. Tässä artikkelissa esitellään RDF ja RDF Schema, joiden konstruktioihin OWL vahvasti nojaa. 
+World Wide Web Consortium W3C on määritellyt 
+joukon standardeja (suosituksia) kielille ja sanastoille, joilla merkitysten määrittäminen voidaan toteuttaa.
+Tässä artikkelissa selvitetään pääasiassa OWL-kielen periaatteita. Lyhenne OWL tulee sanoista Web Ontology Language ja sille on
+W3C:n suositus standardiksi vuodelta 2004. Uudempi suositus on OWL 2:lle vuodelta 2012. 
+
+Jotta olisi mahdollista ymmärtää OWL:n toimintaperiaate, on käytävä soveltuvin osin läpi myös teknologiat, joihin
+se perustuu. Tässä artikkelissa esitellään OWL:in lisäksi RDF ja RDF Schema, joiden konstruktioihin OWL vahvasti nojaa. 
 Lopuksi selvitetään lyhyesti OWL:n laajennoksen OWL2:n tuomat lisäominaisuudet.  
 
-\section{Teknologiat ja kielet jotka mahdollistavat OWL:n}
-W3C tarjoaa semanttisen webin toteuttamiseen suositukset teknologioista ja
-kielistä. Kuvassa \ref{stack} on semanttisen webin teknologia- ja konseptipino.
+\section{Teknologiat ja kielet, joihin OWL perustuu}
+W3C tarjoaa suosituksia teknologioista ja
+kielistä  semanttisen webin toteuttamiseen. Kuvassa \ref{stack} on semanttisen webin teknologiapino.
 Osa teknologioista on jo todellisuutta ja
 käytössä, osa vasta ideatasolla. Jokainen kerros hyödyntää alemman kerroksen toteuttamia
 palveluita. Seuraavissa kappaleissa käydään läpi kaavion teknologioita ja kieliä
@@ -199,37 +202,37 @@ Tärkeä XML:n ominaisuus on nimiavaruudet, jotka mahdollistavat ja helpottavat 
 identifiointia URI:en avulla. Nimiavaruuksien käyttöä selvitetään tarkemmin
 OWL-ontologioiden yhteydessä. 
 
-\subsection{Tiedon esittäminen RDF-triploilla}
+\subsection{Tiedon esittäminen RDF-kolmikoilla}
 
 Resource Description Framework RDF on kieli webissä olevien resurssien
 kuvaamiseen \cite{RDFP}. 
 RDF perustuu resurssien identifiointiin URI:lla ja näiden kuvaamiseen 
 ominaisuuksilla ja ominaisuuksien arvoilla. Tämä mahdollistaa yksinkertaisten
-lausumien esittämisen verkkoina, joissa resurssit ja ominaisuuksien arvot ovat soluja ja
+lausumien esittämisen verkkoina, joissa resurssit ja ominaisuuksien arvot ovat solmuja ja
 ominaisuudet verkon 
 kaaria \cite{RDFP}. % Kuvassa \ref{jack} on havainnollistettu asiaa. 
 
 \begin{figure}[h]
  \centering
  \includegraphics[scale=0.50]{JackTorrance.png}
- \caption{RDF-tripla joka kuvaa yksinkertaisen lausuman. Jokainen triplan solmu
+ \caption{RDF-kolmikko joka kuvaa yksinkertaisen lausuman. Jokainen kolmikon solmu
 ja kaari on identifioitu URI:lla. }
  \label{jack}
 \end{figure}
 
-Kuvassa \ref{jack} on kuvattu yksinkertainen \textit{RDF-tripla}.
-Triplan subjekti, predikaatti ja objekti kertovat, että "Jack Torrance on ammatiltaan
+Kuvassa \ref{jack} on kuvattu yksinkertainen \textit{RDF-kolmikko}.
+Kolmikon subjekti, predikaatti ja objekti kertovat, että "Jack Torrance on ammatiltaan
 kirjailija". Subjekti on siis asia, jota kuvataan, predikaatti on ominaisuus, jolla 
 kuvataan ja objekti on ominaisuuden arvo \cite{RDFP}. 
 Jokainen solu ja kaari on esimerkissä identifioitu URI:lla. Objekti voi olla
 myös literaali, jolloin 
 sitä ei identifioida erikseen, mutta formaatti voidaan määritellään esimerkiksi XML Scheman
-datatyyppien avulla. 
+datatyyppien avulla \cite{RDFP}. 
 
-Yleisin tapa esittää tripla on XML-notaatio. Myös muut tavat ovat mahdollisia,
+Yleisin tapa esittää kolmikko on XML-notaatio. Myös muut tavat ovat mahdollisia,
 kuten 
 esimerkiksi \textit{JSON} \footnote{JSON on nönnöö} ja \textit{turtle} \footnote{turtle on nönnöö}. Alla on esitetty kuvassa
-\ref{jack} esitetyn triplan XML-notaatio:
+\ref{jack} esitetyn kolmikon XML-notaatio:
 \begin{verbatim}
 <?xml version="1.0"?>
 
@@ -248,16 +251,15 @@ nimiavaruuden kautta. Esimerkistä ilmenee RDF:n kolme peruskonstruktiota:
 \textit{rdf:Description} ilmoittaa, että kyseessä on kuvaus, \textit{rdf:about} viittaa subjektiin, \textit{rdf:resource}
 viittaa resurssiin, tässä tapauksessa ominaisuuden arvoon. 
 
-****tää seuraava on ihan kiva läppä, mutta onko paikka tässä? mahdollisesti ennen xml-esimerkkiä?***********
-Jack Torrance on toiselta ammatiltaan talonmies ja myös Laila Hietamies
-on ammatiltaan kirjailija. Kun myös nämä triplat lisätään kuvan \ref{jack} kaavioon, alkaa
+Voimme laajentaa kuvan \ref{jack} esimerkkiä lisäämällä RDF-kolmikoita verkkoomme. Jack Torrance on toiselta ammatiltaan talonmies ja myös Laila Hietamies
+on ammatiltaan kirjailija. Kun myös nämä kolmikot lisätään kuvan \ref{jack} kaavioon, alkaa
 pieni mutta informatiivinen verkko syntyä (kuva \ref{jack2}). Tästä verkosta voisimme
 tehdä jo hakuja, kuten "listaa henkilöt, jotka ovat kirjailijoita".
 
 \begin{figure}[h]
  \centering
  \includegraphics[scale=0.50]{torrance2.png}
- \caption{RDF-triplat muodostavat verkon.}
+ \caption{RDF-kolmikot muodostavat verkon.}
  \label{jack2}
 \end{figure}
 
@@ -265,7 +267,7 @@ RDF tarjoaa melko alkeellisen tavan esittää lausumia, jotka
 muodostavat haut mahdollistavan verkon. RDF toteuttaa myös joukon muita ominaisuuksia, kuten
 \textit{säiliöitä} (container) tiedon säilömiseen sekä
 \textit{kokoomatietorakenteita}
-(collections) asioiden listaamiseen \cite{RDFP}. Näitä käsitellään myöhemmin
+(collections) asioiden listaamiseen \cite{RDFP}. Näitä käsitellään
 niiltä osin 
 kuin ne ovat relevantteja OWL-ontologioiden muodostamisessa.  
  
@@ -273,20 +275,19 @@ kuin ne ovat relevantteja OWL-ontologioiden muodostamisessa.
 
 %RDF:llä ilmaistut ominaisuudet voidaan ajatella resurssien attribuuteiksi
 %samassa mielessä kuin perinteiset attribuutti-arvo -parit \cite{RDFS}. 
-Vaikka RDF:llä voidaan kuvata resursseja ominaisuuksien avulla ja määrittää näin resurssien välisiä suhteita, se ei tarjoa keinoja määrittää itse ominaisuuksia tai
-ominaisuuksien välisiä suhteita \cite{RDFS}. Tämän mahdollistaa RDF:n \textit{sanastonkuvauslaajennos}
-RDF Schema. RDF Schemalla on mahdollista määrittää resurssien joukkoja luokiksi (class) sekä näiden (luokkien ja yksilöiden) välisiä suhteita ominaisuuksiksi (property) \cite{RDFS}. 
-RDF Schema on RDF:n semanttinen laajennos joka ei kuitenkaan tarjoa sanastoa asioiden ymmärtämiseen, vaan se tarjoaa työkaluja sanastojen luomiseen \cite{RDFS}. 
+Vaikka RDF:llä voidaan kuvata resursseja ominaisuuksien avulla ja määrittää näin resurssien välisiä suhteita, se ei tarjoa keinoja määrittää itse luokkia, ominaisuuksia tai
+niiden välisiä suhteita ja hierarkioita \cite{RDFS}. Toisin sanoen, voimme määrittää, että "auton merkki on Lada", mutta emme voi määrittää esimerkiksi mitä arvoja ominaisuus "merkki" voi saada.
+Tämän mahdollistaa RDF:n laajennos RDF Schema. 
 
-RDF Scheman yksi peruselementti on siis \textit{luokka}, jolla voi olla myös \textit{aliluokkia}. Luokan jäsenet ovat \textit{yksilöitä}, luokan \textit{ilmentymiä}. Toinen peruselementti on \textit{ominaisuus}. Ominaisuus yhdistää luokan 
-ilmentymiä toisiinsa, luo suhteen niiden välille. Ominaisuudella voi olla myös \textit{aliominaisuuksia}. Näiden elementtien avulla voidaan määrittää melko yksinkertaisia luokkien ja suhteiden hierarkkisten järjestelmien kuvauksia, (kevyt)ontologioita.  
+RDF Schemalla on mahdollista määrittää resurssien joukkoja \textit{luokiksi} (class).  Luokalla voi olla  \textit{aliluokkia} ja luokkien jäseniä kutsutaan \textit{ilmentymiksi} tai \textit{yksilöiksi}. Luokkien ilmentymien välisiä suhteita kutsutaan \textit{ominaisuuksiksi} (property) \cite{RDFS}. Ominaisuus siis asettaa kahden ilmentymän välille suhteen. Myös ominaisuuksilla voi olla \textit{aliominaisuuksia}.
+RDF Schema on RDF:n semanttinen laajennos joka ei kuitenkaan tarjoa sanastoa asioiden ymmärtämiseen, vaan se tarjoaa työkaluja sanastojen luomiseen \cite{RDFS}. Näiden elementtien avulla voidaan määrittää melko yksinkertaisia luokkien ja suhteiden hierarkkisten järjestelmien kuvauksia, (kevyt)ontologioita.  
 
 Seuraavissa kappaleissa esitellään niitä RDF Scheman peruskonstruktioita, 
-joita myös OWL käyttää toteutuksessaan lähes sellaisenaan. \emph{RDFS Schema määrittelee myös suurehkon joukon muita konstruktioita, mutta niiden käsittely on OWL:n esittelyn kannalta tässä tarpeetonta.} 
+joita myös OWL käyttää toteutuksessaan lähes sellaisenaan. \emph{RDF Schema määrittelee myös suurehkon joukon muita konstruktioita, mutta niiden käsittely on OWL:n esittelyn kannalta tässä tarpeetonta.} 
 Huomionarvoista on, että RDF Schema -dokumentit ovat RDF-dokumentteja, jotka sisältävät kummankin kielen primitiivejä. \textbf{Kaikissa tämän paperin koodiesimerkeissä on esitetty ainoastaan esittelyssä oleva konstruktio. Nimiavaruusmäärittelyt, otsikkotiedot jne. puuttuvat esimerkeistä yksinkertaisuuden vuoksi.}   
 
 \subsubsection{Luokka ja yksilö}
-Resurssit voidaan jaotella luokkiin. Luokkien jäseniä nimitetään luokan ilmentymiksi tai yksilöiksi\cite{RDFS}. Luokat ovat myös itse resursseja. Useimmiten luokat identifioidaan RDF:n URI:lla ja niitä voidaan kuvata RDF:n ominaisuuksilla (property). Luokka määritellään rdfs:Class elementissä. rdf:type -elementillä ilmaistaan, että resurssi kuuluu määrättyyn luokkaan \cite{RDFS}. Esimerkiksi kustannusosakeyhtiö "WSOY" on luokan "Kustantamo" jäsen:
+Resurssit voidaan jaotella luokkiin. Luokkien jäseniä nimitetään luokan ilmentymiksi tai yksilöiksi\cite{RDFS}. Luokat ovat myös itse resursseja. Luokat identifioidaan RDF:n URI:lla. Luokka määritellään rdfs:Class elementissä. rdf:type -elementillä ilmaistaan, että resurssi kuuluu määrättyyn luokkaan \cite{RDFS}. Esimerkiksi kustannusosakeyhtiö "WSOY" on luokan "Kustantamo" jäsen:
 \begin{verbatim}
     <rdfs:Class rdf:ID="WSOY" />
         <rdf:type rdf:resource="#Kustantamo"/>
@@ -302,8 +303,10 @@ luokka "Kustantamo" on luokan "Liikeyritys" aliluokka:
     </rdfs:Class>
 \end{verbatim}
 Kaikki yksilöt, jotka kuuluvat luokkaan Kustantamo kuuluvat myös luokkaan Liikeyritys.
-\subsubsection{Ominaisuus ja periytetty aliominaisuus}
-Resursien välisiä suhteita kuvataan \textit{ominaisuuksilla}. Esimerkiksi "Matilla on veli Teppo". Voidaan ajatella, että resurssien "Matti" ja "Teppo" välinen suhde on ominaisuus "Veljeys". Ominaisuus "Veljeys" voi olla ominaisuuden "Perhesuhde"  aliluokka tai paremminkin aliominaisuus. Tällaisia konstruktioita kuvataan RDF Schemassa termillä subPropertyOf: 
+
+\subsubsection{Ominaisuus ja aliominaisuus}
+
+Resursien välisiä suhteita kuvataan ominaisuuksilla. Esimerkiksi "Matilla on veli Teppo". Voidaan ajatella, että resurssien "Matti" ja "Teppo" välinen suhde on ominaisuus "Veljeys". Ominaisuus "Veljeys" voi olla ominaisuuden "Perhesuhde"  aliluokka tai paremminkin aliominaisuus. Tällaisia konstruktioita kuvataan RDF Schemassa termillä subPropertyOf: 
 \begin{verbatim}
     <rdf:Property rdf:about="Veljeys">
         <rdfs:subPropertyOf rdf:resource="#Perhesuhde" />
@@ -313,10 +316,10 @@ Resursien välisiä suhteita kuvataan \textit{ominaisuuksilla}. Esimerkiksi "Mat
         <Veljeys rdf:resource="#Teppo" />
     </rdf:Description>
 \end{verbatim}
-Esimerkissä on määritetty ensiksi ominaisuus "Veljeys", joka on ominaisuden "Perhesuhde" aliominaisuus. Seuraavaksi kuvataan yksilöä "Matti" ominaisuudella "Veljeys", joka saa arvokseen resurssin "Teppo". subPropertyOf ilmaisee määritelmällisesti, että resurssit joiden välistä suhdetta kuvataan jollain suhteella, voidaan kuvata myös tämän suhteen ylisuhteella, josta ko. suhde on periytynyt \cite{RDFS}. Matin ja Tepon suhdetta voidaan kuvailla ominaisuudella "Veljeys", mutta myös ominaisuudella "Perhesuhde". 
+Esimerkissä on määritetty ensiksi ominaisuus "Veljeys", joka on ominaisuden "Perhesuhde" aliominaisuus. Seuraavaksi kuvataan yksilöä "Matti" ominaisuudella "Veljeys", joka saa arvokseen resurssin "Teppo". subPropertyOf ilmaisee määritelmällisesti, että resurssit joiden välistä suhdetta kuvataan jollain ominaisuudella, voidaan kuvata myös tämän suhteen \textit{yliominaisuudella}, josta ko. suhde on periytynyt \cite{RDFS}. Matin ja Tepon suhdetta voidaan kuvailla ominaisuudella "Veljeys", mutta myös ominaisuudella "Perhesuhde". 
 
 \subsubsection{Rajoitukset ominaisuuden sovellusalueessa ja arvojoukossa}
-RDF Schemassa on mahdollista määrittää ominaisuuksille rajoituksia sen suhteen, että minkä luokkien jäsenten välistä suhdetta ominaisuus voi kuvata. Ensinnäkin
+RDF Schemassa on mahdollista määrittää ominaisuuksille rajoituksia sen suhteen minkä luokkien jäsenten välistä suhdetta ominaisuus voi kuvata. Ensinnäkin
 voidaan rajoittaa ominaisuuden sovellusaluetta (domain). Esimerkiksi ominaisuuden "Työskentelee" sovellusalue voidaan rajata koskemaan ainoastaan luokkaa "Työntekijä". Samoin 
 ominaisuuden saamat arvot (range) voidaan rajata olemaan ainoastaan luokan "Yritys" tai sen aliluokkien ilmentymiä: 
 \begin{verbatim}
@@ -328,13 +331,14 @@ ominaisuuden saamat arvot (range) voidaan rajata olemaan ainoastaan luokan "Yrit
 Sovellusalueen rajaus määritetään rdfs:domain -elementillä ja arvojoukon rajaus rdfs:range -elementillä.  
 
 \section{Kehittyneitä ontologioita OWL:llä}
+
 Kehittyneempi tapa ilmaista ontologioita on OWL-ontologiat. Lyhenne OWL tulee 
 sanoista Web Ontology Language. Vaikka määritelmässä on sana language, kieli, on 
 OWL-ontologiat ymmärettävä ennemminkin sanastoina, joita on kuvattu RDF-kielellä.
-Eräs tapa hahmottaa RDF-triplojen ja OWL-ontologioiden välinen ero on verrata niitä perinteiseen
-relaatiotietokantaan. RDF-triplat on tapa tallettaa tietoa olioiden ominaisuuksista samalla tavalla kuin
+Joukko semanttisen webin parissa työskenteleviä ohjelmistokehittäjiä on luonnehtinut osuvasti RDF-kolmikoiden ja OWL-ontologioiden eroa verkkokurssisivullaan \footnote{http://www.linkeddatatools.com/}.
+Kurssilla lähestytään eroa siten, että verratataan RDF:ää ja OWl:ia perinteiseen relaatiotietokantaan. RDF-kolmikot on tapa tallettaa tietoa olioiden ominaisuuksista samalla tavalla kuin
 relaatiotietokannan taulun riveillä tallennetaan rakenteista tietoa tietokantaolioista. Jokaista riviä relaatiotietokannassa
-yksilöi yksilöivä avain kun taas RDF-triploissa avaimen virkaa hoitaa URI. Relaatiotietokannoissa tietokantaolion attribuuttien suhteita ilmaistaan taulurakenteilla ja tietokantaolioiden suhteita toisiin tietokantaolioihin ilmaistaan viitteillä taulujen välillä. Vastaavasti OWL-ontologiat kuvaavat ja jäsentävät  samalla tavalla RDF-triploilla ilmaistua tietoa: ontologialla voidaan kuvailla monipuolisesti luokkia ja niiden ilmentymiä sekä ilmentymien suhteita toisiin ominaisuuksien avulla. RDF on kuin kieli jolla ilmaistaan lausumia asioista kun taas OWL on sanasto, jonka avulla lausumien merkitykset ymmärretään. 
+yksilöi yksilöivä avain kun taas RDF-kolmikoissa avaimen virkaa hoitaa URI. Relaatiotietokannoissa tietokantaolion attribuuttien suhteita ilmaistaan taulurakenteilla ja tietokantaolioiden suhteita toisiin tietokantaolioihin ilmaistaan viitteillä taulujen välillä. Vastaavasti OWL-ontologiat kuvaavat ja jäsentävät  samalla tavalla RDF-kolmikoilla ilmaistua tietoa: ontologialla voidaan kuvailla monipuolisesti luokkia ja niiden ilmentymiä sekä ilmentymien suhteita toisiin ominaisuuksien avulla. RDF on kuin kieli jolla ilmaistaan lausumia asioista kun taas OWL on sanasto, jonka avulla lausumien merkitykset ymmärretään. 
 
 OWL tarjoaa ontologioiden määrittelyyn \cite{AH09}: 
 \begin{itemize}
@@ -346,9 +350,10 @@ OWL tarjoaa ontologioiden määrittelyyn \cite{AH09}:
 \end{itemize}
 
 Ideaalisesti OWL on RDF:n ja RDF Scheman laajennos \cite{AH09}. OWL käyttää
-RDF:n luokkia ja suhteita lisäten niihin omia laajennoksiaan. RDF Schemassa on joitain 
+RDF:n luokkia ja ominaisuuksia lisäten niihin omia laajennoksiaan. RDF Schemassa on joitain 
 hyvin vahvoja konstruktioita, kuten rfd:Class
-(kaikkien luokkien yliluokka) sekä rdf:Property (kaikkien suhteiden yliluokka).
+(kaikkien luokkien yliluokka) sekä rdf:Property (kaikkien suhteiden yliluokka).triploilla
+
 Näiden primitiivien ilmaisuvoima yhdistettynä OWL:n tarjoamaan laajennoksiin
 on ristiriidassa sen tavoitteen kanssa, että ontologiat olisivat koneellisesti
 pääteltävissä. Tämä tasapainotila mielessäpitäen on määritelty kolme OWL:n
@@ -364,30 +369,29 @@ kasvavassa järjestyksessä:
 
 \begin{itemize}
  \item \textit{OWL Lite} tarjoaa ainoastaan yksinkertaisen luokitteluhierarkian ja yksinkertaiset rajoitteet\cite{MH04}. Kardinaalisuusrajoitteet ovat ainoastaan muotoa 0 ta 1. Työkalutuen tarjoaminen on OWL Litelle helpompaa kuin ilmaisuvoimaisemmille versioille \cite{MH04}.  
- \item \textit{OWL DL} on tarkoitettu niille käyttäjille, jotka haluavat mahdollisimman hyvän ilmaisukyvyn siten, että ontologia on koneellisesti pääteltävissä (kaikki päätelmät tehtävissä järjellisessä ajassa) \cite{MH04}. OWL DL tarjoaa kaikki kielen konstruktiot, mutta niitä voi käyttää tietyin rajoituksin, esimerkiksi luokka voi olla monen luokan aliluokka mutta ei voi olla samalla luokan ilmentymä. DL tulee sanoista Description Logics, deskriptiivinen logiikka, joka on tieteenala, joka tutkii logiikkaa ja on OWL:n perusta \cite{MH04}.  
+ \item \textit{OWL DL} on tarkoitettu niille käyttäjille, jotka haluavat mahdollisimman hyvän ilmaisukyvyn siten, että ontologia on koneellisesti pääteltävissä ja kaikki päätelmät tehtävissä järjellisessä ajassa \cite{MH04}. OWL DL tarjoaa kaikki kielen konstruktiot, mutta niitä voi käyttää tietyin rajoituksin, esimerkiksi luokka voi olla monen luokan aliluokka mutta ei voi olla samalla luokan ilmentymä. DL tulee sanoista Description Logics, deskriptiivinen logiikka, joka on eräs logiikan ala ja on OWL:n perusta \cite{MH04}.  
  \item \textit{OWL Full} on tarkoitettu niille käyttäjille, jotka haluavat maksimaalisen ilmaisukyvyn välittämättä siitä, onko ontologiat enää koneellisesti pääteltävissä \cite{MH04}. Toisin kuin OWL DL:ssä, luokka voi olla kokoelma yksilöitä (instansseja) samalla kuin luokka itsessään on jonkin luokan yksilö. OWL Full mahdollistaa jo olemassa olevien ontologioiden laajentamisen. On epätodennäköistä, että mikään ohjelmisto pystyy täydellisesti päättelemään OWL Full ontologioita \cite{MH04}. 
 \end{itemize}
 
 \subsection{OWL-ontologian rakenne}
+Kaikki OWL-ontologiat ovat RDF-dokumentteja ja niiden yleisin serialisointitapa on XML  \cite{SWM04}.
 
 \subsubsection{Nimiavaruudet}
 OWL-dokumentissa tulee määritellä nimiavaruudet (namespace). Nimiavaruuksien
 avulla voidaan ratkaista mm. samannimisten elementtien aiheuttamia
 tulkintaongelmia sekä kertoa lukijalle (koneelle tai ihmiselle) konteksti, jonka
 mukaan elementtien tageja tulee tulkita. OWL-ontologiassa nimiavaruudet
-määritellään rdf:RDF -kahvojen sisään. \textit{Kaikki OWL-ontologiat ovat RDF-dokumentteja} \cite{SWM04}. Alla olevassa esimerkissä on eräs mahdollinen nimiavaruusmäärittely . 
+määritellään rdf:RDF -kahvojen sisään.  Alla olevassa esimerkissä on eräs mahdollinen nimiavaruusmäärittely . 
 \begin{verbatim}
-<rdf:RDF 
-    xmlns:esim ="http://www.esimerkki.com/esim#" //vittuun?
     xmlns:owl ="http://www.w3.org/2002/07/owl#"
     xmlns:rdf ="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
     xmlns:xsd ="http://www.w3.org/2001/XMLSchema#">
 \end{verbatim}
-Esimerkin nimiavaruusmäärittelyissä on määritelty nimiavaruus niille tageille, jotka käyttävät etuliitettä esim:. 
-Nimiavaruudet on määritelty myös owl:-, rdf:- ja rdfs:-etuliiteille kertomaan, että näillä
-etuliitteillä varustetut tagit edustavat OWL:n, RDF:n ja RDF Schemann termistöä.
-OWL-ontologiassa käytetään myös XMLSchema-datatyypeistä (xsd:), joten myös niiden
+% Esimerkikimäärittelyissä on ensiksi määritetty nimiavaruus niille tageille, jotka käyttävät etuliitettä esim:. 
+Esimerkkimäärityksessä nimiavaruudet on määritetty owl:-, rdf:- ja rdfs:-etuliiteille kertomaan, että näillä
+etuliitteillä varustetut tagit edustavat OWL:n, RDF:n ja RDF Scheman termistöä.
+Esimerkkiontologiassa käytetään myös XMLSchema-datatyyppejä (xsd:), joten myös niiden
 nimiavaruus tulee määrittää. 
 
 \subsubsection{Otsikkotiedot}
@@ -405,7 +409,7 @@ Owl-ontologian otsikkotiedoissa voidaan kertoa yleisiä asioita kuten versiotiet
 Esimerkkiotsikossa perustietojen kertomisen lisäksi tuodaan ontologian käyttöön Dublin Core - sanasto  \footnote{Dublin Core on nnnnn}. 
 
 \subsubsection{Yksinkertaiset luokat ja aliluokat}
-OWL:n, samoin kuin RDF Scheman yksi perusajatus on, että on asioiden joukkoja eli luokkia. Luokan jäseniä sanotaan myös sen ilmentymiksi. OWL-ontologiassa kaikki ilmentymät ovat myös luokan owl:Thing jäseniä ja kaikki käyttäjän määrittämät luokat owl:Thingin aliluokkia \cite{SWM04}. Myös owl:Nothing on määritelty. Luokilla on myös aliluokkia. Kaikki aliluokan jäsenet kuuluvat myös yliluokkaansa \cite{SWM04}. Luokkamäärittelyt tapahtuvat hyvin samaan tapaan kuin RDF Schemassa, ainoastaan tagin nimi on owl:Class. Aliluokan määrittely on RDF Schemasta:
+OWL:n, samoin kuin RDF Scheman yksi perusajatus on, että on olemassa asioiden joukkoja eli luokkia \cite{SWM04}. Luokan jäseniä sanotaan myös sen ilmentymiksi. OWL-ontologiassa kaikki ilmentymät ovat myös luokan owl:Thing jäseniä ja kaikki käyttäjän määrittämät luokat owl:Thingin aliluokkia \cite{SWM04}. Myös owl:Nothing on määritelty. Luokilla on myös aliluokkia. Kaikki aliluokan jäsenet kuuluvat myös yliluokkaansa \cite{SWM04}. Luokkamäärittelyt tapahtuvat hyvin samaan tapaan kuin RDF Schemassa, ainoastaan elementin nimi on owl:Class. Aliluokan määrittely on suoraan RDF Schemasta:
 \begin{verbatim}
 <owl:Class  rdf:ID="Auto">
 <owl:Class  rdf:ID="Ajoneuvo">
@@ -416,30 +420,27 @@ OWL:n, samoin kuin RDF Scheman yksi perusajatus on, että on asioiden joukkoja e
 \end{verbatim}
 Esimerkissä on määritetty kaksi luokkaa "Auto" ja "Ajoneuvo" sekä määritelty edellinen jälkimmäisen aliluokaksi. 
 
-OWL:ssä on myös mahdollista määritellä luokka siten, että luokan jäsenet voivat kuulua ko. luokkaan mutta eivät missään tapauksessa
-implisiittisesti kerrottuun toiseen luokkaan \cite{SWM04}:
+OWL:ssä on myös mahdollista määritellä luokka siten, että luokan jäsenet voivat kuulua johonkin luokkaan mutta eivät missään tapauksessa toiseen ilmoitettuun toiseen luokkaan \cite{SWM04}:
 \begin{verbatim}
-<owl:Class ref:about="Ajoneuvo">
+<owl:Class rdf:about="Ajoneuvo">
     <owl:disjointWith rdf:resource="Elain"
 </owl>
 \end{verbatim}
-Luokan "Ajoneuvo" ja sen mahdollisten aliluokkien jäsenet eivät voi siis kuulua samaan aikaan luokkaan "Kissa" tai sen mahdollisiin aliluokkiin. Voidaan siis päätellä, että ilmentymä "Lada" ei voi olla luokan "Kissa" jäsen jos "Kissa" on määritetty luokan "Elain" aliluokaksi. 
+Luokan "Ajoneuvo" ja sen mahdollisten aliluokkien jäsenet eivät voi siis kuulua samaan aikaan luokkaan "Elain" tai sen mahdollisiin aliluokkiin. Voidaan siis päätellä, että ilmentymä "Lada" ei voi olla luokan "Kissa" jäsen jos "Kissa" on määritetty luokan "Elain" aliluokaksi ja "Lada" luokan "Ajoneuvo" aliluokaksi. 
 
 \subsubsection{Luokan ja ilmentymät}
-Luokan jäseniä kutsutaan siis luokan ilmentymiksi \cite{SWM04}. Ilmentymän kuuluminen johonkin luokkaan ilmaistaan samalla tavalla kuin RDF Schemassa rdf:type konstruktiolla. Ensiksi määritellään kuitenkin instanssi owl:Thing-elementissä:
+Ilmentymän kuuluminen johonkin luokkaan ilmaistaan samalla tavalla kuin RDF Schemassa rdf:type konstruktiolla \cite{SWM04}:
 \begin{verbatim}
 <owl:Thing rdf:ID="Lada"/>
 
-<owl:Thing ref:about="Lada">
+<owl:Thing rdf:about="Lada">
     <rdf:type= rdf:resource="Autonvalmistaja"/>
 </owl:Thing>
 \end{verbatim} 
-Esimerkissä määritettiin "Autonvalmistaja"-luokan ilmentymä "Lada". Luokka "Autonvalmistaja" on pitänyt määrittää toisaalla, jotta siihen voidaan viitata. 
+Esimerkissä määritetään "Autonvalmistaja"-luokan ilmentymä "Lada". Luokka "Autonvalmistaja" on pitänyt määrittää toisaalla, jotta siihen voidaan viitata. 
 
 \subsubsection{Ominaisuudet}
-Ominaisuudet jaetaan OWL:ssä luokkaominaisuuksiksi (Object Property) ja datatyyppiominaisuuksiksi (Data Type Property) sen perusteella liittääkö ominaisuus yhteen kaksi luokan ilmentymää vai luokan ilmentymän ja RDF-literaalin tai XML Schema -datatyypin \cite{SWM04}. Ominaisuuksien avulla voidaan kuvailla asioita, kuten esimerkikis "auton merkki on Lada".   
-
-\textit{Luokkaominaisuus}
+Ominaisuuksien avulla voidaan kuvailla asioita, kuten esimerkiksi "auton merkki on Lada". Luodaan siis suhde kulkuväline auton ja Lada-brändin välille. Ominaisuudet jaetaan OWL:ssä luokkaominaisuuksiksi (Object Property) ja datatyyppiominaisuuksiksi (Data Type Property) sen perusteella liittääkö ominaisuus yhteen kaksi luokan ilmentymää vai luokan ilmentymän ja RDF-literaalin tai XML Schema -datatyypin \cite{SWM04}.  
 
 OWL:ssä luokkaominaisuudet määritellään kuten mitkä tahansa luokat, mutta käyttäen ObjectProperty -konstruktiota. Määrittelyssä kerrotaan minkä luokan ilmentymiin ominaisuus on sovellettavissa sekä mitä arvoja (luokan ilmentymiä) ominaisuus voi saada. Nämä rajoitteet ilmaistaan RDF Schemasta tutuilla rdfs:domain- ja rdfs:range-elementeillä \cite{SWM04}:
 \begin{verbatim}
@@ -450,7 +451,6 @@ OWL:ssä luokkaominaisuudet määritellään kuten mitkä tahansa luokat, mutta 
 \end{verbatim}
 Esimerkissä on määritelty ominaisuus "Merkki". Kyseisellä ominaisuudella voi kuvata ainoastaan luokan "Auto" ilmentymiä ja joka voi ainoastaan saada arvokseen ainoastaan luokan "Autonvalmistaja" ilmentymiä. 
 
-\subsubsection{Datatyyppiominaisuus}
 Datatyyppiominaisuus liittää yhteen luokan ilmentymän ja arvoliteraalin, RDF-literaalin tai XML Schema -datatyypin arvon. Myös datatyyppiominaisuuksien määrittelyssä kerrotaan minkä luokan ilmentymiin ominaisuus on sovellettavissa sekä minkä tyyppisiä arvoja ominaisuus voi saada \cite{SWM04}. Rajoitteet tehdään samoilla elementeillä kuin luokkaominaisuuden määrittelyssä:
 \begin{verbatim}
 <owl:DataTypeProperty rdf:ID="Valmistusvuosi">
@@ -461,7 +461,7 @@ Datatyyppiominaisuus liittää yhteen luokan ilmentymän ja arvoliteraalin, RDF-
 Esimerkissä määritetään ominaisuus "Valmistusvuosi", jolla voidaan kuvata luokan "Auto" ilmentymiä ja joka voi saada arvokseen XML Schema -standardissa määritetyn gYear-tyypin arvon. XML-Schema -standardi määrittelee 19 eri datatyyppiä. Kun käytetään määritettyjä datatyyppejä, XML-parseri pystyy tarkistamaan, onko annetut arvot sallittuja ja esitystapa skeeman mukainen \cite{XMLS}.  
 
 \subsubsection{Aliominaisuudet}
-Myös ominaisuuksille voidaan määritellä aliominaisuuksia samaan tapaan kuin luokille voidaan määrittää aliluokkia. Aliominaisuus toteutetaan subPropertyOf-elementillä, joka on toteutettu jo RDF Schemassa \cite{SWM04}. Alla olevassa esimerkissä lisätään ominaisuuteen "Valmistusvuosi" määritys, että se on ominaisuuden "AutonKuvailija" aliominaisuus:
+Myös ominaisuuksille voidaan määrittää aliominaisuuksia samaan tapaan kuin luokille voidaan määrittää aliluokkia. Aliominaisuus toteutetaan subPropertyOf-elementillä, joka on toteutettu jo RDF Schemassa \cite{SWM04}. Alla olevassa esimerkissä lisätään ominaisuuteen "Valmistusvuosi" määritys, että se on ominaisuuden "AutonKuvailija" aliominaisuus:
 \begin{verbatim}
 <owl:Class rdf:ID="AutonKuvailija">
 
@@ -472,7 +472,7 @@ Myös ominaisuuksille voidaan määritellä aliominaisuuksia samaan tapaan kuin 
 \end{verbatim}
 
 \subsubsection{Kardinaalisuusrajoitteet}
-OWL antaa mahdollisuuden määrätä kardinaalisuusrajoitteita ominaisuuksien arvoille kun ominaisuutta sovelletaan tietyssä kontekstissa \cite{SWM04}. Voidaan esimerkiksi määrätä, että luokka "Ajoneuvo" on joukko asioita, joilla on aina vähintään kaksi "Renkaat"-ominaisuutta. Toisin sanoen, määritellään \textit{anonyymi aliluokka} luokalle "Ajoneuvo" \cite{SWM04}. Koska anonyymi aliluokka on määritetty "Ajoneuvo"-elementin sisällä, on kaikki "Ajoneuvon"  ilmentymät myös määritetyn aliluokan ilmentymiä. Alla oleva esimerkki selventää asiaa:
+OWL antaa mahdollisuuden määrätä kardinaalisuusrajoitteita ominaisuuksien arvoille kun ominaisuutta sovelletaan tietyssä kontekstissa \cite{SWM04}. Voidaan esimerkiksi määrätä, että luokka "Ajoneuvo" on joukko asioita, joilla on aina vähintään kaksi "Renkaat"-ominaisuutta. Toisin sanoen, määritellään \textit{anonyymi aliluokka} \cite{SWM04} luokalle "Ajoneuvo". Koska anonyymi aliluokka on määritetty "Ajoneuvo"-elementin sisällä, on kaikki "Ajoneuvon"  ilmentymät myös määritetyn aliluokan ilmentymiä. Alla oleva esimerkki selventää asiaa:
 \begin{verbatim}
 <owl:Class  rdf:ID="Ajoneuvo">
     <rdfs:subClassOf>
@@ -484,10 +484,10 @@ OWL antaa mahdollisuuden määrätä kardinaalisuusrajoitteita ominaisuuksien ar
     </owl:subClassOf>
 <owl:Class/>
 \end{verbatim}
-Anonyymi aliluokka määritetään subClassOf-konstruktiolla. Aliluokalle määritetään rajoite owl:Restriction-tagilla ja kardinaalisuusrajoite tässä tapauksessa  minCardinality-elementillä. Kardinaalisuus määritetään koskemaan ominaisuutta "Renkaat" onProperty-elementillä. Kardinaalisuusrajoitteita voi määrätä myös maxCardinality-elementillä, joka määrää suhteen yläkardinaliteetin, sekä Cardinality-elementillä, joka määrää tarkan arvon mikä on luokan ja ominaisuuden suhde. Voitaisiin esimerkiksi määrittää luokka "Moottoripyörä" siten, että sillä voisi olla tasan kaksi "Renkaat" ominaisuutta.   
+Anonyymi aliluokka määritetään subClassOf-konstruktiolla. Aliluokalle määritetään rajoite owl:Restriction-elementillä ja kardinaalisuusrajoite tässä tapauksessa  minCardinality-elementillä. Kardinaalisuusrajoite määritetään koskemaan ominaisuutta "Renkaat" onProperty-elementillä. Kardinaalisuusrajoitteita voi määrätä myös maxCardinality-elementillä, joka määrää suhteen yläkardinaliteetin, sekä Cardinality-elementillä, joka määrää tarkan arvon mikä on luokan ja ominaisuuden suhde. Voidaan esimerkiksi määrittää luokka "Moottoripyörä" siten, että sillä voi olla tasan kaksi "Renkaat" ominaisuutta.   
 
 \subsubsection{Ominaisuuden transitiivisuus, symmetrisyys, funktionaalisuus ja käänteisfunktionaalisuus}
-Ominaisuuden voi tarvittaessa määrittää transitiiviseksi, symmetriseksi tai funktionaaliseksi implisiittisen päättelyn helpottamiseksi \cite{AH09}:
+Ominaisuuden voi tarvittaessa määrittää transitiiviseksi, symmetriseksi, funktionaaliseksi tai käänteisfunktionaaliseksi implisiittisen päättelyn helpottamiseksi \cite{AH09}:
 
 \begin{itemize}
  \item \textit{owl:TransitiveProperty} määrittää transitiivisen ominaisuuden, kuten "isompi kuin", "pidempi kuin" \cite{AH09}. Myös rdfs:SubClassOf on transitiivinen ominaisuus. 
@@ -505,7 +505,7 @@ Esimerkissä määritetään ominaisuus "Sarjanumero" käänteisfunktionaaliseks
 \end{verbatim}
 
 \subsubsection{Arvorajoitteet luokkaominaisuuksissa}
-Kaikki tähän mennessä esitellyt tavat määrittää rajoitteita ominaisuuksille toimivat globaalilla tasolla, ts. ne ovat voimassa kaikissa sovellustapauksissa. Seuraavat rajoitteet ovat voimassa ainoastaan niissä luokissa, joiden sisällä rajoitteet määritetään \cite{SWM04}. Esimerkiksi on mahdollista määrätä, että luokan "Auto" kontekstissa ominaisuuden "Omistaja" arvona voi olla vain luokan "Henkilo" jäseniä. Tämä saadaan aikaan wl:allValuesFrom -elementillä:
+Kaikki tähän mennessä esitellyt tavat määrittää rajoitteita ominaisuuksille toimivat globaalilla tasolla, ts. ne ovat voimassa kaikissa sovellustapauksissa \cite{SWM04}. Seuraavat rajoitteet ovat voimassa ainoastaan niissä luokissa, joiden sisällä rajoitteet määritetään \cite{SWM04}. Esimerkiksi on mahdollista määrätä, että luokan "Auto" kontekstissa ominaisuuden "Omistaja" arvona voi olla vain luokan "Henkilo" jäseniä. Tämä saadaan aikaan owl:allValuesFrom -elementillä:
 \begin{verbatim}
 <owl:Class rdf:ID="Auto">
     <rdfs:subClassOf>
@@ -517,12 +517,14 @@ Kaikki tähän mennessä esitellyt tavat määrittää rajoitteita ominaisuuksil
 </owl:Class>    
 \end{verbatim}
 
-Edellisessä esimerkissä määritettiin, että auton omistaja on aina "Henkilo"-luokan jäsen. OWL mahdollistaa myös hieman kevyemmän rajoitteen, jossa määrätään, että ominaisuuden \textit{jonkin} arvon tulee olla määrätyn luokan jäsen \cite{SWM04}. Voidaan määrittää, että autojen edellisistä omistajista ainakin yksi on luokan "Henkilo" jasen:
+Esimerkissä määritettiin, että auton omistaja on aina "Henkilo"-luokan jäsen. OWL mahdollistaa myös hieman kevyemmän rajoitteen, jossa määrätään, että ominaisuuden \textit{jonkin} arvon tulee olla määrätyn luokan jäsen \cite{SWM04}. Voidaan määrittää, että autojen edellisistä omistajista ainakin yksi on luokan "Henkilo" jasen:
 \begin{verbatim}
 . . .
            <owl:onProperty rdf:resource="EdellinenOmistaja"/>
            <owl:someValuesFrom rdf:resource="Henkilo"/>
 . . .
+
+******VOIKO LOPPUA NÄIN KOODIESIMERKKIIN?**********
 \end{verbatim}
 Rajoite toteutetaan owl:someValuesFrom-tagilla.
 
@@ -547,7 +549,7 @@ Kompleksiset luokat on erittäin vahva ja ilmaisuvoimainen OWL:n konstruktio \ci
 
 Esimerkissä leikkaus-operaattori on ilmaistu owl:intersectionOf -elementillä. rdf:parseType="Collection" ilmoittaa parserille, että tämän elementin sisältämät elementit tulee tulkita lueteltuna kokoelmana \cite{SWM04}.
 
-Vastaavasti voidaan määrittää yhdisteluokka käyttämällä elementtiä owl:unionOf \cite{SWM04}:
+Vastaavasti voidaan määrittää luokkien yhdiste käyttämällä elementtiä owl:unionOf \cite{SWM04}:
 \begin{verbatim}
 <owl:Class rdf:ID="Maansiirtokone"/>
     <owl:intersectionOf rdf:parseType="Collection">
@@ -570,14 +572,14 @@ Komplementtiluokka määritellään elementillä owl:complementOf  \cite{SWM04}.
 Esimerkkimäärityksessä luokkaan "Manuaalivaihteisto" kuuluvat vain ne ilmentymät, jotka eivät kuulu luokkaan "Automaattivaihteisto". 
 
 \subsubsection{Ontologioiden yhdistäminen}
-Jotta ontologioiden luominen olisi mielekästä, tulee olla kyky yhdistää ontologioita toisiinsa laajempien ontologian aikaansaamiseksi \cite{SWM04}.  Ontologian otsikkotiedoissa voidaan import-lasuseella tuoda jonkun toisen jo olemassa olevan ontologian määritykset oman ontologian käyttöön. OWL tarjoaa elementtejä, joilla tuoduissa ontologioissa määritettyjä voi käyttää apuna omissa määrityksissä \cite{SWM04}.
+Jotta ontologioiden luominen olisi mielekästä, tulee olla kyky yhdistää ontologioita toisiinsa laajempien ontologioiden aikaansaamiseksi \cite{SWM04}.  Ontologian otsikkotiedoissa voidaan import-lasuseella tuoda jonkun toisen jo olemassa olevan ontologian määritykset oman ontologian käyttöön. OWL tarjoaa elementtejä, joilla tuoduissa ontologioissa määritettyjä voi käyttää apuna omissa määrityksissä \cite{SWM04}.
 owl:equivalentClass -elementillä voidaan oma luokkamääritys määrätä vastaamaan jotain olemassaolevaa määritystä: 
 \begin{verbatim}
-<owl:Class rdf:ID="Auto">
+<owl:Class rdf:ID="Kiesi">
     <owl:equivalentClass rdf:resource="&kulkuneuvot;Auto"/>
 </owl:Class>
 \end{verbatim}
-Esimerkissä siis oletetaan, että otsikkotiedoissa on import-määritys ontologialle "kulkuneuvot". Oma määritys luokalle "Auto" siis asetetaan vastaamaan tuodun ontologian määritystä luokalle "Auto". 
+Esimerkissä siis oletetaan, että otsikkotiedoissa on import-määritys ontologialle "kulkuneuvot". Oma määritys luokalle "Kiesi" asetetaan vastaamaan tuodun ontologian määritystä luokalle "Auto". 
 
 OWL mahdollistaa myös määrittää yksittäisen ilmentymän vastaamaan toista ilmentymää \cite{SWM04}. Tämä tehdään sameAs-konstruktiolla: 
 \begin{verbatim}
@@ -603,16 +605,22 @@ Esimerkki kertoo, että jokainen Henkilon ilmentymä viittaa eri ilmentymään.
 OWL 2 on laajennos OWL-kieleen, jolle on annettu W3C-suositus vuonna 2009 \cite{OWL2}. OWL 2:n ominaisuudet ovat suurilta osin samat kuin OWL 1:ssä, osa ainoastaan eri nimillä esitettynä. OWL 1:llä tarkoitetaan tässä OWL:n vuoden 2004 suositusta standardiksi, jota tässä artikkelissa on käsitelty.  Myös OWL 2:n ytimen muodostaa XML ja RDF ja mikä tärkeintä, OWL 2 on taaksepäin yhteensopiva OWL 1:n kanssa. Jokainen OWL 1 -ontologia on siis kelvollinen OWL 2 -ontologia \cite{OWL2}. OWL 2 tekee pääasiassa samat asiat kuin OWL 1 hieman erilaisella kieliopilla. Se tarjoaa kuitenkin myös   joitain uusia toiminnallisuuksia \cite{OWL2}: 
 \begin{itemize}
 \item \textit{avaimet}, joka mahdollistaa sen, että ominaisuuksia (tai ominaisuuksien joukkoa) voidaan käyttää avaimena tunnistamaan luokan ilmentymää.
-\item \textit{ominaisuusketjut}, jotka mahdollistavat ominaisuuksien ketjutuksen. Esimerkiksi voidaan määrittää ominaisuus "Isovanhempi" kahden "Vanhempi"-ominaisuuden ketjuksi
-\item \textit{uusia datatyyppejä}, jotka mahdollistavat esimerkiki ominaisuuksille annettavien numeeristen arvojen rajoittamisen jollekin välille. Esimerkiksi luokalle "Teini-ikäinen" voidaan määrätä, että "Ikä"-ominaisuus voi saada ainoastaan arvoja väliltä [13..19].
+\item \textit{ominaisuusketjut}, jotka mahdollistavat ominaisuuksien ketjutuksen. Voidaan esimerkiksi määrittää ominaisuus "Isovanhempi" kahden "Vanhempi"-ominaisuuden ketjuksi
+\item \textit{uusia datatyyppejä}, jotka mahdollistavat ominaisuuksille annettavien numeeristen arvojen rajoittamisen jollekin välille. Esimerkiksi luokalle "Teini-ikäinen" voidaan määrätä, että "Ikä"-ominaisuus voi saada ainoastaan arvoja väliltä [13..19].
 \item \textit{kvalifioituja kardinaalisuusrajoitteita}, *********jätän tämän, jos keksin ikinä miten tää selitetään**********
-\item \textit{asymetriset, refleksiiviset ja poissulkevat ominaisuudet}. Asymmetrisyys on vastakohta OWL 1:n symmetrisyydelle, reflektiivinen ominaisuus viittaa aina itseensä ja poissulkevat ominaisuudet eivät voi olla voimassa samaan aikaan. 
+\item \textit{asymmetriset, refleksiiviset ja poissulkevat ominaisuudet}. Asymmetrisyys on vastakohta OWL 1:n symmetrisyydelle, reflektiivinen ominaisuus viittaa aina itseensä ja poissulkevat ominaisuudet eivät voi olla voimassa samaan aikaan. 
 \item \textit{uusia kommentointimahdollisuuksia}, jotka mahdollistavat uusia tapoja kommentoida ontologioita.   
 \end{itemize}
 
 \subsection{Päätelmiä}
 
-Semanttista webiä on joskus luonnehdittu web 3.0:ksi [lähde!!!]. Vaikka web 3.0:n määritelmät ovat kirjavia, voidaan kuitenkin sanoa, että se on ennemmänkin visio jostain kuin jotain konkreettista ihmisten arkipäivässä. Sovelluksia, jotka käyttävät hyväkseen semanttisen webin ideoita ja teknologioita, on kuitenkin tehty paljonkin. Esimerkkinä voidaan mainita esimerkiksi tripit.com, joka muodostaa matkasuunnitelman automaattisesti palveluun lähetettyjen tilausvahvistusten pohjalta. Palvelu mm. muodostaa kokonaismatka-aikataulun, liittää siihen matkustustiedot, kirjaa hotellivaraustiedot jne.         
+Kun semanttisen webin teknologioita upotetaan websovelluksiin, puhutaan usein web 3.0:sta \cite{WEB3}. Kuitenkaan web 3.0:n konseptit eivät ole vielä leikanneet läpi koko verkkomaailman web 2.0:n tavoin. (Web 2.0:na käsitetään web-sivut, jotka eivät enää ole stattisia dokumentteja vaan niissä käyttäjät ovat vuorovaikutuksessa toistensa kanssa ja luovat omaa sisältöään sivuille [wikisivu]). Web 3.0. ei ole synnyttänyt samanlaisia ihmisten arkipäivään kiinteästi nivoutuneita  web-palveluita kuin Facebook, Flickr tai Twitter. Tämä ei kuitenkaan tarkoita, etteikö semanttinen web ja web 3.0 olisi kuitenkin menossa eteenpäin. 
+
+W3C Semantic Web tekee tutkimustyötä semanttisen webin alueella ja on vastuussa jo olemassa olevista semanttisen webin suosituksista standardeiksi. Semanttinen web on tutkimuskohteena myös useissa yliopistoissa maailmanlaajuisesti. Esimerkiksi suomalainen tutkimusryhmä Semantic Computing Research Group (SeCo) Aalto Yliopistosta tutkii koneellisesti pääteltävien semantiikkojen mahdollisuuksia semanttisen webin kontekstissa.  
+
+Myös kuluttajille suunnattuja semanttisen webin palveluita on tarjolla. Esimerkkinä voidaan mainita tripit.com, joka muodostaa matkasuunnitelman automaattisesti palveluun lähetettyjen tilausvahvistusten pohjalta. Ei-kaupallinen DBpedia-projekti pyrkii luomaan Wikipedian tietojen pohjalta kattavan linkitetyn datan tietokannan. DBpedia tarjoaa tietoa Wikipedian lisäksi monesta eri lähteestä koottuna ja mahdollisuuden tehdä kyselyjä, jotka hyödyntävät Wikipedian ja muiden lähteiden tietoja yhdellä kertaa[http://en.wikipedia.org/wiki/DBpedia] 
+
+Semanttisen webin teknologioilla on mahdollisuudet mullistaa koko tiedon haun ja tuottamisen mallit webissä.  
 
 
 % --- Back matter ---
