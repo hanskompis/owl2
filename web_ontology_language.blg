@@ -5,45 +5,45 @@ The style file: babplain-lf.bst
 Database file #1: lahteet.bib
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Warning--empty language in AH09
-You've used 10 entries,
+You've used 11 entries,
             2783 wiz_defined-function locations,
-            716 strings with 7882 characters,
-and the built_in function-call counts, 3830 in all, are:
-= -- 346
-> -- 137
+            722 strings with 7981 characters,
+and the built_in function-call counts, 4103 in all, are:
+= -- 370
+> -- 144
 < -- 0
-+ -- 55
-- -- 44
-* -- 417
-:= -- 570
-add.period$ -- 28
-call.type$ -- 10
-change.case$ -- 52
++ -- 58
+- -- 46
+* -- 438
+:= -- 610
+add.period$ -- 30
+call.type$ -- 11
+change.case$ -- 56
 chr.to.int$ -- 0
-cite$ -- 11
-duplicate$ -- 177
-empty$ -- 363
-format.name$ -- 73
-if$ -- 786
+cite$ -- 12
+duplicate$ -- 190
+empty$ -- 397
+format.name$ -- 76
+if$ -- 848
 int.to.chr$ -- 0
-int.to.str$ -- 10
+int.to.str$ -- 11
 missing$ -- 16
-newline$ -- 64
-num.names$ -- 20
-pop$ -- 58
+newline$ -- 68
+num.names$ -- 22
+pop$ -- 69
 preamble$ -- 1
-purify$ -- 42
+purify$ -- 45
 quote$ -- 0
-skip$ -- 94
+skip$ -- 103
 stack$ -- 0
-substring$ -- 175
-swap$ -- 64
+substring$ -- 180
+swap$ -- 68
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 40
+type$ -- 44
 warning$ -- 1
-while$ -- 34
-width$ -- 12
-write$ -- 130
+while$ -- 36
+width$ -- 13
+write$ -- 140
 (There was 1 warning)

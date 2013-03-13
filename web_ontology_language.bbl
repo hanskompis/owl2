@@ -96,4 +96,11 @@
   \btxurlfont{http://http://en.wikipedia.org/wiki/XML_Schema_(W3C)}}, [Online;
   noudettu 8.3.2013].
 
+\bibitem {WEB20}
+\btxnamefont {\btxlastnamefont {Wikipedia}}\btxauthorcolon\ \btxtitlefont
+  {\btxifchangecase {Web 2.0}{Web 2.0}}, 2013.
+\newblock {\latintext
+  \btxurlfont{http://http://http://en.wikipedia.org/wiki/Web_2.0}}, [Online;
+  noudettu 13.3.2013].
+
 \end{thebibliography}
