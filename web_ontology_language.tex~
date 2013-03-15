@@ -79,7 +79,7 @@
 \author{Hansi Keijonen}
 \date{\today}
 \level{Seminaariraportti}
-\abstract{Semanttisessa webissä ei ole ainoastaan dokumentteja ihmisten luettavaksi, vaan myös tietoa dokumenteissa olevien asioiden merkityksistä. Näitä merkityksiä voidaan tulkita ja tuottaa myös koneellisesti. Merkityksiä, semantiikkaa, voidaan ilmaista ontologioilla. Tietojenkäsittelytieteessä ontologialla tarkoitetaan dokumenttia, jossa kerrotaan asioiden välisistä yhteyksistä. Ontologiat ovat kehittyneen semanttisen webin perusta. OWL (Web Ontology Language) on ilmaisuvoimainen mutta kuitenkin koneellisesti pääteltävissä oleva ontologianmäärityskieli. Tässä seminaariraportissa esitellään OWL-kieli sekä muita teknologioita ja kieliä, kuten RDF ja RDF Schema, joiden konstruktioita OWL käyttää.}
+\abstract{Semanttisessa webissä ei ole ainoastaan dokumentteja ihmisten luettavaksi, vaan myös kuvauksia dokumenteissa olevien asioiden merkityksistä. Näitä merkityksiä voidaan tulkita ja tuottaa myös koneellisesti. Merkityksiä, semantiikkaa, voidaan ilmaista ontologioilla. Tietojenkäsittelytieteessä ontologialla tarkoitetaan dokumenttia, jossa kerrotaan asioiden välisistä yhteyksistä. Ontologiat ovat kehittyneen semanttisen webin perusta. OWL (Web Ontology Language) on ilmaisuvoimainen mutta kuitenkin koneellisesti pääteltävissä oleva ontologianmäärityskieli. Tässä seminaariraportissa esitellään OWL-kieli sekä muita teknologioita ja kieliä, kuten RDF ja RDF Schema, joiden konstruktioita OWL käyttää.}
 
 % The following can be used to specify keywords and classification of the paper:
 
@@ -170,7 +170,7 @@ se perustuu. Tässä artikkelissa esitellään OWL:in lisäksi RDF ja RDF Schema
 Lopuksi selvitetään lyhyesti OWL:n laajennoksen OWL2:n tuomat lisäominaisuudet.
 
 Artikkelin esimerkeissä käsitellään autoalan termistöä. RDF:n osalta tyydytään ainoastaan kuvaamaan joitain resursseja, 
-mutta RDF Scheman ja OWL:n luvuissa pyritään määrittämään todellisia semantiikkoja aiheen piiristä. Esimerkeistä on poistettu nimiavaruusmäärittelyt
+mutta RDF Schemaa ja OWL:ää käsittelevissä luvuissa pyritään määrittämään todellisia semantiikkoja aiheen piiristä. Esimerkeistä on poistettu nimiavaruusmäärittelyt
 pl. esimerkit, jotka nimenomaisesti keskittyvät nimiavaruuksiin. Tämä esimerkkien yksinkertaistamisen vuoksi. 
 
 \section{Teknologiat ja kielet, joihin OWL perustuu}
@@ -322,7 +322,7 @@ Resursien välisiä suhteita kuvataan ominaisuuksilla. Esimerkiksi "Lada 1200 A:
 Esimerkissä on määritetty ensiksi ominaisuus \texttt{Valmistusmaa}, joka on ominaisuuden \texttt{Autonkuvailija} aliominaisuus. Seuraavaksi kuvataan yksilöä \texttt{Lada1200A} ominaisuudella \texttt{Valmistusmaa}, joka saa arvokseen resurssin \texttt{Venäjä}. \texttt{subPropertyOf} ilmaisee määritelmällisesti, että resurssit joiden välistä suhdetta kuvataan jollain ominaisuudella, voidaan kuvata myös tämän suhteen \textit{yliominaisuudella}, josta ko. suhde on periytynyt \cite{RDFS}. \texttt{Lada1200A}n ja \texttt{Venäjä}n suhdetta voidaan kuvailla ominaisuudella \texttt{Valmistusmaa}, mutta myös ominaisuudella \texttt{Autonkuvailija}. 
 
 \subsubsection{Rajoitukset ominaisuuden sovellusalueessa ja arvojoukossa}
-RDF Schemassa on mahdollista määrittää ominaisuuksille rajoituksia sen suhteen minkä luokkien jäsenten välistä suhdetta ominaisuus voi kuvata. Ensinnäkin
+RDF Schemassa on mahdollista määrittää ominaisuuksille rajoituksia sen suhteen minkä luokkien jäsenten välistä suhdetta ominaisuus voi kuvata \cite{RDFS}. Ensinnäkin
 voidaan rajoittaa ominaisuuden sovellusaluetta (domain). Esimerkiksi ominaisuuden  \texttt{Valmistusmaa} sovellusalue voidaan rajata koskemaan ainoastaan luokkaa \texttt{Tuote}. Samoin 
 ominaisuuden saamat arvot (range) voidaan rajata olemaan ainoastaan luokan \texttt{Valtio} ilmentymiä: 
 \begin{verbatim}
@@ -386,6 +386,7 @@ tulkintaongelmia sekä kertoa lukijalle (koneelle tai ihmiselle) konteksti, jonk
 mukaan elementtien tageja tulee tulkita. OWL-ontologiassa nimiavaruudet
 määritellään rdf:RDF -tagin sisään.  Alla olevassa esimerkissä on eräs mahdollinen nimiavaruusmäärittely . 
 \begin{verbatim}
+<rdf:RDF
     xmlns:owl ="http://www.w3.org/2002/07/owl#"
     xmlns:rdf ="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"

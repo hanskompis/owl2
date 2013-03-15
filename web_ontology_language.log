@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.1.22)  13 MAR 2013 18:15
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.1.22)  15 MAR 2013 12:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1006,13 +1006,13 @@ Package rerunfilecheck Info: File `web_ontology_language.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 641.
  ) 
 Here is how much of TeX's memory you used:
- 9806 strings out of 493481
- 144722 string characters out of 3143393
- 270591 words of memory out of 3000000
+ 9802 strings out of 493481
+ 144678 string characters out of 3143393
+ 270594 words of memory out of 3000000
  12697 multiletter control sequences out of 15000+200000
- 67178 words of font info for 133 fonts, out of 3000000 for 9000
+ 67012 words of font info for 131 fonts, out of 3000000 for 9000
  965 hyphenation exceptions out of 8191
- 35i,8n,35p,774b,494s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 35i,8n,35p,776b,494s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/en
 c/dvips/lm/lm-ec.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/s
 hare/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/publi
@@ -1021,10 +1021,10 @@ xmf/fonts/type1/public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8
 .pfb></usr/share/texmf/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf/fonts/t
 ype1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></
 usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb>
-Output written on web_ontology_language.pdf (20 pages, 378893 bytes).
+Output written on web_ontology_language.pdf (20 pages, 379348 bytes).
 PDF statistics:
- 405 PDF objects out of 1000 (max. 8388607)
- 365 compressed objects within 4 object streams
+ 407 PDF objects out of 1000 (max. 8388607)
+ 367 compressed objects within 4 object streams
  65 named destinations out of 1000 (max. 500000)
  19680 words of extra memory for PDF output out of 20736 (max. 10000000)
 
